@@ -1,0 +1,24 @@
+1. grupe (componenta)
+2. tema proiect - dezvoltata
+3. => SM (SM din a 3-a saptamana)
+4. repository github(access -> olariu@gmail.com) - public
+5. legare repository => sonarQube
+6. Backlog => Trello, Bitbucket(fara github)
+7. Email seara => email de la SM cu toate detaliile mai sus mentionate
+
+Core:
+	- pe c#
+	- se pot integra alte limbaje de programare
+	
+Nota - pe saptamana asta - din cele de mai sus
+
+De saptamana viitoare:
+1. Kata => la fiecare laborator 1h - timp ramas discutii referitoare la proiect
+2. Fiecare echipa => prezentare de 10-15 minute
+				  => aux: ppt, prezi
+				  => trebuie sa aratam progresul
+						- cod
+						- functionalitati
+						- interactiune
+						- de catre fiecare membru*?
+3. Note ajustate in functie de posibilitati, maximizare punctaj
