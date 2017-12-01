@@ -1,0 +1,18 @@
+Pentru a face analiza la proiect este nevoie de urmatoarele:
+	name: kunfoodfii
+	token: 745b67e6755deb3bfc6719a4c5faf696ccfe2c6e
+	
+	Install SonarQube for MSBuild:
+		- https://about.sonarcloud.io/get-started/
+		- https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+MSBuild
+	
+	Observatii:
+		- nu trebuie urmati toti pasii de acolo pentru ca am facut eu cont si am generat token.
+	
+	Trebuie sa executati aceste 3 comenzi in directorul root al proiectul ce doriti a fi analizat.
+	Comanda 1:
+		SonarQube.Scanner.MSBuild.exe begin /k:"kunfood" /o:"kunfoodfii" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="745b67e6755deb3bfc6719a4c5faf696ccfe2c6e"
+	Comanda 2:
+		MsBuild.exe /t:Rebuild
+	Comanda 3:
+		SonarQube.Scanner.MSBuild.exe end /d:sonar.login="745b67e6755deb3bfc6719a4c5faf696ccfe2c6e"
