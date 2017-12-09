@@ -1,5 +1,4 @@
-﻿using Data.Domain;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Data.Persistence
 {
