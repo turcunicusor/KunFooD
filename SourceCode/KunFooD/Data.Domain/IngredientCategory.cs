@@ -1,0 +1,27 @@
+﻿using System;
+
+namespace Data.Domain
+{
+    public class IngredientCategory
+    {
+        private IngredientCategory()
+        {
+            // EF Core
+        }
+
+        public Guid Id { get; private set; }
+        public String Name { get; private set; }
+
+        public static IngredientCategory Create(string name)
+        {
+            var instance = new IngredientCategory { Id = Guid.NewGuid() };
+            instance.Update(name);
+            return instance;
+        }
+
+        public void Update(string name)
+        {
+            Name = name;
+        }
+    }
+}
