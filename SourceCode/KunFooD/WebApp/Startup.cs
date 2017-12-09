@@ -1,4 +1,6 @@
-﻿using Data.Persistence;
+﻿using Business;
+using Data.Domain.Intefaces;
+using Data.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +23,7 @@ namespace WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IDatabaseContext, DatabaseContext>();
-
+            services.AddTransient<IUsersRepository, UsersRepository>();
             var conection = @"Server = .\SQLEXPRESS; Database = KunFooD.Development; Trusted_Connection = true;";
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(conection));
 
