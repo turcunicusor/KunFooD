@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Intefaces\IIngredientCategoryRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="User" />
   </ItemGroup>
 

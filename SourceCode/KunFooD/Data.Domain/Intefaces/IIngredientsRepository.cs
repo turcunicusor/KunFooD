@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Data.Domain.Intefaces
 {
-    public interface IIngredientiesRepository
+    public interface IIngredientsRepository
     {
         void AddIngredient(Ingredient ingredient);
         void DeleteIngredient(Guid id);
