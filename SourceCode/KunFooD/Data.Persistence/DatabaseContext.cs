@@ -10,13 +10,19 @@ namespace Data.Persistence
             Database.EnsureCreated();
         }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<Thread> Threads { get; set; }
-        public DbSet<Recipe> Recipes { get; set; }
-        public DbSet<Post> Posts { get; set; }
-        public DbSet<IngredientCategory> IngredientCategories { get; set; }
-        public DbSet<Ingredient> Ingredients { get; set; }
-        public DbSet<PairItem> PairItems { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<PairItem>()
+                .HasKey(pairItem => new { pairItem.IngredientId, pairItem.RecipieId });
+        }
+
+        public DbSet<Data.Domain.User> Users { get; set; }
+        public DbSet<Data.Domain.Thread> Threads { get; set; }
+        public DbSet<Data.Domain.Recipe> Recipes { get; set; }
+        public DbSet<Data.Domain.Post> Posts { get; set; }
+        public DbSet<Data.Domain.IngredientCategory> IngredientCategories { get; set; }
+        public DbSet<Data.Domain.Ingredient> Ingredients { get; set; }
+        public DbSet<Data.Domain.PairItem> PairItems { get; set; }
+        public DbSet<Data.Domain.Category> Categories { get; set; }
     }
 }

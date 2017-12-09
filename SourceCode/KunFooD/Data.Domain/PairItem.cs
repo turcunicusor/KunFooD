@@ -8,7 +8,6 @@ namespace Data.Domain
         {
             // EF Core
         }
-
         public Guid IngredientId { get; private set; }
         public Guid RecipieId { get; private set; }
         public double Quantity { get; private set; }
