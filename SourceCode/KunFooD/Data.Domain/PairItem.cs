@@ -2,9 +2,9 @@
 
 namespace Data.Domain
 {
-    public class Fridge
+    public class PairItem
     {
-        private Fridge()
+        private PairItem()
         {
             // EF Core
         }
@@ -13,9 +13,9 @@ namespace Data.Domain
         public Guid RecipieId { get; private set; }
         public double Quantity { get; private set; }
 
-        public static Fridge Create(Guid ingredientId, Guid recipieId, double quantity)
+        public static PairItem Create(Guid ingredientId, Guid recipieId, double quantity)
         {
-            var instance = new Fridge();
+            var instance = new PairItem();
             instance.Update(ingredientId, recipieId, quantity);
             return instance;
         }
