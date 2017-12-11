@@ -4,6 +4,7 @@ using System.Linq;
 using Data.Domain;
 using Data.Domain.Intefaces;
 using Data.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Business
 {
@@ -40,9 +41,9 @@ namespace Business
             return _databaseContext.Users.FirstOrDefault(user => user.Id == id);
         }
 
-        public IReadOnlyCollection<User> GetAll()
+        public IQueryable<User> GetAll()
         {
-            return _databaseContext.Users.ToList().AsReadOnly();
+            return _databaseContext.Users;
         }
     }
 }

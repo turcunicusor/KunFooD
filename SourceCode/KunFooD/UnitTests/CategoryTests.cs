@@ -1,4 +1,3 @@
-using Data.Domain;
 using Data.Domain.Entities.Forum;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

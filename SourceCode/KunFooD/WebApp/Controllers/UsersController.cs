@@ -4,24 +4,24 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Data.Domain;
-using Data.Persistence;
+using Data.Domain.Intefaces;
 using WebApp.DTOs;
 
 namespace WebApp.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly DatabaseContext _context;
+        private readonly IUsersRepository _repository;
 
-        public UsersController(DatabaseContext context)
+        public UsersController(IUsersRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Users.ToListAsync());
+            return View(await _repository.GetAll().ToListAsync());
         }
 
         // GET: Users/Details/5
@@ -32,7 +32,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var user = await _context.Users
+            var user = await _repository.GetAll()
                 .SingleOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {
@@ -52,14 +52,12 @@ namespace WebApp.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([FromBody] CreateUsers createUsers)
+        public IActionResult Create([FromBody] CreateUsers createUsers)
         {
             User user = Data.Domain.User.Create(createUsers.Name, createUsers.IsAdmin, createUsers.Password, createUsers.Token, createUsers.Description);
             if (ModelState.IsValid)
             {
-                _context.Add(user);
-                await _context.SaveChangesAsync();
+                _repository.AddUser(user);
                 return RedirectToAction(nameof(Index));
             }
             return View(user);
@@ -73,7 +71,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var user = await _context.Users.SingleOrDefaultAsync(m => m.Id == id);
+            var user = await _repository.GetAll().SingleOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {
                 return NotFound();
@@ -85,8 +83,7 @@ namespace WebApp.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Name,IsAdmin,Password,Token,Description,CreatedAt")] User user)
+        public IActionResult Edit(Guid id, [Bind("Id,Name,IsAdmin,Password,Token,Description,CreatedAt")] User user)
         {
             if (id != user.Id)
             {
@@ -97,8 +94,7 @@ namespace WebApp.Controllers
             {
                 try
                 {
-                    _context.Update(user);
-                    await _context.SaveChangesAsync();
+                    _repository.EditUser(user);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -106,10 +102,7 @@ namespace WebApp.Controllers
                     {
                         return NotFound();
                     }
-                    else
-                    {
-                        throw;
-                    }
+                    throw;
                 }
                 return RedirectToAction(nameof(Index));
             }
@@ -117,15 +110,11 @@ namespace WebApp.Controllers
         }
 
         // GET: Users/Delete/5
-        public async Task<IActionResult> Delete(Guid? id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _context.Users
+            var user = await _repository.GetAll()
                 .SingleOrDefaultAsync(m => m.Id == id);
+            _repository.DeleteUser(id);
             if (user == null)
             {
                 return NotFound();
@@ -136,18 +125,15 @@ namespace WebApp.Controllers
 
         // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(Guid id)
+        public IActionResult DeleteConfirmed(Guid id)
         {
-            var user = await _context.Users.SingleOrDefaultAsync(m => m.Id == id);
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
+            _repository.DeleteUser(id);
             return RedirectToAction(nameof(Index));
         }
 
         private bool UserExists(Guid id)
         {
-            return _context.Users.Any(e => e.Id == id);
+            return _repository.GetAll().Any(e => e.Id == id);
         }
     }
 }

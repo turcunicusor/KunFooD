@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Data.Domain.Intefaces
 {
@@ -9,6 +10,6 @@ namespace Data.Domain.Intefaces
         void DeleteUser(Guid id);
         void EditUser(User user);
         User GetUser(Guid id);
-        IReadOnlyCollection<User> GetAll();
+        IQueryable<User> GetAll();
     }
 }
