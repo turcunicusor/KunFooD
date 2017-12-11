@@ -1,0 +1,1 @@
+M.wwwroot/lib/bootstrap/dist/js/bootstrap.min.js 2jsXh

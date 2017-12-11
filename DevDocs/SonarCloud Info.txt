@@ -16,3 +16,8 @@ Pentru a face analiza la proiect este nevoie de urmatoarele:
 		MsBuild.exe /t:Rebuild
 	Comanda 3:
 		SonarQube.Scanner.MSBuild.exe end /d:sonar.login="745b67e6755deb3bfc6719a4c5faf696ccfe2c6e"
+	
+	Important:
+		Comanda 2 s-ar putea sa nu mearga deoarece trebuie de adaugat msbuild la PATH environment variable.
+		Pentru VS 2017 se afla aici:
+			C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin

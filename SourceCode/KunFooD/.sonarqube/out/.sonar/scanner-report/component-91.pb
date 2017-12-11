@@ -1,0 +1,1 @@
+[wwwroot/lib/jquery/dist :Z^
