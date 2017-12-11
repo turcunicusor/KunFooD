@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Data.Domain;
 using Data.Persistence;
-using WebApp.DTO;
+using WebApp.DTOs;
 
 namespace WebApp.Controllers
 {

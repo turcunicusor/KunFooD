@@ -1,4 +1,4 @@
-﻿namespace WebApp.DTO
+﻿namespace WebApp.DTOs
 {
     public class CreateUsers
     {

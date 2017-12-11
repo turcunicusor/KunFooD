@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Data.Domain
+namespace Data.Domain.Entities.Food
 {
     public class PairItem
     {

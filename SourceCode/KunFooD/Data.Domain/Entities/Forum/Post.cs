@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Data.Domain
+namespace Data.Domain.Entities.Forum
 {
     public class Post
     {
@@ -19,7 +19,6 @@ namespace Data.Domain
         {
             var instance = new Post { Id = new Guid(), CreatedAt = DateTime.Now, ThreadId = threadId, UserId = userId };
             instance.Update(content);
-
             return instance;
         }
 
