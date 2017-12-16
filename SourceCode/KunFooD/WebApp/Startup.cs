@@ -1,4 +1,5 @@
 ﻿using Business;
+using Data.Domain.Entities;
 using Data.Domain.Intefaces;
 using Data.Persistence;
 using FluentValidation.AspNetCore;
@@ -25,6 +26,7 @@ namespace WebApp
         {
             services.AddTransient<IDatabaseContext, DatabaseContext>();
             services.AddTransient<IUsersRepository, UsersRepository>();
+            services.AddTransient<IGenericRepository<User>, GenericRepository<DatabaseContext, User>>();
             var conection = @"Server = .\SQLEXPRESS; Database = KunFooD.Development; Trusted_Connection = true;";
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(conection));
 

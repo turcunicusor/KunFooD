@@ -11,6 +11,10 @@ namespace Data.Persistence
         {
             Database.EnsureCreated();
         }
+        public DatabaseContext()
+        {
+            Database.EnsureCreated();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

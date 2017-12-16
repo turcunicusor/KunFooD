@@ -58,7 +58,7 @@ namespace WebApp.Controllers
             User user = Data.Domain.Entities.User.Create(createUsers.Name, createUsers.IsAdmin, createUsers.Email, createUsers.Password, createUsers.Token, createUsers.Description);
             if (ModelState.IsValid)
             {
-                _repository.AddUser(user);
+                _repository.Add(user);
                 return RedirectToAction(nameof(Index));
             }
             return View(user);
@@ -95,7 +95,7 @@ namespace WebApp.Controllers
             {
                 try
                 {
-                    _repository.EditUser(user);
+                    _repository.Edit(user);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -115,7 +115,7 @@ namespace WebApp.Controllers
         {
             var user = await _repository.GetAll()
                 .SingleOrDefaultAsync(m => m.Id == id);
-            _repository.DeleteUser(id);
+            _repository.Delete(id);
             if (user == null)
             {
                 return NotFound();
@@ -128,7 +128,7 @@ namespace WebApp.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(Guid id)
         {
-            _repository.DeleteUser(id);
+            _repository.Delete(id);
             return RedirectToAction(nameof(Index));
         }
 
