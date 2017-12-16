@@ -15,7 +15,6 @@ namespace Data.Persistence
         {
             Database.EnsureCreated();
         }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<PairItem>()

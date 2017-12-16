@@ -6,10 +6,12 @@ using Microsoft.EntityFrameworkCore;
 using Data.Domain.Entities;
 using Data.Domain.Intefaces;
 using WebApp.DTOs;
+using WebApp.Filters;
 
 namespace WebApp.Controllers
 {
     [Route("api/[controller]")]
+    [UsersControllerFilter]
     public class UsersController : Controller
     {
         private readonly IUsersRepository _repository;

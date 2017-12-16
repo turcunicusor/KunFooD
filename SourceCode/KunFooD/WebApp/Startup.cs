@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
+using WebApp.Filters;
 
 namespace WebApp
 {
@@ -25,11 +26,14 @@ namespace WebApp
         {
             services.AddTransient<IDatabaseContext, DatabaseContext>();
             services.AddTransient<IUsersRepository, UsersRepository>();
-            //services.AddTransient<IGenericRepository<Data.Domain.Entities.User>, GenericRepository<Data.Domain.Entities.User>>();
             var conection = @"Server = .\SQLEXPRESS; Database = KunFooD.Development; Trusted_Connection = true;";
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(conection));
 
-            services.AddMvc().AddFluentValidation();
+            services.AddMvc(options =>
+                {
+                    options.Filters.Add(typeof(UsersControllerFilter));
+                }
+            ).AddFluentValidation();
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
             {
