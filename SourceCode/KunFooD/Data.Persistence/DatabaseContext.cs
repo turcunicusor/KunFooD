@@ -1,4 +1,5 @@
-﻿using Data.Domain.Entities.Food;
+﻿using Data.Domain.Entities;
+using Data.Domain.Entities.Food;
 using Data.Domain.Entities.Forum;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +18,7 @@ namespace Data.Persistence
                 .HasKey(pairItem => new { pairItem.IngredientId, pairItem.RecipieId });
         }
 
-        public DbSet<Domain.User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Thread> Threads { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
         public DbSet<Post> Posts { get; set; }

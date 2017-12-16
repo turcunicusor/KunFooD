@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Data.Domain;
+using Data.Domain.Entities;
 using Data.Domain.Intefaces;
 using WebApp.DTOs;
 
@@ -54,7 +55,7 @@ namespace WebApp.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] CreateUsers createUsers)
         {
-            User user = Data.Domain.User.Create(createUsers.Name, createUsers.IsAdmin, createUsers.Password, createUsers.Token, createUsers.Description);
+            User user = Data.Domain.Entities.User.Create(createUsers.Name, createUsers.IsAdmin, createUsers.Password, createUsers.Token, createUsers.Description);
             if (ModelState.IsValid)
             {
                 _repository.AddUser(user);

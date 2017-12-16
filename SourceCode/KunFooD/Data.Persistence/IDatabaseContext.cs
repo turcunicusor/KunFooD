@@ -1,4 +1,5 @@
-﻿using Data.Domain.Entities.Food;
+﻿using Data.Domain.Entities;
+using Data.Domain.Entities.Food;
 using Data.Domain.Entities.Forum;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,7 +7,7 @@ namespace Data.Persistence
 {
     public interface IDatabaseContext
     {
-        DbSet<Domain.User> Users { get; set; }
+        DbSet<User> Users { get; set; }
         DbSet<Thread> Threads { get; set; }
         DbSet<Recipe> Recipes { get; set; }
         DbSet<Post> Posts { get; set; }

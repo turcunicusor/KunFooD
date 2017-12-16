@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Data.Domain;
+using Data.Domain.Entities;
 using Data.Domain.Intefaces;
 using Data.Persistence;
 using Microsoft.EntityFrameworkCore;
