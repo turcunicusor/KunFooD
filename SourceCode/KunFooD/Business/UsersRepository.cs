@@ -1,4 +1,5 @@
-﻿using Data.Domain.Entities;
+﻿using System.Linq;
+using Data.Domain.Entities;
 using Data.Domain.Intefaces;
 using Data.Persistence;
 
@@ -12,6 +13,11 @@ namespace Business
         public UsersRepository(IDatabaseContext databaseContext) : base(databaseContext)
         {
             _databaseContext = databaseContext;
+        }
+
+        public IQueryable<User> GetAdmins()
+        {
+            return _databaseContext.Users.Where(user => user.IsAdmin);
         }
 
     }

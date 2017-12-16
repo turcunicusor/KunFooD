@@ -1,6 +1,8 @@
-﻿namespace Data.Domain.Intefaces
+﻿using Data.Domain.Entities.Food;
+
+namespace Data.Domain.Intefaces
 {
-    public interface IRecipesRepository
+    public interface IRecipesRepository : IGenericRepository<Recipe>
     {
     }
 }

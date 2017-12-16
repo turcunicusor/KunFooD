@@ -1,8 +1,11 @@
-﻿namespace Data.Domain.Intefaces
+﻿using System;
+using Data.Domain.Entities.Food;
+
+namespace Data.Domain.Intefaces
 {
-    public interface IFridgeRepository
+    public interface IFridgeRepository : IGenericRepository<PairItem>
     {
-//        void DeletePairItem(Guid ingredientId, Guid recipeId);
-//        PairItem GetPairItem(Guid ingredientId, Guid recipeId);
+        void Delete(Guid ingredientId, Guid recipeId);
+        PairItem Get(Guid ingredientId, Guid recipeId);
     }
 }

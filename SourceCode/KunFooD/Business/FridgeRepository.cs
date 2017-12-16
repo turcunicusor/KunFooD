@@ -1,28 +1,32 @@
-﻿using Data.Domain.Intefaces;
+﻿using System;
+using System.Linq;
+using Data.Domain.Entities.Food;
+using Data.Domain.Intefaces;
 using Data.Persistence;
 
 namespace Business
 {
-    public class FridgeRepository : IFridgeRepository
+    public class FridgeRepository :
+        GenericRepository<PairItem>, IFridgeRepository
     {
         private readonly IDatabaseContext _databaseContext;
-        /*
-        public FridgeRepository(IDatabaseContext databaseContext)
+
+        public FridgeRepository(IDatabaseContext databaseContext) : base(databaseContext)
         {
             _databaseContext = databaseContext;
         }
 
-        public void DeletePairItem(Guid ingredientId, Guid recipeId)
+        public void Delete(Guid ingredientId, Guid recipeId)
         {
-            var pairItem = GetPairItem(ingredientId, recipeId);
+            var pairItem = Get(ingredientId, recipeId);
             _databaseContext.PairItems.Remove(pairItem);
+            Save();
         }
 
-        public PairItem GetPairItem(Guid ingredientId, Guid recipeId)
+        public PairItem Get(Guid ingredientId, Guid recipeId)
         {
             return _databaseContext.PairItems.FirstOrDefault(pairItem =>
-                pairItem.IngredientId == ingredientId && pairItem.RecipieId == recipeId);
+            pairItem.IngredientId == ingredientId && pairItem.RecipieId == recipeId);
         }
-        */
     }
 }
