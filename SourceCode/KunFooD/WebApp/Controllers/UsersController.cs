@@ -3,13 +3,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Data.Domain;
 using Data.Domain.Entities;
 using Data.Domain.Intefaces;
 using WebApp.DTOs;
 
 namespace WebApp.Controllers
 {
+    [Route("api/[controller]")]
     public class UsersController : Controller
     {
         private readonly IUsersRepository _repository;
@@ -19,39 +19,30 @@ namespace WebApp.Controllers
             _repository = repository;
         }
 
-        // GET: Users
-        public async Task<IActionResult> Index()
+        [HttpGet]
+        [Route("getAll")]
+        public IActionResult Index()
         {
-            return View(await _repository.GetAll().ToListAsync());
+            return Ok(_repository.GetAll());
         }
 
-        // GET: Users/Details/5
+        [HttpGet]
+        [Route("get")]
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
             var user = await _repository.GetAll()
                 .SingleOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {
                 return NotFound();
             }
-
-            return View(user);
+            return Ok(user);
         }
 
-        // GET: Users/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Users/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         public IActionResult Create([FromBody] CreateUsers createUsers)
         {
@@ -59,12 +50,13 @@ namespace WebApp.Controllers
             if (ModelState.IsValid)
             {
                 _repository.Add(user);
-                return RedirectToAction(nameof(Index));
+                return Ok(user);
             }
-            return View(user);
+            return Ok(user);
         }
 
-        // GET: Users/Edit/5
+        [HttpGet]
+        [Route("edit")]
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -77,25 +69,22 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            return View(user);
+            return Ok(user);
         }
 
-        // POST: Users/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        public IActionResult Edit(Guid id, [Bind("Id,Name,IsAdmin,Password,Token,Description,CreatedAt")] User user)
+        [HttpPut("{id}")]
+        public IActionResult Edit(Guid id, [FromBody]UpdateUsers user)
         {
             if (id != user.Id)
             {
                 return NotFound();
             }
-
+            User u1 = _repository.FindById(id);
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _repository.Edit(user);
+                    _repository.Edit(Data.Domain.Entities.User.Create(user.Name, user.IsAdmin, user.Email, user.Password, user.Token, user.Description));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -105,12 +94,12 @@ namespace WebApp.Controllers
                     }
                     throw;
                 }
-                return RedirectToAction(nameof(Index));
+                return Ok(u1);
             }
-            return View(user);
+            return Ok(u1);
         }
 
-        // GET: Users/Delete/5
+        [HttpDelete]
         public async Task<IActionResult> Delete(Guid id)
         {
             var user = await _repository.GetAll()
@@ -120,16 +109,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
             return View(user);
-        }
-
-        // POST: Users/Delete/5
-        [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteConfirmed(Guid id)
-        {
-            _repository.Delete(id);
-            return RedirectToAction(nameof(Index));
         }
 
         private bool UserExists(Guid id)

@@ -1,57 +1,56 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Data.Domain.Intefaces;
+using Data.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 namespace Business
 {
-    public abstract class GenericRepository<C, T> :
-        IGenericRepository<T> where T : class where C : DbContext, new()
+    public abstract class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private C _entities = new C();
-        public C Context
+        private readonly IDatabaseContext _databaseContext;
+        private readonly DbSet<T> _entities;
+
+        protected GenericRepository(IDatabaseContext databaseContext)
         {
-            get { return _entities; }
-            set { _entities = value; }
+            _databaseContext = databaseContext;
+            _entities = (databaseContext as DbContext)?.Set<T>();
         }
 
         public virtual IQueryable<T> GetAll()
         {
-            IQueryable<T> query = _entities.Set<T>();
-            return query;
+            return _entities;
         }
 
         public T FindById(Guid id)
         {
 
-            T entity = _entities.Set<T>().Find(id);
+            T entity = _entities.Find(id);
             return entity;
         }
 
         public virtual void Add(T entity)
         {
-            _entities.Set<T>().Add(entity);
+            _entities.Add(entity);
             Save();
         }
 
         public virtual void Delete(Guid id)
         {
             var entity = FindById(id);
-            _entities.Set<T>().Remove(entity);
+            _entities.Remove(entity);
             Save();
         }
 
         public virtual void Edit(T entity)
         {
-            _entities.Set<T>().Update(entity);
+            _entities.Update(entity);
             Save();
         }
 
         public virtual void Save()
         {
-            _entities.SaveChanges();
+            _databaseContext.SaveChanges();
         }
     }
 }

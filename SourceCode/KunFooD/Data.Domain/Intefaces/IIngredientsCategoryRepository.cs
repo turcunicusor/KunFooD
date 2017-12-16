@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Data.Domain.Entities.Food;
-
-namespace Data.Domain.Intefaces
+﻿namespace Data.Domain.Intefaces
 {
     public interface IIngredientsCategoryRepository
     {
