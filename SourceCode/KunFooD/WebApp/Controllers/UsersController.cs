@@ -55,7 +55,7 @@ namespace WebApp.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] CreateUsers createUsers)
         {
-            User user = Data.Domain.Entities.User.Create(createUsers.Name, createUsers.IsAdmin, createUsers.Password, createUsers.Token, createUsers.Description);
+            User user = Data.Domain.Entities.User.Create(createUsers.Name, createUsers.IsAdmin, createUsers.Email, createUsers.Password, createUsers.Token, createUsers.Description);
             if (ModelState.IsValid)
             {
                 _repository.AddUser(user);

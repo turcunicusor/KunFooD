@@ -1,6 +1,7 @@
 ﻿using Business;
 using Data.Domain.Intefaces;
 using Data.Persistence;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +28,7 @@ namespace WebApp
             var conection = @"Server = .\SQLEXPRESS; Database = KunFooD.Development; Trusted_Connection = true;";
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(conection));
 
-            services.AddMvc();
+            services.AddMvc().AddFluentValidation();
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
             {
