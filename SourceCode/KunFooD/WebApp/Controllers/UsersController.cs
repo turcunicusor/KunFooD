@@ -29,6 +29,13 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
+        [Route("getAdmins")]
+        public IActionResult GetAdmins()
+        {
+            return Ok(_repository.GetAdmins());
+        }
+
+        [HttpGet]
         [Route("get")]
         public async Task<IActionResult> Details(Guid? id)
         {
