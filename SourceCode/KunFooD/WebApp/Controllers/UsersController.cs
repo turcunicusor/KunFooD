@@ -22,14 +22,14 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
-        [Route("getAll")]
-        public IActionResult Index()
+        [Route("All")]
+        public async Task<IActionResult> Index()
         {
-            return Ok(_repository.GetAll());
+            return Ok(await _repository.GetAll());
         }
 
         [HttpGet]
-        [Route("getAdmins")]
+        [Route("Admins")]
         public IActionResult GetAdmins()
         {
             return Ok(_repository.GetAdmins());
@@ -37,14 +37,9 @@ namespace WebApp.Controllers
 
         [HttpGet]
         [Route("get")]
-        public async Task<IActionResult> Details(Guid? id)
+        public async Task<IActionResult> Details(Guid id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            var user = await _repository.GetAll()
-                .SingleOrDefaultAsync(m => m.Id == id);
+            var user = await _repository.FindById(id);
             if (user == null)
             {
                 return NotFound();
@@ -53,77 +48,52 @@ namespace WebApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] CreateUsers createUsers)
+        public IActionResult Create([FromBody] CreateUsers usrToCreate)
         {
-            User user = Data.Domain.Entities.User.Create(createUsers.Name, createUsers.IsAdmin, createUsers.Email, createUsers.Password, createUsers.Token, createUsers.Description);
-            if (ModelState.IsValid)
-            {
-                _repository.Add(user);
-                return Ok(user);
-            }
+            User user = null;
+            if (!ModelState.IsValid) return BadRequest(usrToCreate);
+            user = Data.Domain.Entities.User.Create(usrToCreate.Name, usrToCreate.IsAdmin, usrToCreate.Email, usrToCreate.Password, usrToCreate.Token, usrToCreate.Description);
+            _repository.Add(user);
             return Ok(user);
         }
 
         [HttpGet]
         [Route("edit")]
-        public async Task<IActionResult> Edit(Guid? id)
+        public async Task<IActionResult> Edit(Guid id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _repository.GetAll().SingleOrDefaultAsync(m => m.Id == id);
+            var user = await _repository.FindById(id);
             if (user == null)
             {
                 return NotFound();
             }
+            await _repository.Edit(user);
             return Ok(user);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Edit(Guid id, [FromBody]UpdateUsers user)
+        public async Task<IActionResult> Edit(Guid id, [FromBody]UpdateUsers userToUpdate)
         {
-            if (id != user.Id)
+            if (id != userToUpdate.Id)
             {
                 return NotFound();
             }
-            User u1 = _repository.FindById(id);
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _repository.Edit(Data.Domain.Entities.User.Create(user.Name, user.IsAdmin, user.Email, user.Password, user.Token, user.Description));
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UserExists(user.Id))
-                    {
-                        return NotFound();
-                    }
-                    throw;
-                }
-                return Ok(u1);
-            }
-            return Ok(u1);
+            var user = await _repository.FindById(id);
+            // to think about it
+            user.Update(userToUpdate.Name, userToUpdate.IsAdmin, userToUpdate.Email, userToUpdate.Password, userToUpdate.Token, userToUpdate.Description);
+            await _repository.Edit(user); 
+            return Ok(user);
         }
 
         [HttpDelete]
         public async Task<IActionResult> Delete(Guid id)
         {
-            var user = await _repository.GetAll()
-                .SingleOrDefaultAsync(m => m.Id == id);
-            _repository.Delete(id);
+            var user = await _repository.FindById(id);
             if (user == null)
             {
-                return NotFound();
+                return NotFound(id);
             }
-            return View(user);
-        }
-
-        private bool UserExists(Guid id)
-        {
-            return _repository.GetAll().Any(e => e.Id == id);
+            await _repository.Delete(id);
+            return Ok(user);
         }
     }
 }
