@@ -1,15 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Data.Domain.Intefaces
 {
     public interface IGenericRepository<T> where T : class
     {
-        IQueryable<T> GetAll();
-        T FindById(Guid id);
-        void Add(T entity);
-        void Delete(Guid id);
-        void Edit(T entity);
-        void Save();
+        Task<IEnumerable<T>> GetAll();
+        Task<T> FindById(Guid id);
+        Task Add(T entity);
+        Task Delete(Guid id);
+        Task Edit(T entity);
+        Task Save();
     }
 }

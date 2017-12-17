@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Data.Domain.Intefaces;
 using Data.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -17,40 +19,41 @@ namespace Business
             _entities = (databaseContext as DbContext)?.Set<T>();
         }
 
-        public virtual IQueryable<T> GetAll()
+        public virtual async Task<IEnumerable<T>> GetAll()
         {
-            return _entities;
+            return await _entities.ToListAsync();
         }
 
-        public T FindById(Guid id)
+        public virtual async Task<T> FindById(Guid id)
         {
-
-            T entity = _entities.Find(id);
-            return entity;
+            return await _entities.FindAsync(id);
         }
 
-        public virtual void Add(T entity)
+        public virtual async Task Add(T entity)
         {
-            _entities.Add(entity);
-            Save();
+            await _entities.AddAsync(entity);
+            await Save();
         }
 
-        public virtual void Delete(Guid id)
+        public virtual async Task Delete(Guid id)
         {
-            var entity = FindById(id);
-            _entities.Remove(entity);
-            Save();
+            var itemToRemove = await FindById(id);
+            if (itemToRemove != null)
+            {
+                _entities.Remove(itemToRemove);
+                await Save();
+            }
         }
 
-        public virtual void Edit(T entity)
+        public virtual async Task Edit(T entity)
         {
             _entities.Update(entity);
-            Save();
+            await Save();
         }
 
-        public virtual void Save()
+        public virtual async Task Save()
         {
-            _databaseContext.SaveChanges();
+            await ((DbContext) _databaseContext).SaveChangesAsync();
         }
     }
 }
