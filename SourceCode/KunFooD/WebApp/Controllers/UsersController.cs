@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Data.Domain.Entities;
 using Data.Domain.Intefaces;
 using WebApp.DTOs;
@@ -36,8 +34,8 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
-        [Route("get")]
-        public async Task<IActionResult> Details(Guid id)
+        [Route("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
         {
             var user = await _repository.FindById(id);
             if (user == null)
@@ -50,37 +48,22 @@ namespace WebApp.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] CreateUsers usrToCreate)
         {
-            User user = null;
-            if (!ModelState.IsValid) return BadRequest(usrToCreate);
-            user = Data.Domain.Entities.User.Create(usrToCreate.Name, usrToCreate.IsAdmin, usrToCreate.Email, usrToCreate.Password, usrToCreate.Token, usrToCreate.Description);
+            User user = Data.Domain.Entities.User.Create(usrToCreate.Name, usrToCreate.IsAdmin, usrToCreate.Email, usrToCreate.Password, usrToCreate.Token, usrToCreate.Description);
             _repository.Add(user);
             return Ok(user);
         }
 
-        [HttpGet]
-        [Route("edit")]
-        public async Task<IActionResult> Edit(Guid id)
-        {
-            var user = await _repository.FindById(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            await _repository.Edit(user);
-            return Ok(user);
-        }
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Edit(Guid id, [FromBody]UpdateUsers userToUpdate)
+        [HttpPut]
+        [Route("{id}")]
+        public async Task<IActionResult> Update(Guid id, [FromBody]UpdateUsers userToUpdate)
         {
             if (id != userToUpdate.Id)
             {
                 return NotFound();
             }
             var user = await _repository.FindById(id);
-            // to think about it
             user.Update(userToUpdate.Name, userToUpdate.IsAdmin, userToUpdate.Email, userToUpdate.Password, userToUpdate.Token, userToUpdate.Description);
-            await _repository.Edit(user); 
+            await _repository.Edit(user);
             return Ok(user);
         }
 
