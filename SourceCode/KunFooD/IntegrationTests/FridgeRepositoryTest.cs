@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Business;
-using Data.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IntegrationTests
@@ -27,8 +23,8 @@ namespace IntegrationTests
                 await repository.Delete(pairAdded.IngredientId, pairAdded.RecipieId);
 
                 // Assert
-                var users = repository.GetAll();
-                Assert.AreEqual(0, users.Result.ToList().Count);
+                var data = repository.GetAll();
+                Assert.AreEqual(0, data.Result.ToList().Count);
             });
         }
     }

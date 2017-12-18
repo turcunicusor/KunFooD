@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Business;
-using Data.Domain.Entities;
+﻿using Business;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IntegrationTests

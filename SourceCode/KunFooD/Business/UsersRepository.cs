@@ -23,5 +23,9 @@ namespace Business
             return await _databaseContext.Users.Where(user => user.IsAdmin).ToListAsync();
         }
 
+        public async Task<User> GetByEmail(string email)
+        {
+            return await _databaseContext.Users.FirstOrDefaultAsync(user => user.Email.Equals(email));
+        }
     }
 }

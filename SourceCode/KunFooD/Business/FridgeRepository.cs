@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Threading.Tasks;
 using Data.Domain.Entities.Food;
 using Data.Domain.Intefaces;
@@ -28,7 +27,7 @@ namespace Business
         public async Task<PairItem> Get(Guid ingredientId, Guid recipeId)
         {
             return await _databaseContext.PairItems.FirstOrDefaultAsync(pairItem =>
-            pairItem.IngredientId == ingredientId && pairItem.RecipieId == recipeId);
+            pairItem.IngredientId.Equals(ingredientId) && pairItem.RecipieId.Equals(recipeId));
         }
     }
 }

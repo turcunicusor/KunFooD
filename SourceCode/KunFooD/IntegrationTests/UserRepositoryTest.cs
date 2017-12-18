@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Business;
-using Data.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IntegrationTests
@@ -90,11 +85,11 @@ namespace IntegrationTests
 
                 // Assert
                 var addedUser = repository.FindById(user.Id);
-                Assert.AreEqual(addedUser.Result.Name, "new name");
+                Assert.AreEqual(addedUser.Result.UserName, "new name");
             });
         }
         [TestMethod]
-        public void Given_Repository_When_GetAdmins_Then_TheCount_ShouldBe_2()
+        public void Given_Repository_When_GetAdmins_Then_TheCount_ShouldBe_3()
         {
             RunOnDatabase(async s =>
             {
@@ -111,7 +106,7 @@ namespace IntegrationTests
 
                 // Assert
                 var users = repository.GetAdmins();
-                Assert.AreEqual(2, users.Result.ToList().Count);
+                Assert.AreEqual(3, users.Result.ToList().Count);
             });
         }
     }
