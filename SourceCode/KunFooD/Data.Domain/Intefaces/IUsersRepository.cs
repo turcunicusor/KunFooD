@@ -1,10 +1,12 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Data.Domain.Entities;
 
 namespace Data.Domain.Intefaces
 {
     public interface IUsersRepository : IGenericRepository<User>
     {
-        IQueryable<User> GetAdmins();
+        Task<IEnumerable<User>> GetAdmins();
     }
 }

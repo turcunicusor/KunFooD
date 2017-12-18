@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Data.Domain.Entities.Food;
 using Data.Domain.Intefaces;
 using Data.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Business
 {
@@ -16,16 +18,16 @@ namespace Business
             _databaseContext = databaseContext;
         }
 
-        public void Delete(Guid ingredientId, Guid recipeId)
+        public async Task Delete(Guid ingredientId, Guid recipeId)
         {
             var pairItem = Get(ingredientId, recipeId);
-            _databaseContext.PairItems.Remove(pairItem);
-            Save();
+            _databaseContext.PairItems.Remove(pairItem.Result);
+            await Save();
         }
 
-        public PairItem Get(Guid ingredientId, Guid recipeId)
+        public async Task<PairItem> Get(Guid ingredientId, Guid recipeId)
         {
-            return _databaseContext.PairItems.FirstOrDefault(pairItem =>
+            return await _databaseContext.PairItems.FirstOrDefaultAsync(pairItem =>
             pairItem.IngredientId == ingredientId && pairItem.RecipieId == recipeId);
         }
     }
