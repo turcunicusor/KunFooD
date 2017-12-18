@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AnalysisConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <SonarConfigDir>C:\Users\Tamara\Desktop\Work\Anul 3\DotNet\Proiect\KunFooD\SourceCode\KunFooD\.sonarqube\conf</SonarConfigDir>
-  <SonarOutputDir>C:\Users\Tamara\Desktop\Work\Anul 3\DotNet\Proiect\KunFooD\SourceCode\KunFooD\.sonarqube\out</SonarOutputDir>
-  <SonarBinDir>C:\Users\Tamara\Desktop\Work\Anul 3\DotNet\Proiect\KunFooD\SourceCode\KunFooD\.sonarqube\bin</SonarBinDir>
-  <SonarScannerWorkingDirectory>C:\Users\Tamara\Desktop\Work\Anul 3\DotNet\Proiect\KunFooD\SourceCode\KunFooD</SonarScannerWorkingDirectory>
+  <SonarConfigDir>C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\.sonarqube\conf</SonarConfigDir>
+  <SonarOutputDir>C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\.sonarqube\out</SonarOutputDir>
+  <SonarBinDir>C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\.sonarqube\bin</SonarBinDir>
+  <SonarScannerWorkingDirectory>C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD</SonarScannerWorkingDirectory>
   <SonarQubeHostUrl>https://sonarcloud.io</SonarQubeHostUrl>
   <SonarProjectKey>kunfood</SonarProjectKey>
   <AdditionalConfig>
@@ -94,8 +94,8 @@
     <Property Name="sonar.dbcleaner.weeksBeforeKeepingOnlyOneSnapshotByWeek">1</Property>
     <Property Name="sonaranalyzer-vbnet.analyzerId">SonarAnalyzer.VisualBasic</Property>
     <Property Name="email.prefix">[SonarCloud]</Property>
-    <Property Name="sonar.c.std">c11</Property>
     <Property Name="sonar.python.coverage.itReportPath">coverage-reports/it-coverage-*.xml</Property>
+    <Property Name="sonar.c.std">c11</Property>
     <Property Name="sonaranalyzer-cs.pluginKey">csharp</Property>
     <Property Name="sonar.cfamily.useCache">true</Property>
     <Property Name="sonar.branch.longLivedBranches.regex">(branch|release)-.*</Property>
@@ -134,7 +134,7 @@ Select your &lt;a href="https://about.sonarcloud.io"&gt;plan&lt;/a&gt; and start
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</Property>
-    <Property Name="sonar.core.startTime">12/01/2017 4:48:25 PM</Property>
+    <Property Name="sonar.core.startTime">01-Dec-17 16:48:25</Property>
     <Property Name="sonar.msbuild.testProjectPattern">[^\\]*test[^\\]*$</Property>
   </ServerSettings>
   <LocalSettings>
@@ -144,32 +144,32 @@ Select your &lt;a href="https://about.sonarcloud.io"&gt;plan&lt;/a&gt; and start
   <AnalyzersSettings>
     <AnalyzerSettings>
       <Language>cs</Language>
-      <RuleSetFilePath>C:\Users\Tamara\Desktop\Work\Anul 3\DotNet\Proiect\KunFooD\SourceCode\KunFooD\.sonarqube\conf\SonarQubeRoslyn-cs.ruleset</RuleSetFilePath>
+      <RuleSetFilePath>C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\.sonarqube\conf\SonarQubeRoslyn-cs.ruleset</RuleSetFilePath>
       <AnalyzerAssemblyPaths>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\0\Google.Protobuf.dll</Path>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CSharp.dll</Path>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.dll</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\0\Google.Protobuf.dll</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.CSharp.dll</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\0\SonarAnalyzer.dll</Path>
       </AnalyzerAssemblyPaths>
       <AdditionalFilePaths>
-        <Path>C:\Users\Tamara\Desktop\Work\Anul 3\DotNet\Proiect\KunFooD\SourceCode\KunFooD\.sonarqube\conf\cs\SonarLint.xml</Path>
+        <Path>C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\.sonarqube\conf\cs\SonarLint.xml</Path>
       </AdditionalFilePaths>
     </AnalyzerSettings>
     <AnalyzerSettings>
       <Language>vbnet</Language>
-      <RuleSetFilePath>C:\Users\Tamara\Desktop\Work\Anul 3\DotNet\Proiect\KunFooD\SourceCode\KunFooD\.sonarqube\conf\SonarQubeRoslyn-vbnet.ruleset</RuleSetFilePath>
+      <RuleSetFilePath>C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\.sonarqube\conf\SonarQubeRoslyn-vbnet.ruleset</RuleSetFilePath>
       <AnalyzerAssemblyPaths>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.VisualBasic.nuspec</Path>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\1\[Content_Types].xml</Path>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\1\analyzers\Google.Protobuf.dll</Path>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\1\analyzers\SonarAnalyzer.dll</Path>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\1\analyzers\SonarAnalyzer.VisualBasic.dll</Path>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\1\package\services\metadata\core-properties\5ae10ab4a3f94d63b091b2c8e7547889.psmdcp</Path>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\1\tools\install.ps1</Path>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\1\tools\uninstall.ps1</Path>
-        <Path>C:\Users\Tamara\AppData\Local\Temp\.sonarqube\resources\1\_rels\.rels</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\1\SonarAnalyzer.VisualBasic.nuspec</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\1\[Content_Types].xml</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\1\analyzers\Google.Protobuf.dll</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\1\analyzers\SonarAnalyzer.dll</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\1\analyzers\SonarAnalyzer.VisualBasic.dll</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\1\package\services\metadata\core-properties\5ae10ab4a3f94d63b091b2c8e7547889.psmdcp</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\1\tools\install.ps1</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\1\tools\uninstall.ps1</Path>
+        <Path>C:\Users\Turcu Nicusor\AppData\Local\Temp\.sonarqube\resources\1\_rels\.rels</Path>
       </AnalyzerAssemblyPaths>
       <AdditionalFilePaths>
-        <Path>C:\Users\Tamara\Desktop\Work\Anul 3\DotNet\Proiect\KunFooD\SourceCode\KunFooD\.sonarqube\conf\vbnet\SonarLint.xml</Path>
+        <Path>C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\.sonarqube\conf\vbnet\SonarLint.xml</Path>
       </AdditionalFilePaths>
     </AnalyzerSettings>
   </AnalyzersSettings>

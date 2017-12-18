@@ -1,13 +1,8 @@
-using Xunit;
+using Data.Domain.Entities.Food;
 
-namespace IntegrationTests
+namespace Data.Domain.Intefaces
 {
-    public class UnitTest1
+    public interface IIngredientsCategoryRepository : IGenericRepository<IngredientCategory>
     {
-        [Fact]
-        public void Test1()
-        {
-            // Test
-        }
     }
 }

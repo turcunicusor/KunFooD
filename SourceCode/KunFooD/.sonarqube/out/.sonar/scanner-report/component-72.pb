@@ -1,1 +1,1 @@
-H*wwwroot/lib/bootstrap/dist/js/bootstrap.js 2jsXÊh
+Hwwwroot/js/site.js 2jsXh

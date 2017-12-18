@@ -1,33 +1,19 @@
-using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using WebApp.Models;
+using Data.Domain.Entities.Forum;
+using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace WebApp.Controllers
+namespace UnitTests
 {
-    public class HomeController : Controller
+    [TestClass]
+    public class CategoryTests
     {
-        public IActionResult Index()
+        [TestMethod]
+        public void Category_Name_Should_Be_TestCategory()
         {
-            return View();
-        }
+            string name = "TestCategory";
+            Category category = Category.Create(name, "desc");
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            category.Name.Should().Be(name);
         }
     }
 }

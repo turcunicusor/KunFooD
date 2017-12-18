@@ -1,0 +1,1 @@
+qwwwroot/lib/jquery/dist :rs

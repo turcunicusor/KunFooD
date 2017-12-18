@@ -1,29 +1,12 @@
 using System;
+using System.Threading.Tasks;
+using Data.Domain.Entities.Food;
 
-namespace Data.Domain
+namespace Data.Domain.Intefaces
 {
-    public class PairItem
+    public interface IFridgeRepository : IGenericRepository<PairItem>
     {
-        private PairItem()
-        {
-            // EF Core
-        }
-        public Guid IngredientId { get; private set; }
-        public Guid RecipieId { get; private set; }
-        public double Quantity { get; private set; }
-
-        public static PairItem Create(Guid ingredientId, Guid recipieId, double quantity)
-        {
-            var instance = new PairItem();
-            instance.Update(ingredientId, recipieId, quantity);
-            return instance;
-        }
-
-        public void Update(Guid ingredientId, Guid recipieId, double quantity)
-        {
-            IngredientId = ingredientId;
-            RecipieId = recipieId;
-            Quantity = quantity;
-        }
+        Task Delete(Guid ingredientId, Guid recipeId);
+        Task<PairItem> Get(Guid ingredientId, Guid recipeId);
     }
 }

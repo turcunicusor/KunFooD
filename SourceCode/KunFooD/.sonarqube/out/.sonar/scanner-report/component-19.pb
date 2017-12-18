@@ -1,1 +1,1 @@
-PairItem.cs 2csXh
+Intefaces/IFridgeRepository.cs 2csXh

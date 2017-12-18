@@ -1,14 +1,33 @@
 using System;
-using System.Collections.Generic;
 
-namespace Data.Domain.Intefaces
+namespace Data.Domain.Entities.Food
 {
-    public interface IRecipesRepository
+    public class Ingredient
     {
-        void AddRecipe(Recipe recipe);
-        void DeleteRecipe(Guid id);
-        void EditRecipe(Recipe recipe);
-        Recipe GetRecipe(Guid id);
-        IReadOnlyCollection<Recipe> GetAll();
+        private Ingredient()
+        {
+            // EF Core
+        }
+
+        public Guid Id { get; private set; }
+        public Guid IngredientCategoryId { get; private set; }
+        public String Name { get; private set; }
+        public String MeasuredUnit { get; private set; }
+        public double Cost { get; private set; }
+
+        public static Ingredient Create(Guid ingredientCategoryId, string name, string measuredUnit, double cost)
+        {
+            var instance = new Ingredient { Id = Guid.NewGuid() };
+            instance.Update(ingredientCategoryId, name, measuredUnit, cost);
+            return instance;
+        }
+
+        public void Update(Guid ingredientCategoryId, string name, string measuredUnit, double cost)
+        {
+            IngredientCategoryId = ingredientCategoryId;
+            Name = name;
+            MeasuredUnit = measuredUnit;
+            Cost = cost;
+        }
     }
 }

@@ -1,33 +1,30 @@
 using System;
 
-namespace Data.Domain
+namespace Data.Domain.Entities.Forum
 {
-    public class Ingredient
+    public class Post
     {
-        private Ingredient()
+        private Post()
         {
             // EF Core
         }
 
         public Guid Id { get; private set; }
-        public Guid IngredientCategoryId { get; private set; }
-        public String Name { get; private set; }
-        public String MeasuredUnit { get; private set; }
-        public double Cost { get; private set; }
+        public string Content { get; private set; }
+        public DateTime CreatedAt { get; private set; }
+        public Guid ThreadId { get; private set; }
+        public Guid UserId { get; private set; }
 
-        public static Ingredient Create(Guid ingredientCategoryId, string name, string measuredUnit, double cost)
+        public static Post Create(string content, Guid threadId, Guid userId)
         {
-            var instance = new Ingredient { Id = Guid.NewGuid() };
-            instance.Update(ingredientCategoryId, name, measuredUnit, cost);
+            var instance = new Post { Id = new Guid(), CreatedAt = DateTime.Now, ThreadId = threadId, UserId = userId };
+            instance.Update(content);
             return instance;
         }
 
-        public void Update(Guid ingredientCategoryId, string name, string measuredUnit, double cost)
+        public void Update(string content)
         {
-            IngredientCategoryId = ingredientCategoryId;
-            Name = name;
-            MeasuredUnit = measuredUnit;
-            Cost = cost;
+            Content = content;
         }
     }
 }

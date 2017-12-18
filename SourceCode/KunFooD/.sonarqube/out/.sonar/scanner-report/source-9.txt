@@ -1,14 +1,29 @@
 using System;
-using System.Collections.Generic;
 
-namespace Data.Domain.Intefaces
+namespace Data.Domain.Entities.Food
 {
-    public interface IFridgeRepository
+    public class PairItem
     {
-        void AddPairItem(PairItem pairItem);
-        void DeletePairItem(Guid ingredientId, Guid recipeId);
-        void EditPairItem(PairItem pairItem);
-        PairItem GetPairItem(Guid ingredientId, Guid recipeId);
-        IReadOnlyCollection<PairItem> GetAll();
+        private PairItem()
+        {
+            // EF Core
+        }
+        public Guid IngredientId { get; private set; }
+        public Guid RecipieId { get; private set; }
+        public double Quantity { get; private set; }
+
+        public static PairItem Create(Guid ingredientId, Guid recipieId, double quantity)
+        {
+            var instance = new PairItem();
+            instance.Update(ingredientId, recipieId, quantity);
+            return instance;
+        }
+
+        public void Update(Guid ingredientId, Guid recipieId, double quantity)
+        {
+            IngredientId = ingredientId;
+            RecipieId = recipieId;
+            Quantity = quantity;
+        }
     }
 }
