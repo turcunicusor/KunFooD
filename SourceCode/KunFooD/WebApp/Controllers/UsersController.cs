@@ -9,7 +9,7 @@ using WebApp.Filters;
 namespace WebApp.Controllers
 {
     [Route("api/[controller]")]
-    [UsersControllerFilter]
+    [DefaultControllerFilter]
     public class UsersController : Controller
     {
         private readonly IUsersRepository _repository;

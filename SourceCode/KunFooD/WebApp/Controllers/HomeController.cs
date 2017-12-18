@@ -1,9 +1,11 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using WebApp.Filters;
 using WebApp.Models;
 
 namespace WebApp.Controllers
 {
+    [DefaultControllerFilter]
     public class HomeController : Controller
     {
         public IActionResult Index()

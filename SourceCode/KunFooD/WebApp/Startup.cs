@@ -26,14 +26,13 @@ namespace WebApp
         {
             services.AddTransient<IDatabaseContext, DatabaseContext>();
             services.AddTransient<IUsersRepository, UsersRepository>();
-            var conection = @"Server = .\SQLEXPRESS; Database = KunFooD.Development; Trusted_Connection = true;";
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(conection));
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc(options =>
                 {
-                    options.Filters.Add(typeof(UsersControllerFilter));
+                    options.Filters.Add(typeof(DefaultControllerFilter));
                 }
-            ).AddFluentValidation();
+            ).AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<Startup>());
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
             {

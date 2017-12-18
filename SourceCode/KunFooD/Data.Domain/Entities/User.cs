@@ -10,7 +10,7 @@ namespace Data.Domain.Entities
         }
 
         public Guid Id { get; private set; }
-        public string Name { get; private set; }
+        public string UserName { get; private set; }
         public bool IsAdmin { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
@@ -27,7 +27,7 @@ namespace Data.Domain.Entities
 
         public void Update(string name, bool isAdmin,string email, string password, string token, string description)
         {
-            Name = name;
+            UserName = name;
             IsAdmin = isAdmin;
             Email = email;
             Password = password;

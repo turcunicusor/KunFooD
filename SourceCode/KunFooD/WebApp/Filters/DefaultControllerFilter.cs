@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace WebApp.Filters
 {
-    public class UsersControllerFilter : ActionFilterAttribute
+    public class DefaultControllerFilter : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
