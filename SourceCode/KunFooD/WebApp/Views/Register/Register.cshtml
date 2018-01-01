@@ -1,0 +1,67 @@
+﻿@using Microsoft.AspNetCore.Http
+
+@model WebApp.DTO.RegisterDTO
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<style>
+    .register-box
+    {
+        margin-top: 75px;
+    }
+
+    .validation-summary {
+        display: none;
+    }
+
+    .validation-summary.validation-summary-errors {
+        display: block;
+    }
+</style>
+
+<form method="post" asp-controller="Register" asp-action="Register" class="form-horizontal register-box">
+    <div asp-validation-summary="All" class="validation-summary alert alert-dismissible alert-danger">
+    </div>
+    <fieldset>
+        <legend>Register</legend>
+        <div class="form-group">
+            <label asp-for="UserName" class="col-lg-2 control-label"></label>
+            <div class="col-lg-10">
+                <input asp-for="UserName" class="form-control">
+                <span asp-validation-for="UserName"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="col-lg-2 control-label"></label>
+            <div class="col-lg-10">
+                <input asp-for="Email" class="form-control">
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="col-lg-2 control-label"></label>
+            <div class="col-lg-10">
+                <input asp-for="Password" class="form-control">
+                <span asp-validation-for="Password"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ConfirmPassword" class="col-lg-2 control-label"></label>
+            <div class="col-lg-10">
+                <input asp-for="ConfirmPassword" class="form-control">
+                <span asp-validation-for="ConfirmPassword"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <input type="submit" value="Register" class="btn btn-primary">
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

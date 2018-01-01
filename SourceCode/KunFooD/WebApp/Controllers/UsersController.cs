@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Data.Domain.Entities;
 using Data.Domain.Intefaces;
-using WebApp.DTOs;
+using WebApp.DTO;
 using WebApp.Filters;
 
 namespace WebApp.Controllers

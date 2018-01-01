@@ -1,16 +1,16 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebApp.DTOs;
+using WebApp.DTO;
 using WebApp.Filters;
 using WebApp.Security;
 using Data.Domain.Entities;
 using Data.Domain.Intefaces;
+using Microsoft.Extensions.Primitives;
 
 namespace WebApp.Controllers
 {
-    [Route("api/[controller]")]
-    [DefaultControllerFilter]
+    [Route("[controller]")]
     public class LoginController : Controller
     {
         private readonly IUsersRepository _repository;
@@ -21,8 +21,17 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Login()
         {
+            // Get the Registered parameter if available
+            StringValues registered;
+            HttpContext.Request.Query.TryGetValue("Registered", out registered);
+
+            // Send registered value to the view
+            if (registered.Equals(StringValues.Empty))
+                ViewData["Registered"] = 0;
+            else
+                ViewData["Registered"] = int.Parse(registered);
             return View();
         }
 
