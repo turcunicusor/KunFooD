@@ -2,11 +2,12 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.DTO;
-using WebApp.Filters;
 using WebApp.Security;
 using Data.Domain.Entities;
 using Data.Domain.Intefaces;
 using Microsoft.Extensions.Primitives;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace WebApp.Controllers
 {
@@ -36,18 +37,41 @@ namespace WebApp.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] Login newLogin)
+        public async Task<IActionResult> Login(LoginDTO dto)
         {
-            User user = await _repository.GetByEmail(newLogin.Email);
+            User user = await _repository.GetByEmail(dto.Email);
+
+            // Check if the user exists
             if (user != null)
             {
-                var token = JwtToken.GenerateToken(user);
-                return Ok(new
+                // Hash the model password
+                byte[] bytes = Encoding.UTF8.GetBytes(dto.Password);
+                SHA256Managed cipher = new SHA256Managed();
+                byte[] hash = cipher.ComputeHash(bytes);
+                string hashStr = "";
+                foreach (byte b in hash)
+                    hashStr += string.Format("{0:x2}", b);
+
+                // Check if the passwords match
+                if (user.Password.Equals(hashStr))
                 {
-                    token = new JwtSecurityTokenHandler().WriteToken(token)
-                });
+                    // Generate the token
+                    var token = JwtToken.GenerateToken(user);
+
+                    // Write the token to the cookie
+                    Response.Cookies.Append("SessionId", new JwtSecurityTokenHandler().WriteToken(token));
+
+                    // Redirect to homepage
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                    ModelState.AddModelError("", "Invalid password!");
             }
-            return Unauthorized();
+            else
+                ModelState.AddModelError("", "Account is not registered!");
+
+            // If something went bad, return the model back to view
+            return View(dto);
         }
     }
 }
