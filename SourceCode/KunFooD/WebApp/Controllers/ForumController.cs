@@ -7,6 +7,7 @@ using WebApp.DTO;
 
 namespace WebApp.Controllers
 {
+    [Route("[controller]")]
     public class ForumController : Controller
     {
         private readonly IForumCategoryRepository _categoryRepo;
@@ -22,14 +23,12 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
-        [Route("[controller]")]
         public async Task<IActionResult> Index()
         {
             return View(await _categoryRepo.GetAll());
         }
 
-        [HttpGet]
-        [Route("[controller]/[action]/{id}")]
+        [HttpGet("[action]/{id}")]
         public async Task<IActionResult> Category(Guid id)
         { 
             var category = await _categoryRepo.FindById(id);
@@ -55,8 +54,7 @@ namespace WebApp.Controllers
             return View(dto);
         }
 
-        [HttpGet]
-        [Route("[controller]/[action]/{id}")]
+        [HttpGet("[action]")]
         public IActionResult CreateThread(Guid id)
         {
             CreateThreadDTO dto = new CreateThreadDTO();
@@ -65,8 +63,7 @@ namespace WebApp.Controllers
             return View(dto);
         }
 
-        [HttpPost]
-        [Route("[controller]/[action]")]
+        [HttpPost("[action]")]
         public async Task<IActionResult> CreateThread(CreateThreadDTO dto)
         {
             if(ModelState.IsValid)
