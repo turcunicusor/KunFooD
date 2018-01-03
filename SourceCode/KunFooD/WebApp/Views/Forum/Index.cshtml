@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Data.Domain.Entities.Forum.Category>
+
+<style>
+    .desc-text {
+        margin-left: 10px;
+    }
+
+    .forum-item {
+        border-bottom: 1px solid darkblue;
+        cursor: pointer;
+    }
+</style>
+
+<h1>KunFooD Forums</h1>
+<br />
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Last Post</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="forum-item" onclick="location.href = '@(Url.Action("Category", "Forum", new { id = item.Id }))'">
+                <td>
+                    <b>@item.Name</b> <br />
+                    <span class="desc-text">@item.Description</span>
+                </td>
+                <td><b>Date: </b>TO IMPLEMENT<br /><b>By: </b>TO IMPLEMENT</td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
