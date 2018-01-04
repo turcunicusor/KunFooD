@@ -28,7 +28,7 @@ namespace WebApp.Controllers
             return View(await _categoryRepo.GetAll());
         }
 
-        [HttpGet("[action]/{id}")]
+        [HttpGet("[action]")]
         public async Task<IActionResult> Category(Guid id)
         { 
             var category = await _categoryRepo.FindById(id);
