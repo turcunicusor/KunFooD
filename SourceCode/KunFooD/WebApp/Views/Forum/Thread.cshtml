@@ -1,0 +1,52 @@
+﻿
+@model Data.Domain.Entities.Forum.Thread
+
+<style>
+    .first-post {
+        margin-top: 50px;
+    }
+
+    p {
+        text-indent: 30px;
+    }
+
+    h2 {
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    small {
+        margin-left: 10px;
+    }
+
+    blockquote {
+        border-left: 5px solid lightgreen;
+    }
+
+    .validation-summary {
+        display: none;
+    }
+
+     .validation-summary.validation-summary-errors {
+        display: block;
+     }
+
+    form {
+        border-left: 5px solid lightblue;
+    }
+</style>
+
+<blockquote class="first-post">
+    <h2>@Model.Name</h2>
+    <small><b>Created At: </b>@Model.CreatedAt</small>
+    <small><b>By: </b>Temp</small>
+    <br />
+    <p>@Model.Description</p>
+</blockquote>
+
+<div class="clearfix visible-lg visible-md visible-sm visible-xs">
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

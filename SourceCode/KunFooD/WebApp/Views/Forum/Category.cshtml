@@ -32,7 +32,7 @@
     <tbody>
         @foreach (var item in Model.Threads)
         {
-            <tr class="forum-item" onclick="location.href = '@(Url.Action("Category", "Forum", new { id = item.Id }))'">
+            <tr class="forum-item" onclick="location.href = '@(Url.Action("Thread", "Forum", new { id = item.Id }))'">
                 <td>
                     <b>@item.Name</b>
                 </td>

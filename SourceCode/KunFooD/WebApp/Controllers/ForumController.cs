@@ -86,6 +86,14 @@ namespace WebApp.Controllers
             return View(dto);
         }
 
+        [HttpGet("[action]")]
+        public async Task<IActionResult> Thread(Guid id)
+        {
+            var thread = await _threadRepo.FindById(id);
+
+            return View(thread);
+        }
+
         public async Task<string> GetThreadAuthorName(Guid id)
         {
             var user = await _userRepo.FindById(id);
