@@ -1,8 +1,9 @@
-from urllib.request import Request, urlopen
 import json
-from pyquery import PyQuery
+import sys
 from html import unescape
-import sys, os
+from urllib.request import Request, urlopen
+
+from pyquery import PyQuery
 
 valid_websites = {
     "www.closetcooking.com": lambda recipes: parse_recipes_closetcooking(recipes),
