@@ -1,0 +1,59 @@
+﻿@using Microsoft.AspNetCore.Http
+
+@model IEnumerable<Data.Domain.Entities.Forum.Category>
+
+<style>
+    .page-title {
+        border-bottom: 1px solid darkblue;
+        padding-bottom: 25px;
+        margin-top: 50px;
+    }
+
+    .sub-cat {
+        margin-left: 50px;
+    }
+
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        border-bottom: 1px solid darkblue;
+    }
+
+    .table-striped > tbody > tr:nth-of-type(even) {
+        border-bottom: 1px solid darkblue;
+    }
+
+    tr {
+        cursor: default;
+    }
+</style>
+
+<h1 class="page-title">KunFooD Admin Panel</h1>
+
+<div class="sub-cat">
+    <h2>Forum Manager - Categories</h2>
+    <table class="table table-striped table-hover ">
+        <thead>
+            <tr>
+                <th>Category name</th>
+                <th>Creation Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.CreatedAt</td>
+                    <td>
+                        @using (Html.BeginForm("DeleteCategory", "AdminPanel", FormMethod.Post))
+                        {
+                            @Html.Hidden("Id", item.Id)
+                            <input type="submit" class="btn btn-danger btn-sm" value="Delete" />
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-controller="AdminPanel" asp-action="CreateCategory" class="btn btn-success">Create</a>
+</div>

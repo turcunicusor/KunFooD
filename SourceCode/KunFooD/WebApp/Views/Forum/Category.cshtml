@@ -1,0 +1,50 @@
+﻿
+@model WebApp.DTO.CategoryDTO
+
+<style>
+    h1 {
+        margin-bottom: -15px;
+    }
+
+    #header-desc {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid darkblue;
+    }
+
+    .forum-item {
+        border-bottom: 1px solid darkblue;
+        cursor: pointer;
+    }
+</style>
+
+<h1>@Model.Category.Name</h1><br />
+<p id="header-desc">@Model.Category.Description</p>
+
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>Thread</th>
+            <th>Created By</th>
+            <th>Last Post</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Threads)
+        {
+            <tr class="forum-item" onclick="location.href = '@(Url.Action("Thread", "Forum", new { id = item.Id }))'">
+                <td>
+                    <b>@item.Name</b>
+                </td>
+                <td>
+                    <b>By: </b>@item.AuthorName<br />
+                    <b>Date: </b>@item.CreatedAt
+                </td>
+                <td><b>Date: </b>TO IMPLEMENT<br /><b>By: </b>TO IMPLEMENT</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<a href="@(Url.Action("CreateThread", "Forum", new { id = Model.Category.Id }))" class="btn btn-success">Create Thread</a>

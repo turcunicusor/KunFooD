@@ -1,0 +1,59 @@
+﻿@using Microsoft.AspNetCore.Http
+
+@model WebApp.DTO.CreateThreadDTO
+
+<style>
+    .create-box {
+        margin-top: 50px;
+    }
+
+    .validation-summary {
+        display: none;
+    }
+
+        .validation-summary.validation-summary-errors {
+            display: block;
+        }
+</style>
+
+<form method="post" class="form-horizontal create-box col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    @Html.Hidden("CategoryId", Model.CategoryId)
+    <div asp-validation-summary="All" class="validation-summary alert alert-dismissible alert-danger">
+    </div>
+    <fieldset>
+        <legend><h3>Create Thread</h3></legend>
+        <div class="form-group">
+            <label asp-for="Name" class="col-lg-2 control-label"></label>
+            <div class="col-lg-10">
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description" class="col-lg-2 control-label"></label>
+            <div class="col-lg-10">
+                <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Description"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="UserEmail" class="col-lg-2 control-label"></label>
+            <div class="col-lg-10">
+                <input asp-for="UserEmail" class="form-control">
+                <span asp-validation-for="UserEmail"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <input type="submit" value="Create Thread" class="btn btn-primary">
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<div class="clearfix visible-lg visible-md visible-sm visible-xs">
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

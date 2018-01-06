@@ -26,6 +26,8 @@ namespace WebApp
         {
             services.AddTransient<IDatabaseContext, DatabaseContext>();
             services.AddTransient<IUsersRepository, UsersRepository>();
+            services.AddTransient<IForumCategoryRepository, ForumCategoryRepository>();
+            services.AddTransient<IForumThreadRepository, ForumThreadRepository>();
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc(options =>
