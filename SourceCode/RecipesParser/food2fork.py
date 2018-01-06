@@ -2,7 +2,6 @@ import json
 import sys
 from html import unescape
 from urllib.request import Request, urlopen
-
 from pyquery import PyQuery
 
 valid_websites = {
@@ -87,7 +86,7 @@ def parse_recipes_closetcooking(recipes):
             d["content"] = content
             d["preparation_time"] = total_time
             d["servings"] = servings
-            d["ingredients"] = ingredients
+            d["ingredients"] = parse_ingredients(ingredients)
             d_recipes.append(d)
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -119,7 +118,7 @@ def parse_recipes_thepioneerwoman(recipes):
             d["content"] = content
             d["preparation_time"] = total_time
             d["servings"] = servings
-            d["ingredients"] = ingredients
+            d["ingredients"] = parse_ingredients(ingredients)
             d_recipes.append(d)
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -147,7 +146,7 @@ def parse_recipes_allrecipes(recipes):
             d["content"] = content
             d["preparation_time"] = total_time
             d["servings"] = servings
-            d["ingredients"] = ingredients
+            d["ingredients"] = parse_ingredients(ingredients)
             d_recipes.append(d)
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -177,9 +176,28 @@ def parse_recipes_twopeasandtheirpod(recipes):
             d["content"] = content
             d["preparation_time"] = total_time
             d["servings"] = servings
-            d["ingredients"] = ingredients
+            d["ingredients"] = parse_ingredients(ingredients)
             d_recipes.append(d)
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
             print("Failed to parse recipie. Error", str(e), "Line:", exc_tb.tb_lineno)
     return unescape(d_recipes)
+
+
+def parse_ingredients(ingredients):
+    from fractions import Fraction
+    ingredients_json = list()
+    for ingredient in ingredients:
+        args = ingredient.split(" ")
+        ing = dict()
+        try:
+            quantity = float(sum(Fraction(s) for s in args[0].split()))
+            ing["quantity"] = quantity
+            ing["name"] = args[1:]
+        except Exception as e:
+            ing["quantity"] = "undefined"
+            ing["name"] = args[0:]
+        ing["measured_unit"] = "undefined"
+        ing["category"] = "undefined"
+        ingredients_json.append(ing)
+    return ingredients_json
