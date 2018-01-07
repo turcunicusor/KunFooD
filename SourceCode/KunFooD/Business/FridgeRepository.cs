@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Data.Domain.Entities.Food;
 using Data.Domain.Intefaces;
@@ -28,6 +30,18 @@ namespace Business
         {
             return await _databaseContext.PairItems.FirstOrDefaultAsync(pairItem =>
             pairItem.IngredientId.Equals(ingredientId) && pairItem.RecipieId.Equals(recipeId));
+        }
+
+        public async Task<IEnumerable<PairItem>> GetByRecipe(Guid recipeId)
+        {
+            return await _databaseContext.PairItems.Where(pairItem =>
+            pairItem.RecipieId.Equals(recipeId)).ToListAsync();
+        }
+
+        public async Task<IEnumerable<PairItem>> GetByIngredient(Guid ingredientId)
+        {
+            return await _databaseContext.PairItems.Where(pairItem =>
+            pairItem.IngredientId.Equals(ingredientId)).ToListAsync();
         }
     }
 }
