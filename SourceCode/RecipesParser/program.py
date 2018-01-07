@@ -7,7 +7,7 @@ import food_ndtv_parser as food_ndfv
 
 
 def f2f_api():
-    result = f2f.send_requests(1)
+    result = f2f.send_requests(2)
     links = f2f.parse_api_response(result)
     recipes = []
     for website in f2f.valid_websites.keys():
@@ -43,4 +43,5 @@ def worldopenfoodfacts_experimental():
 # ing_with_categ()
 f2f_api()
 
-# to validate ingredient name using ingredient list with categories
+# to check encoding at output
+# to validate add measurement unit where I can do that

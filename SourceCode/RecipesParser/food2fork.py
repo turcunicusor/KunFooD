@@ -1,9 +1,24 @@
 import json
+import re
 import sys
+import utils as u
 from html import unescape
 from urllib.request import Request, urlopen
 from pyquery import PyQuery
+from nltk.stem import WordNetLemmatizer
 
+# globals
+def get_ing():
+    data = json.loads(u.read("_ingredients_with_category.json"))
+    ingredients_global = list()
+    ing_count = 0
+    for key, value in data.items():
+        ingredients_global.extend(value["ing"])
+        ing_count += int(value["count"])
+    return ingredients_global
+
+ing_global = get_ing()
+wn_l = WordNetLemmatizer()
 valid_websites = {
     "www.closetcooking.com": lambda recipes: parse_recipes_closetcooking(recipes),
     "www.thepioneerwoman.com": lambda recipes: parse_recipes_thepioneerwoman(recipes),
@@ -86,7 +101,9 @@ def parse_recipes_closetcooking(recipes):
             d["content"] = content
             d["preparation_time"] = total_time
             d["servings"] = servings
-            d["ingredients"] = parse_ingredients(ingredients)
+            ing, valid = parse_ingredients(ingredients)
+            d["ingredients"] = ing
+            d["valid"] = valid
             d_recipes.append(d)
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -118,7 +135,9 @@ def parse_recipes_thepioneerwoman(recipes):
             d["content"] = content
             d["preparation_time"] = total_time
             d["servings"] = servings
-            d["ingredients"] = parse_ingredients(ingredients)
+            ing, valid = parse_ingredients(ingredients)
+            d["ingredients"] = ing
+            d["valid"] = valid
             d_recipes.append(d)
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -146,7 +165,9 @@ def parse_recipes_allrecipes(recipes):
             d["content"] = content
             d["preparation_time"] = total_time
             d["servings"] = servings
-            d["ingredients"] = parse_ingredients(ingredients)
+            ing, valid = parse_ingredients(ingredients)
+            d["ingredients"] = ing
+            d["valid"] = valid
             d_recipes.append(d)
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -176,7 +197,9 @@ def parse_recipes_twopeasandtheirpod(recipes):
             d["content"] = content
             d["preparation_time"] = total_time
             d["servings"] = servings
-            d["ingredients"] = parse_ingredients(ingredients)
+            ing, valid = parse_ingredients(ingredients)
+            d["ingredients"] = ing
+            d["valid"] = valid
             d_recipes.append(d)
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -184,20 +207,45 @@ def parse_recipes_twopeasandtheirpod(recipes):
     return unescape(d_recipes)
 
 
+def lematize_list(lst):
+    lst = ''.join(e for e in lst if (e.isalnum() or e ==" "))
+    lst = lst.split(" ")
+    l = []
+    for el in lst:
+        l.append(wn_l.lemmatize(el))
+    return l
+
+
+def extract_valid_ingredients(candidate_ingredients):
+    candidate_ingredients = " " + candidate_ingredients + " "
+    ing_true = list()
+    for ing in ing_global:
+        r = re.search("(\W)+" + ing + "(\W)+", candidate_ingredients)
+        if (r):
+            ing_true.append(ing)
+            candidate_ingredients = candidate_ingredients.replace(ing, "")
+    return " ".join(ing_true)
+
 def parse_ingredients(ingredients):
+    valid = True
     from fractions import Fraction
     ingredients_json = list()
     for ingredient in ingredients:
-        args = ingredient.split(" ")
+        ingredient = ingredient.lower()
+        args = lematize_list(ingredient)
         ing = dict()
+        name = extract_valid_ingredients(" ".join(args))
         try:
-            quantity = float(sum(Fraction(s) for s in args[0].split()))
+            quantity = float(sum(Fraction(s) for s in ingredient.split(" ")[0].split()))
             ing["quantity"] = quantity
-            ing["name"] = args[1:]
         except Exception as e:
             ing["quantity"] = "undefined"
-            ing["name"] = args[0:]
+        if not name:
+            valid = False
+        ing["name"] = name
+        ing["name_debug"] = ingredient
+        ing["name_lematized_debug"] = " ".join(args)
         ing["measured_unit"] = "undefined"
         ing["category"] = "undefined"
         ingredients_json.append(ing)
-    return ingredients_json
+    return ingredients_json, valid
