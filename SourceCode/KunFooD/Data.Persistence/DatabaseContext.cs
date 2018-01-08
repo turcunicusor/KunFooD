@@ -19,6 +19,8 @@ namespace Data.Persistence
         {
             modelBuilder.Entity<PairItem>()
                 .HasKey(pairItem => new { pairItem.IngredientId, pairItem.RecipieId });
+            modelBuilder.Entity<Post>()
+                .HasKey(post => new { post.Id });
         }
 
         public DbSet<User> Users { get; set; }
