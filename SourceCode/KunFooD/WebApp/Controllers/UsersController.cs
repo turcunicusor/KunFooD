@@ -28,9 +28,9 @@ namespace WebApp.Controllers
 
         [HttpGet]
         [Route("Admins")]
-        public IActionResult GetAdmins()
+        public async Task<IActionResult> GetAdmins()
         {
-            return Ok(_repository.GetAdmins());
+            return Ok(await _repository.GetAdmins());
         }
 
         [HttpGet]

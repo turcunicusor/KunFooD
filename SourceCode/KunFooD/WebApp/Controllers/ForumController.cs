@@ -4,10 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebApp.DTO;
+using WebApp.Filters;
 
 namespace WebApp.Controllers
 {
     [Route("[controller]")]
+    [DefaultControllerFilter]
     public class ForumController : Controller
     {
         private readonly IForumCategoryRepository _categoryRepo;
@@ -30,27 +32,27 @@ namespace WebApp.Controllers
 
         [HttpGet("[action]")]
         public async Task<IActionResult> Category(Guid id)
-        { 
+        {
             var category = await _categoryRepo.FindById(id);
 
             CategoryDTO dto = new CategoryDTO();
             dto.Category = category;
 
             var threads = await _threadRepo.GetByCategoryId(id);
-            List<ThreadDTO> threadDTOList = new List<ThreadDTO>();
-           
-            foreach(var thread in threads)
+            List<ThreadDTO> threadDtoList = new List<ThreadDTO>();
+
+            foreach (var thread in threads)
             {
-                ThreadDTO threadDTO = new ThreadDTO();
-                threadDTO.Id = thread.Id;
-                threadDTO.Name = thread.Name;
-                threadDTO.Description = thread.Description;
-                threadDTO.CreatedAt = thread.CreatedAt;
-                threadDTO.AuthorName = await GetThreadAuthorName(thread.UserId);
-                threadDTOList.Add(threadDTO);
+                ThreadDTO threadDto = new ThreadDTO();
+                threadDto.Id = thread.Id;
+                threadDto.Name = thread.Name;
+                threadDto.Description = thread.Description;
+                threadDto.CreatedAt = thread.CreatedAt;
+                threadDto.AuthorName = await GetThreadAuthorName(thread.UserId);
+                threadDtoList.Add(threadDto);
             }
 
-            dto.Threads = threadDTOList;
+            dto.Threads = threadDtoList;
             return View(dto);
         }
 
@@ -66,21 +68,17 @@ namespace WebApp.Controllers
         [HttpPost("[action]")]
         public async Task<IActionResult> CreateThread(CreateThreadDTO dto)
         {
-            if(ModelState.IsValid)
+            // TEMP CODE: Check email and get userid based on it
+            var user = await _userRepo.GetByEmail(dto.UserEmail);
+            if (user != null)
             {
-                // TEMP CODE: Check email and get userid based on it
-                var user = await _userRepo.GetByEmail(dto.UserEmail);
-                if (user != null)
-                {
-                    var thread = Data.Domain.Entities.Forum.Thread.Create(dto.Name, dto.Description, user.Id, dto.CategoryId);
-                    await _threadRepo.Add(thread);
-                    await _threadRepo.Save();
+                var thread = Data.Domain.Entities.Forum.Thread.Create(dto.Name, dto.Description, user.Id, dto.CategoryId);
+                await _threadRepo.Add(thread);
+                await _threadRepo.Save();
 
-                    return RedirectToAction("Category", "Forum", new { id = dto.CategoryId });
-                }
-                else
-                    ModelState.AddModelError("", "TEMPCODE: Account doesn't exist!");
+                return RedirectToAction("Category", "Forum", new { id = dto.CategoryId });
             }
+            ModelState.AddModelError("", "TEMPCODE: Account doesn't exist!");
 
             // Something went bad, return dto back to view
             return View(dto);
@@ -94,7 +92,7 @@ namespace WebApp.Controllers
             return View(thread);
         }
 
-        public async Task<string> GetThreadAuthorName(Guid id)
+        private async Task<string> GetThreadAuthorName(Guid id)
         {
             var user = await _userRepo.FindById(id);
             return user.UserName;

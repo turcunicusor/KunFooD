@@ -8,10 +8,12 @@ using Data.Domain.Intefaces;
 using Microsoft.Extensions.Primitives;
 using System.Text;
 using System.Security.Cryptography;
+using WebApp.Filters;
 
 namespace WebApp.Controllers
 {
     [Route("[controller]")]
+    [DefaultControllerFilter]
     public class LoginController : Controller
     {
         private readonly IUsersRepository _repository;
@@ -25,8 +27,7 @@ namespace WebApp.Controllers
         public IActionResult Login()
         {
             // Get the Registered parameter if available
-            StringValues registered;
-            HttpContext.Request.Query.TryGetValue("Registered", out registered);
+            HttpContext.Request.Query.TryGetValue("Registered", out var registered);
 
             // Send registered value to the view
             if (registered.Equals(StringValues.Empty))
@@ -64,8 +65,7 @@ namespace WebApp.Controllers
                     // Redirect to homepage
                     return RedirectToAction("Index", "Home");
                 }
-                else
-                    ModelState.AddModelError("", "Invalid password!");
+                ModelState.AddModelError("", "Invalid password!");
             }
             else
                 ModelState.AddModelError("", "Account is not registered!");

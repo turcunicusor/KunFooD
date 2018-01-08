@@ -3,10 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 using WebApp.DTO;
+using WebApp.Filters;
 
 namespace WebApp.Controllers
 {
     [Route("[controller]")]
+    [DefaultControllerFilter]
     public class AdminPanelController : Controller
     {
         private readonly IForumCategoryRepository _categoryRepo;
@@ -39,17 +41,11 @@ namespace WebApp.Controllers
         [HttpPost("[action]")]
         public async Task<IActionResult> CreateCategory(CreateCategoryDTO dto)
         {
-            if (ModelState.IsValid)
-            {
-                var category = Data.Domain.Entities.Forum.Category.Create(dto.Name, dto.Description);
-                await _categoryRepo.Add(category);
-                await _categoryRepo.Save();
+            var category = Data.Domain.Entities.Forum.Category.Create(dto.Name, dto.Description);
+            await _categoryRepo.Add(category);
+            await _categoryRepo.Save();
 
-                return RedirectToAction("Index", "AdminPanel");
-            }
-            
-            // Something went bad, return dto back to view
-            return View(dto);
+            return RedirectToAction("Index", "AdminPanel");
         }
     }
 }
