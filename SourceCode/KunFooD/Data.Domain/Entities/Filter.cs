@@ -3,7 +3,7 @@ using Data.Domain.Entities.Food;
 
 namespace Data.Domain.Entities
 {
-    class Filter
+    public class Filter
     {
         public KitchenType Cuisine { get; set; } //default Unspecified
         public double Cost { get; set; } // 0 - default. (Less than)
@@ -16,7 +16,7 @@ namespace Data.Domain.Entities
         public List<Ingredient> OnlyIngredients { get; set; }
         public List<Ingredient> ExcludedIngredients { get; set; }
 
-        Filter()
+        public Filter()
         {
             IncludedIngredients = null;
             OnlyIngredients = null;
