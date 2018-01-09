@@ -18,7 +18,9 @@ def get_ing():
     return ingredients_global
 
 ing_global = get_ing()
+
 wn_l = WordNetLemmatizer()
+
 valid_websites = {
     "www.closetcooking.com": lambda recipes: parse_recipes_closetcooking(recipes),
     "www.thepioneerwoman.com": lambda recipes: parse_recipes_thepioneerwoman(recipes),
@@ -26,6 +28,7 @@ valid_websites = {
     "www.twopeasandtheirpod.com": lambda recipes: parse_recipes_twopeasandtheirpod(recipes),
 }
 
+measured_unit = ['slice', 'ounce', 'can', 'package', 'chip', 'stalk', 'cup', 'sugar', 'tablespoon', 'box', 'teaspoon', 'leaf', 'envelope', 'loaf', 'oz']
 
 def send_requests(page_nr=1):
     app_key = "b0ea215bec6aec0022f947193a1f6f02"
@@ -226,6 +229,9 @@ def extract_valid_ingredients(candidate_ingredients):
             candidate_ingredients = candidate_ingredients.replace(ing, "")
     return " ".join(ing_true)
 
+
+measured_unit_potentials = []
+
 def parse_ingredients(ingredients):
     valid = True
     from fractions import Fraction
@@ -245,7 +251,12 @@ def parse_ingredients(ingredients):
         ing["name"] = name
         ing["name_debug"] = ingredient
         ing["name_lematized_debug"] = " ".join(args)
-        ing["measured_unit"] = "undefined"
+        if args[1] in measured_unit:
+            ing["measured_unit"] = args[1]
+        else:
+            measured_unit_potentials.append(args[1])
+            ing["measured_unit"] = "undefined"
+            valid = False
         ing["category"] = "undefined"
         ingredients_json.append(ing)
     return ingredients_json, valid

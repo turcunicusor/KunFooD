@@ -7,7 +7,7 @@ import food_ndtv_parser as food_ndfv
 
 
 def f2f_api():
-    result = f2f.send_requests(2)
+    result = f2f.send_requests(250)
     links = f2f.parse_api_response(result)
     recipes = []
     for website in f2f.valid_websites.keys():
@@ -16,7 +16,7 @@ def f2f_api():
     d = dict()
     d["count"] = len(recipes)
     d["recipies"] = recipes
-    print(d)
+    # print(d)
     u.write(json.dumps(d), "food2fork")
 
 
@@ -42,6 +42,8 @@ def worldopenfoodfacts_experimental():
 # ing_only()
 # ing_with_categ()
 f2f_api()
+x = f2f.measured_unit_potentials
+u.write(json.dumps(x), "measured_unit_potentials", "")
 
 # to check encoding at output
 # to validate add measurement unit where I can do that
