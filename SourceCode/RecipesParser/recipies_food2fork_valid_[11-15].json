@@ -1,0 +1,3011 @@
+{
+   "count":33,
+   "recipies":[
+      {
+         "name":"Caramel Apple Cheesecake Bars",
+         "summary":"These bars start out with a crispy and buttery shortbread base which is topped with a creamy cheesecake, tart granny smith and a rolled oat crumble before being finished off with a drizzle of salted caramel sauce!",
+         "content":"For the crust: Cut the butter into the flour, sugar, salt and cinnamon until combined and crumbly. Press the mixture into the bottom of an 8x8 inch baking dish lined with foil. Bake in a preheated 350F/180C oven until lightly golden brown, about 8-12 minutes, set aside and let cool. For the cheesecake: Beat the sugar into the cream cheese until smooth. Beat in the egg followed by the vanilla extract. Pour the mixture into the baking dish. For the apples: Mix the apples, cinnamon, sugar and nutmeg. Sprinkle the apples on top of the cream cheese layer. For the streusel topping: Cut the butter into the flour, sugar, cinnamon and rolled oats until combined and crumbly. Sprinkle the crumbs on top of the apples. Bake in a preheated 350F/180C oven until the cheesecake has set, about 25-35 minutes, and let cool. For the caramel sauce: Heat the sugar and water in a sauce pan over medium heat and simmer it until it turns a medium amber colour. Remove from heat and carefully pour in the heavy cream. Return to heat and cook until smooth, stirring with a wooden spoon. Stir in the butter. Allow the sauce to cool for a few minutes and stir in the vanilla extract and salt. Let cool and serve over the apple cheesecake bars.",
+         "preparation_time":"1 hour",
+         "servings":"9",
+         "ingredients":[
+            {
+               "quantity":0.5,
+               "name":"unsalted butter",
+               "name_debug":"1/2 cup (1 stick) unsalted butter, room temperature",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"flour",
+               "name_debug":"1 cup flour",
+               "measured_unit":"cup",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.25,
+               "name":"brown sugar",
+               "name_debug":"1/4 cup brown sugar, packed",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":0.125,
+               "name":"salt",
+               "name_debug":"1/8 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.25,
+               "name":"cinnamon",
+               "name_debug":"1/4 teaspoon cinnamon",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.25,
+               "name":"sugar",
+               "name_debug":"1/4 cup sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":8.0,
+               "name":"cream cheese",
+               "name_debug":"8 ounces cream cheese, room temperature",
+               "measured_unit":"ounce",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"egg",
+               "name_debug":"1 large egg",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"vanilla extract",
+               "name_debug":"1/2 teaspoon vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"apple",
+               "name_debug":"2 granny smith apples, peeled, cored, and cut into bite sized pieces",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"sugar",
+               "name_debug":"1 tablespoon sugar",
+               "measured_unit":"tablespoon",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":0.25,
+               "name":"cinnamon",
+               "name_debug":"1/4 teaspoon cinnamon",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.125,
+               "name":"nutmeg",
+               "name_debug":"1/8 teaspoon nutmeg",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":6.0,
+               "name":"unsalted butter",
+               "name_debug":"6 tablespoons unsalted butter, room temperature",
+               "measured_unit":"tablespoon",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"flour",
+               "name_debug":"1/2 cup flour",
+               "measured_unit":"cup",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.5,
+               "name":"oats",
+               "name_debug":"1/2 cup old fashioned oats",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"brown sugar",
+               "name_debug":"1/2 cup brown sugar, packed",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":0.25,
+               "name":"ground cinnamon",
+               "name_debug":"1/4 teaspoon ground cinnamon",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":1.0,
+               "name":"sugar",
+               "name_debug":"1 cup sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":0.25,
+               "name":"water",
+               "name_debug":"1/4 cup water",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"cream",
+               "name_debug":"1/2 cup heavy cream",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":2.0,
+               "name":"unsalted butter",
+               "name_debug":"2 tablespoons unsalted butter, room temperature",
+               "measured_unit":"tablespoon",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"vanilla extract",
+               "name_debug":"1 teaspoon vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"coarse salt",
+               "name_debug":"1 teaspoon coarse salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            }
+         ],
+         "valid":true
+      },
+      {
+         "name":"Taco Dip",
+         "summary":"A hot melted cheese dip inspired by the flavours of tacos! Serve topped with lettuce, tomatoes and avocados along with some tortilla chips for dipping.",
+         "content":"Brown the ground beef in a pan, drain the grease add the taco seasoning and water, mix and simmer until the water evaporates. Mix the beef, cream cheese, sour cream, mayonnaise, salsa and cheeses in a large bowl, reserving some of the cheese. Pour the mixture into a baking dish and top with the reserved cheese, bake in a preheated 350F/180C oven until it is bubbling on the sides and golden brown on top, about 20-30 minutes.",
+         "preparation_time":"40 minutes",
+         "servings":"4",
+         "ingredients":[
+            {
+               "quantity":0.5,
+               "name":"ground beef",
+               "name_debug":"1/2 pound ground beef",
+               "measured_unit":"pound",
+               "category":"meat"
+            },
+            {
+               "quantity":0.5,
+               "name":"taco seasoning",
+               "name_debug":"1/2 tablespoon taco seasoning",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"water",
+               "name_debug":"2 tablespoons water",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":4.0,
+               "name":"cream cheese",
+               "name_debug":"4 ounces cream cheese, room temperature",
+               "measured_unit":"ounce",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"sour cream",
+               "name_debug":"1/2 cup sour cream",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.25,
+               "name":"mayonnaise",
+               "name_debug":"1/4 cup mayonnaise",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"salsa",
+               "name_debug":"1 cup salsa",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"",
+               "name_debug":"1/2 cup jack cheese, shredded",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"cheddar cheese",
+               "name_debug":"1/2 cup cheddar cheese, shredded",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"lettuce",
+               "name_debug":"1 cup lettuce, shredded (optional)",
+               "measured_unit":"cup",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"tomato",
+               "name_debug":"1 tomato, diced (optional)",
+               "measured_unit":"piece",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"avocado",
+               "name_debug":"1 avocado, diced (optional)",
+               "measured_unit":"piece",
+               "category":"vegetables"
+            },
+            {
+               "quantity":2.0,
+               "name":"black olives",
+               "name_debug":"2 tablespoons sliced black olives (optional)",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"cilantro",
+               "name_debug":"1 handful cilantro (optional)",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":true
+      },
+      {
+         "name":"Tequila Lime Grilled Chicken Club Sandwich with Guacamole and Roasted Jalapeno Mayo",
+         "summary":"A tequila and lime marinated grilled chicken club sandwich with bacon and roasted jalapeno mayonnaise.",
+         "content":"Puree the tequila, lime juice, oil, lime zest, jalapeno, garlic, cilantro, cumin, salt and pepper in a food processor. Place both the chicken and the marinade in a freezer bag and marinate over night. Heat he grill to medium-high, brush it with oil and grill the chicken until cooked, about 5-7 minutes per side. Assemble the sandwich and enjoy!",
+         "preparation_time":"30 minutes",
+         "servings":"4",
+         "ingredients":[
+            {
+               "quantity":0.25,
+               "name":"tequila",
+               "name_debug":"1/4 cup tequila",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"lime juice",
+               "name_debug":"1/2 cup lime juice",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"oil",
+               "name_debug":"2 tablespoons oil",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"lime zest",
+               "name_debug":"1 teaspoon lime zest",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"jalapeno pepper",
+               "name_debug":"1 jalapeno pepper",
+               "measured_unit":"piece",
+               "category":"vegetables"
+            },
+            {
+               "quantity":2.0,
+               "name":"clove garlic",
+               "name_debug":"2 cloves garlic",
+               "measured_unit":"piece",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"cilantro",
+               "name_debug":"1 handful cilantro",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"cumin",
+               "name_debug":"1 teaspoon cumin, toasted and ground",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"salt",
+               "name_debug":"1 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.5,
+               "name":"black pepper",
+               "name_debug":"1/2 teaspoon black pepper",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":4.0,
+               "name":"chicken breast",
+               "name_debug":"4 (6 ounce) chicken breast, boneless and skinless",
+               "measured_unit":"piece",
+               "category":"meat"
+            },
+            {
+               "quantity":4.0,
+               "name":"bun",
+               "name_debug":"4 buns",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.25,
+               "name":"mayo",
+               "name_debug":"1/4 cup roasted jalapeno mayo (or mayo)",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":4.0,
+               "name":"lettuce",
+               "name_debug":"4 leaves lettuce",
+               "measured_unit":"leaf",
+               "category":"vegetables"
+            },
+            {
+               "quantity":4.0,
+               "name":"tomato",
+               "name_debug":"4 slices tomato",
+               "measured_unit":"slice",
+               "category":"fruits"
+            },
+            {
+               "quantity":8.0,
+               "name":"bacon",
+               "name_debug":"8 slices bacon, cooked",
+               "measured_unit":"slice",
+               "category":"meat"
+            },
+            {
+               "quantity":1.0,
+               "name":"guacamole",
+               "name_debug":"1 cup guacamole",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.25,
+               "name":"feta",
+               "name_debug":"1/4 cup queso fresco (or feta), crumbled",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":true
+      },
+      {
+         "name":"Kolokythokeftedes (Zucchini and Feta Balls)",
+         "summary":"Zucchini, feta and plenty of fresh herbs rolled into balls and fried until light and crispy and golden brown! These zucchini balls are a great appetizer and can be served with tzatziki or marina sauce for dipping.",
+         "content":"Mix the zucchini, feta, ouzo, garlic, green onion, herbs and egg and season with salt and pepper. Mix in enough flour and breadcrumbs that you can work with the mixture to form balls. Form the mixture into balls and dust in flour. Fry in oil until golden brown and set aside to cool.",
+         "preparation_time":"25 minutes",
+         "servings":"4",
+         "ingredients":[
+            {
+               "quantity":2.0,
+               "name":"zucchini",
+               "name_debug":"2 cups zucchini, grated and squeezed",
+               "measured_unit":"cup",
+               "category":"vegetables"
+            },
+            {
+               "quantity":0.25,
+               "name":"feta",
+               "name_debug":"1/4 cup of feta, crumbled",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"ouzo",
+               "name_debug":"1 splash ouzo (optional)",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"clove garlic",
+               "name_debug":"1 clove garlic, chopped",
+               "measured_unit":"piece",
+               "category":"vegetables"
+            },
+            {
+               "quantity":2.0,
+               "name":"onion",
+               "name_debug":"2 green onions, sliced",
+               "measured_unit":"piece",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"herbs",
+               "name_debug":"1 handful herbs (such as mint, dill and parsley), chopped",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"egg",
+               "name_debug":"1 egg, lightly beaten",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0,
+               "name":"salt and pepper",
+               "name_debug":"salt and pepper to taste",
+               "measured_unit":"to taste",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1,
+               "name":"flour",
+               "name_debug":"~1/2 cup flour (i used whole wheat)",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1,
+               "name":"breadcrumbs",
+               "name_debug":"breadcrumbs (i use whole wheat)",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0,
+               "name":"oil",
+               "name_debug":"oil for frying",
+               "measured_unit":"to fry",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":true
+      },
+      {
+         "name":"Taco Stuffed Shells",
+         "summary":"Jumbo pasta shells stuffed with a taco inspired mixture of beef, corn, black beans and goat cheese that is covered in cheese and baked in salsa.",
+         "content":"Heat the oil in a large pan over medium heat. Add the onions and saute until tender, about 5-7 minutes. Add the garlic and saute until fragrant, about a minute. Add the ground beef and cook until browned, breaking it up, about 10 minutes. Add the taco seasoning, tomato puree, corn, black beans and goat cheese and cook until the goat cheese has melted in, about 2-3 minutes. Season with hot sauce, salt and pepper to taste. Spread the salsa into a large baking dish, stuff the shells with the beef mixture and place them in the salsa. Mix the butter into the bread crumbs and sprinkle onto the stuffed shells followed by the cheese. Bake in a preheated 350F/180C oven until the cheese has melted and the bread crumbs turn golden brown, about 20-25 minutes.",
+         "preparation_time":"1 hour",
+         "servings":"4",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"oil",
+               "name_debug":"1 tablespoon oil",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"onion",
+               "name_debug":"1 onion, diced",
+               "measured_unit":"piece",
+               "category":"vegetables"
+            },
+            {
+               "quantity":2.0,
+               "name":"clove garlic",
+               "name_debug":"2 cloves garlic",
+               "measured_unit":"piece",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"groundbeef",
+               "name_debug":"1 pound ground beef",
+               "measured_unit":"pound",
+               "category":"meat"
+            },
+            {
+               "quantity":1.5,
+               "name":"taco seasoning",
+               "name_debug":"1-2 tablespoons taco seasoning",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"tomato puree",
+               "name_debug":"1 cup tomato puree",
+               "measured_unit":"cup",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"corn",
+               "name_debug":"1 cup corn",
+               "measured_unit":"cup",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"black beans",
+               "name_debug":"1 cup black beans",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":4.0,
+               "name":"cream cheese",
+               "name_debug":"4 ounces goat cheese or cream cheese",
+               "measured_unit":"ounce",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0,
+               "name":"hot sauce",
+               "name_debug":"hot sauce to taste",
+               "measured_unit":"to taste",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0,
+               "name":"salt and pepper",
+               "name_debug":"salt and pepper to taste",
+               "measured_unit":"to taste",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"salsa",
+               "name_debug":"1 cup salsa",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"pasta shells",
+               "name_debug":"1 pound large pasta shells, cooked (gluten free for gluten free)",
+               "measured_unit":"pound",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"butter",
+               "name_debug":"1 tablespoon butter, melted",
+               "measured_unit":"tablespoon",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"bread crumbs",
+               "name_debug":"1/2 cup panko bread crumbs",
+               "measured_unit":"cup",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":1.0,
+               "name":"cheese",
+               "name_debug":"1 cup cheese, shredded",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":true
+      },
+      {
+         "name":"Strawberry Greek Yogurt Banana Bread",
+         "summary":"A moist, light and fluffy strawberry banana bread with Greek yogurt.",
+         "content":"Mix the flour, baking powder, baking soda and salt in a large bowl. Mix brown sugar, bananas, eggs, vanilla extract, yogurt and strawberries in another large bowl. Mix the dry ingredients into the wet ingredients. Pour the mixture into a greased 9x5 inch loaf pan. Bake in a preheated 350F/180C oven until golden brown and a toothpick poked into the center comes out clean, about 60 minutes.",
+         "preparation_time":"1 hour 10 minutes",
+         "servings":"1",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"flour",
+               "name_debug":"1 3/4 cups all-purpose flour",
+               "measured_unit":"cup",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":1.0,
+               "name":"baking powder",
+               "name_debug":"1 teaspoon baking powder",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"baking soda",
+               "name_debug":"1/2 teaspoon baking soda",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"salt",
+               "name_debug":"1/2 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.5,
+               "name":"brown sugar",
+               "name_debug":"1/2 cup brown sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":3.0,
+               "name":"banana",
+               "name_debug":"3 large over-ripe bananas (mashed)",
+               "measured_unit":"piece",
+               "category":"fruits"
+            },
+            {
+               "quantity":2.0,
+               "name":"egg",
+               "name_debug":"2 eggs",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"vanilla extract",
+               "name_debug":"1 teaspoon vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"greek yogurt",
+               "name_debug":"1/2 cup greek yogurt",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"strawberry",
+               "name_debug":"1 cup strawberries, sliced",
+               "measured_unit":"cup",
+               "category":"fruits"
+            }
+         ],
+         "valid":true
+      },
+      {
+         "name":"Bacon Double Cheeseburger Soup",
+         "summary":"A tasty and hearty soup with all of the flavours of a bacon double cheeseburger.",
+         "content":"Cook the ground beef in a large sauce an over medium heat, about 8-10 minutes, and set aside. Cook the bacon in the pan, about 5-7 minutes, and set aside on paper towels reserving about 2 tablespoons of the bacon grease in the pan and 1 tablespoon for later. Add the onions, carrots, celery and jalapeno and cook until tender, about 10-15 minutes. Add the garlic and cook until fragrant, about a minute Mix in the flour and let it cook for 2-3 minutes. Add the broth, beer, bacon, beef, potato, ketchup, mustard, worcestershire sauce and tomatoes, bring to a boil, reduce the heat and simmer until the potatoes are tender, about 10-15 minutes. Add the lettuce, milk and cheese and cook until the cheese has melted without bringing it back to a boil. Season with cayenne, salt and pepper and enjoy! While the soup is cooking, toss the bun cubes in the reserved bacon grease and bake in a preheated 400F/200C oven until lightly golden brown, about 10 minutes, turning half way through. Serve garnished with the croutons and pickle.",
+         "preparation_time":"1 hour",
+         "servings":"4",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"ground beef",
+               "name_debug":"1 pound ground beef",
+               "measured_unit":"pound",
+               "category":"meat"
+            },
+            {
+               "quantity":8.0,
+               "name":"bacon",
+               "name_debug":"8 slices bacon (preferably smoked), cut into one inch pieces",
+               "measured_unit":"slice",
+               "category":"meat"
+            },
+            {
+               "quantity":1.0,
+               "name":"onion",
+               "name_debug":"1 onion, diced",
+               "measured_unit":"piece",
+               "category":"vegetables"
+            },
+            {
+               "quantity":2.0,
+               "name":"carrot",
+               "name_debug":"2 carrots, diced",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":2.0,
+               "name":"celery",
+               "name_debug":"2 stalks celery, diced",
+               "measured_unit":"stalk",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"jalapeno",
+               "name_debug":"1 jalapeno, seeded and finely diced",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":2.0,
+               "name":"clove garlic",
+               "name_debug":"2 cloves garlic, chopped",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":0.25,
+               "name":"flour rice",
+               "name_debug":"1/4 cup flour (rice flour for gluten free)",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"beef broth",
+               "name_debug":"2 cups beef broth",
+               "measured_unit":"cup",
+               "category":"meat"
+            },
+            {
+               "quantity":1.0,
+               "name":"beer",
+               "name_debug":"1 (~12 ounce) bottle/can beer (gluten free for gluten free)",
+               "measured_unit":"bottle",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"yukon gold",
+               "name_debug":"1 large yukon gold or other boiling potato, peeled and cut into bite sized pieces",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"ketchup",
+               "name_debug":"2 tablespoons ketchup",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"mustard",
+               "name_debug":"1 teaspoon dijon mustard",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"sauce",
+               "name_debug":"1 tablespoon worcestershire sauce",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"diced tomato",
+               "name_debug":"1 (14.5 ounce) can diced tomatoes",
+               "measured_unit":"can",
+               "category":"fruits"
+            },
+            {
+               "quantity":2.0,
+               "name":"lettuce",
+               "name_debug":"2 cups lettuce, shredded",
+               "measured_unit":"cup",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"milk",
+               "name_debug":"1 cup milk",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"cheddar",
+               "name_debug":"1 cup cheddar, shredded",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"mozzarella",
+               "name_debug":"1 cup mozzarella, shredded",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0,
+               "name":"cayenne, salt and pepper",
+               "name_debug":"cayenne, salt and pepper to taste",
+               "measured_unit":"to taste",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"bacon",
+               "name_debug":"1 tablespoon bacon grease oil",
+               "measured_unit":"tablespoon",
+               "category":"meat"
+            },
+            {
+               "quantity":2.0,
+               "name":"hamburger buns",
+               "name_debug":"2 hamburger buns, cut into 1 inch cubes (gluten free or omit for gluten free)",
+               "measured_unit":"piece",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":4.0,
+               "name":"pickle",
+               "name_debug":"4 tablespoons pickle, diced (optional)",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":true
+      },
+      {
+         "name":"Cheese Covered, Bacon Wrapped Jalapeno Popper Burgers with Roasted Jalapeno Mayonnaise",
+         "summary":"These burgers have all of the flavours of jalapeno poppers with their jalapeno and cream cheese filling and their bacon wrapping and coat of melted cheddar cheese.",
+         "content":"Grill the jalapenos over medium-high heat until charred all over, about 6-8 minutes. Place the peppers in a zip-lock bag or other sealable container, seal and let them cool until you can handle them, about 20 minutes. Pinch the skins off of the peppers, cut in half and remove the seeds. Dice 2 of the jalapeno peppers and mix into the cream cheese. Divide the beef into 8 equal portions, form into patties, place 1/4 of the cream cheese mixture on 4 of them, top with the free patties, pinch the sides closed to seal and form into patties again. Season the patties with salt and pepper to taste and wrap each with 2 strips of bacon. Brush the grill with oil and grill the burgers over medium-high heat until cooked, about 4-5 minutes per side, topping each patty with a slice of cheese after flipping. Assemble the burgers and enjoy!",
+         "preparation_time":"25 minutes",
+         "servings":"4",
+         "ingredients":[
+            {
+               "quantity":6.0,
+               "name":"jalapeno",
+               "name_debug":"6 jalapeno peppers",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":4.0,
+               "name":"cream cheese",
+               "name_debug":"4 ounces cream cheese, room temperature",
+               "measured_unit":"ounce",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"beef",
+               "name_debug":"1 1/2 pound ground beef",
+               "measured_unit":"undefined",
+               "category":"meat"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt",
+               "name_debug":"salt and pepper to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":8.0,
+               "name":"bacon",
+               "name_debug":"8 strips bacon",
+               "measured_unit":"undefined",
+               "category":"meat"
+            },
+            {
+               "quantity":4.0,
+               "name":"cheddar cheese",
+               "name_debug":"4 slices cheddar cheese",
+               "measured_unit":"slice",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":4.0,
+               "name":"",
+               "name_debug":"4 hamburger buns",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":4.0,
+               "name":"lettuce",
+               "name_debug":"4 leaves lettuce",
+               "measured_unit":"leaf",
+               "category":"vegetables"
+            },
+            {
+               "quantity":4.0,
+               "name":"tomato",
+               "name_debug":"4 slices tomato",
+               "measured_unit":"slice",
+               "category":"fruits"
+            },
+            {
+               "quantity":4.0,
+               "name":"jalapeno mayonnaise",
+               "name_debug":"4 tablespoons mayonnaise or roasted jalapeno mayonnaise",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Okonomiyaki (Japanese Pancake)",
+         "summary":"Japanese \"as you like pancakes\" are stuffed with vegetables, grilled until golden brown and topped with a tasty sauce along with mayonnaise.",
+         "content":"Mix the flour, dashi, egg, cabbage, carrot, zucchini and green onion in a large bowl. Heat some oil in pan. Pour in mixture and top with the bacon slices. Cook on medium heat until golden brown on both sides, about 5-15 minutes per side. Top with okonomiyaki sauce, mayonnaise and green onion slices.",
+         "preparation_time":"40 minutes",
+         "servings":"2",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"flour",
+               "name_debug":"1 cup flour (i like to use whole wheat)",
+               "measured_unit":"cup",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.75,
+               "name":"",
+               "name_debug":"3/4 cup dashi or water",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"egg",
+               "name_debug":"1 egg",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.25,
+               "name":"cabbage",
+               "name_debug":"1/4 of a cabbage, about 2-3 cups packed, shredded",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 carrot,grated",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"zucchini",
+               "name_debug":"1 small zucchini, grated",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"onion",
+               "name_debug":"1 green onion, sliced",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":3.0,
+               "name":"bacon",
+               "name_debug":"3 slices bacon",
+               "measured_unit":"slice",
+               "category":"meat"
+            },
+            {
+               "quantity":"undefined",
+               "name":"",
+               "name_debug":"okonomiyaki sauce (or worcestershire sauce) to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"mayonnaise",
+               "name_debug":"mayonnaise to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"onion",
+               "name_debug":"green onions to taste, sliced",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Guinness Chocolate Pudding",
+         "summary":"Guinness and chocolate combine to form something truly amazing in this pudding that is topped with a Guinness syrup whipped cream.",
+         "content":"Pour the Guinness into a large bowl and wait a few minutes for the foam to subside. Mix half of the Guinness and 2 1/4 cups of heavy cream in a large sauce pan, heat over medium until bubbles just start to form, remove from heat, mix in the chocolate and let it melt. Mix the eggs and 1 cup of sugar in a large bowl and slowly mix in the Guinness mixture. Pour the mixture back into the sauce pan and cook over low heat until it thickens enough to coat the back of a spoon, about 15 minutes. Give the mixture 1 minute on high in the blender, run it through a fine mesh sieve, divide between glasses leaving 1 inch of space, cover in plastic and let chill in the fridge to set. Meanwhile, simmer the remaining Guinness and sugar over medium heat until it has reduced to about 1 tablespoon, about 15-20 minutes, and let cool. Beat the remaining cream until soft peaks are form, mix in the Guinness syrup and place on top of the Guinness pudding in the glasses.",
+         "preparation_time":"50 minutes",
+         "servings":"4",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 can guinness draught",
+               "measured_unit":"can",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":3.0,
+               "name":"cream",
+               "name_debug":"3 cups heavy cream",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":7.0,
+               "name":"chocolate",
+               "name_debug":"7 ounces dark chocolate, finely chopped",
+               "measured_unit":"ounce",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":8.0,
+               "name":"egg",
+               "name_debug":"8 large egg yolks",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"sugar",
+               "name_debug":"1 cup + 2 tablespoons sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Bacon Guacamole",
+         "summary":"Cool and creamy guacamole with crispy and salt bacon makes for perfect snacking satisfaction.",
+         "content":"Cook the bacon until crispy and set it aside on paper towels to drain. Mix everything.",
+         "preparation_time":"15 minutes",
+         "servings":"4",
+         "ingredients":[
+            {
+               "quantity":4.0,
+               "name":"bacon",
+               "name_debug":"4 strips of bacon",
+               "measured_unit":"undefined",
+               "category":"meat"
+            },
+            {
+               "quantity":2.0,
+               "name":"avocado",
+               "name_debug":"2 large avocados, mashed",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 lime, juice",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"jalapeno",
+               "name_debug":"1 jalapeno pepper, finely diced",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"tomato",
+               "name_debug":"1 medium tomato, seeded and finely diced",
+               "measured_unit":"undefined",
+               "category":"fruits"
+            },
+            {
+               "quantity":0.25,
+               "name":"onion",
+               "name_debug":"1/4 cup red onion, finely diced",
+               "measured_unit":"cup",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 tablespoon cilantro, chopped",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"",
+               "name_debug":"1/2 teaspoon cumin, toasted and ground",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt",
+               "name_debug":"salt and pepper to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Poached Egg on Toast with Chipotle Mayonnaise, Bacon and Avocado Chipotle Lime Mayo",
+         "summary":"Open faced bacon, avocado and poached egg sandwich with creamy chipotle lime mayonnaise. Spicy hot and smoky chipotle peppers mixed with creamy mayo and a hint of lime.",
+         "content":"Bring a large pot of water to a boil and reduce the heat to medium. Crack an egg into a bowl, swirl the water in the pot and pour the egg from the bowl into the water and repeat for another egg. Let the eggs cook until the whites are set but the yolks are not, about 2-3 minutes and fish them out. Repeat for the remaining 2 eggs. Assemble sandwiches and enjoy. Mix everything.",
+         "preparation_time":"20 minutes Total Time ",
+         "servings":"2 Servings ",
+         "ingredients":[
+            {
+               "quantity":4.0,
+               "name":"egg",
+               "name_debug":"4 eggs",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":4.0,
+               "name":"bread",
+               "name_debug":"4 slices bread, lightly toasted (i used multigrain)",
+               "measured_unit":"slice",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.25,
+               "name":"",
+               "name_debug":"1/4 cup chipotle lime mayo (see below)",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"avocado",
+               "name_debug":"2 avocados, sliced",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":8.0,
+               "name":"bacon",
+               "name_debug":"8 slices bacon, cooked",
+               "measured_unit":"slice",
+               "category":"meat"
+            },
+            {
+               "quantity":0.5,
+               "name":"mayonnaise",
+               "name_debug":"1/2 cup mayonnaise",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 chipotle chili in adobo sauce or to taste, chopped",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 teaspoon adobo sauce",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"",
+               "name_debug":"1/2 lime, juice",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Toffee Ice Cream Brownie Bars",
+         "summary":"Fudgy brownies topped with toffee ice cream and frozen for an extra special dessert. This brownie ice cream cake is one of my all-time favorite desserts!",
+         "content":"Preheat the oven to 350\u00c2\u00b0F. Grease a 9\u00e2\u0080\u00b3 x 13\u00e2\u0080\u00b3 pan and set aside. In a medium saucepan set over low heat, melt the butter, then add the sugar and stir to combine. Return the mixture to the heat, just until it\u00e2\u0080\u0099s hot, but not bubbling. The mixture will become shiny looking as you stir it. Transfer the sugar mixture to a medium-sized mixing bowl. Stir in the cocoa, baking powder, salt, and vanilla. Whisk in the eggs, stirring until smooth. Slowly add the flour and chocolate chips. Stir until smooth. Spoon the batter into prepared pan. Bake the brownies for about 30 minutes, until a cake tester inserted into the center comes out clean, or with just a few moist crumbs clinging to it. The brownies should feel set on the edges, and the center should look very moist, but not uncooked. Remove them from the oven and cool completely. When the brownies are completely cool, put the softened ice cream into a medium bowl. Stir in 1 1/2 cups chopped Heath candy bars. Evenly spread the ice cream over the cooled brownies. Garnish with the additional Heath candy bar chunks. Cover the ice cream brownie bars and place in the freezer. Freeze until ice cream hardens, at least 2 hours. This dessert can be made in advance. When ready to serve, remove the pan from the freezer. Run a sharp knife under hot water and cut the bars into squares. The bars will be hard to cut so make sure you get the knife super hot in between each cut. Drizzle the bars with salted caramel sauce, if desired. Serve. Note-To soften the ice cream, let the ice cream out on a countertop for 30 minutes before using. You want it soft enough to spread over brownies but still slightly frozen. The brownies will be hard to eat with a fork if you eat them straight from the freezer. You can let them sit for a bit or you can pick them up and eat them. They are a little messy to eat, but I promise it is worth the mess!",
+         "preparation_time":"3 hours",
+         "servings":"Serves 16",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"butter",
+               "name_debug":"1 cup (2 sticks) unsalted butter",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":2.0,
+               "name":"sugar",
+               "name_debug":"2 1/4 cups sugar",
+               "measured_unit":"undefined",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"cocoa",
+               "name_debug":"1 1/4 cups dutch-process cocoa",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"baking powder",
+               "name_debug":"1 teaspoon baking powder",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"salt",
+               "name_debug":"1 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 tablespoon vanilla extract",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":4.0,
+               "name":"egg",
+               "name_debug":"4 large eggs",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"flour",
+               "name_debug":"1 1/2 cups all purpose flour",
+               "measured_unit":"undefined",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":1.0,
+               "name":"chocolate",
+               "name_debug":"1 cup chocolate chips",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.5,
+               "name":"cream",
+               "name_debug":"1.5 quart of vanilla ice cream, softened",
+               "measured_unit":"undefined",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":2.0,
+               "name":"",
+               "name_debug":"2 cups chopped heath candy bars, divided",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"caramel",
+               "name_debug":"salted caramel sauce , for serving, if desired",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Pumpkin Cinnamon Streusel Pancakes",
+         "summary":"",
+         "content":"First, make the cinnamon streusel. In a medium bowl, combine flour, brown sugar, cinnamon, and butter. Mix together with your hands or a fork, until you have a crumbly mixture. Set aside. In a large bowl, whisk together flours, brown sugar, baking powder, salt, cinnamon, nutmeg, ginger, and cloves. Set aside. In a medium bowl, whisk together milk, egg, pumpkin, canola oil, and vanilla extract. Add wet ingredients to the flour mixture and whisk until combined. Heat a griddle or pan to medium low. Coat with cooking spray. Drop 1/3 cup of batter onto heated skillet. Add 2 tablespoons of the cinnamon streusel. Cook on the first side until bubbles begin to form, about 2-3 minutes. Carefully flip pancake over and cover very generously with cinnamon streusel. Cook for another 2-3 minutes or until golden brown. Continue this process to make the rest of the pancakes. Serve pancakes warm with maple syrup and butter.",
+         "preparation_time":"",
+         "servings":"Serves 4",
+         "ingredients":[
+            {
+               "quantity":0.5,
+               "name":"flour",
+               "name_debug":"1/2 cup all-purpose flour",
+               "measured_unit":"cup",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.5,
+               "name":"brown sugar",
+               "name_debug":"1/2 cup brown sugar, packed",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"cinnamon",
+               "name_debug":"1 teaspoon ground cinnamon",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":6.0,
+               "name":"butter",
+               "name_debug":"6 tablespoons cold unsalted butter, cut into chunks",
+               "measured_unit":"tablespoon",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.75,
+               "name":"flour",
+               "name_debug":"3/4 cup all-purpose flour",
+               "measured_unit":"cup",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.5,
+               "name":"flour",
+               "name_debug":"1/2 cup whole wheat flour",
+               "measured_unit":"cup",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":2.0,
+               "name":"brown sugar",
+               "name_debug":"2 tablespoons light brown sugar",
+               "measured_unit":"tablespoon",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":2.0,
+               "name":"baking powder",
+               "name_debug":"2 teaspoons baking powder",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.25,
+               "name":"salt",
+               "name_debug":"1/4 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":1.0,
+               "name":"cinnamon",
+               "name_debug":"1 teaspoon ground cinnamon",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.25,
+               "name":"nutmeg",
+               "name_debug":"1/4 teaspoon nutmeg",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.125,
+               "name":"ginger",
+               "name_debug":"1/8 teaspoon ground ginger",
+               "measured_unit":"teaspoon",
+               "category":"vegetables"
+            },
+            {
+               "quantity":0.125,
+               "name":"",
+               "name_debug":"1/8 teaspoon ground cloves",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"milk",
+               "name_debug":"1 cup milk",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"pumpkin",
+               "name_debug":"1/2 cup canned pumpkin (not pumpkin pie filling)",
+               "measured_unit":"cup",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"egg",
+               "name_debug":"1 large egg",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"canola oil",
+               "name_debug":"2 tablespoons canola oil",
+               "measured_unit":"tablespoon",
+               "category":"nuts-and-oilseeds"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 teaspoon vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Chickpea, Avocado, & Feta Salad",
+         "summary":"You only need 5 minutes to make this healthy salad!",
+         "content":"In a medium bowl, combine chickpeas, avocado, cilantro, green onion, feta cheese, and lime juice. Stir until mixed well. Season with salt and pepper. Serve.",
+         "preparation_time":"5 minutes",
+         "servings":"Serves 4",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 can chickpeas, rinsed and drained",
+               "measured_unit":"can",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"avocado",
+               "name_debug":"2 avocados, pitted, and chopped",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":0.3333333333333333,
+               "name":"",
+               "name_debug":"1/3 cup chopped cilantro",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"onion",
+               "name_debug":"2 tablespoons green onion",
+               "measured_unit":"tablespoon",
+               "category":"vegetables"
+            },
+            {
+               "quantity":0.3333333333333333,
+               "name":"feta cheese",
+               "name_debug":"1/3 cup feta cheese",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":"undefined",
+               "name":"",
+               "name_debug":"juice of 1 lime",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt black pepper",
+               "name_debug":"salt and black pepper, to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Quinoa Salad with Asparagus, Peas, Avocados & Lemon Basil Dressing",
+         "summary":"A fresh, healthy, and easy salad for spring!",
+         "content":"In a small bowl or medium jar, combine the dressing ingredients. Whisk to combine or shake with the jar lid on tight. Set aside. Add water, quinoa, and salt to a medium saucepan and bring to a boil over medium heat. Boil for 5 minutes. Turn the heat to low and simmer for about 15 minutes, or until water is absorbed. Remove from heat and fluff with a fork. While the quinoa is cooking, cook the asparagus. In a large skillet, heat the olive oil over medium heat. Add the asparagus and fresh lemon juice. Cook until tender, about 5 minutes. Stir in the peas and cook for an additional 2 minutes. In a large bowl, combine quinoa, asparagus, peas, and avocado. Pour the dressing over the salad and stir until well coated. Season with salt and pepper, to taste. Stir in the fresh basil and serve.",
+         "preparation_time":"35 minutes",
+         "servings":"Serves 4-6",
+         "ingredients":[
+            {
+               "quantity":3.0,
+               "name":"olive oil",
+               "name_debug":"3 tablespoons olive oil",
+               "measured_unit":"tablespoon",
+               "category":"nuts-and-oilseeds"
+            },
+            {
+               "quantity":3.0,
+               "name":"lemon juice",
+               "name_debug":"3 tablespoons fresh lemon juice",
+               "measured_unit":"tablespoon",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"honey",
+               "name_debug":"1 teaspoon honey or agave nectar",
+               "measured_unit":"teaspoon",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"garlic",
+               "name_debug":"1 clove garlic, minced",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"basil",
+               "name_debug":"1 tablespoon finely chopped fresh basil",
+               "measured_unit":"tablespoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt black pepper",
+               "name_debug":"salt and freshly ground black pepper, to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"",
+               "name_debug":"2 cups water",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"quinoa",
+               "name_debug":"1 cup quinoa",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"salt",
+               "name_debug":"1/2 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":2.0,
+               "name":"olive oil",
+               "name_debug":"2 teaspoons olive oil",
+               "measured_unit":"teaspoon",
+               "category":"nuts-and-oilseeds"
+            },
+            {
+               "quantity":1.0,
+               "name":"asparagus",
+               "name_debug":"1 small bunch asparagus, about 15 spears, cut into 1-inch pieces",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"lemon juice",
+               "name_debug":"1 tablespoon fresh lemon juice",
+               "measured_unit":"tablespoon",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 cup frozen peas",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"avocado",
+               "name_debug":"1 avocado, chopped",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt black pepper",
+               "name_debug":"salt and freshly ground black pepper, to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.25,
+               "name":"basil",
+               "name_debug":"1/4 cup chopped basil",
+               "measured_unit":"cup",
+               "category":"spices-and-herbs"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Pumpkin Chocolate Chip Streusel Cake",
+         "summary":"This easy pumpkin cake is a MUST make for fall!",
+         "content":"Preheat oven to 350 degrees. Spray a 9-by-13-inch baking pan with cooking spray. Set aside. In a medium bowl, whisk together flour, cinnamon, nutmeg, ginger, baking soda, and salt. Set aside. In the bowl of a stand mixer, cream butter and sugars until smooth. Beat in the egg and vanilla until well blended. Add the pumpkin puree. Reduce speed to low, and mix in the flour mixture until just combined. Stir in the chocolate chips. Spread batter evenly into the prepared pan. To make the streusel, in a medium bowl, combine the flour, brown sugar, and cinnamon. Add in the butter, using 2 table knives or your hands, and cut into the dry ingredients until the mixture looks like coarse crumbs. Sprinkle streusel evenly over the top of the cake. Next, sprinkle the chocolate chips over the cake. Bake for about 35-40 minutes or until the sides pull away from the pan and a toothpick comes out clean. Place cake on a wire rack and cool completely. Cut into squares and serve.",
+         "preparation_time":"55 minutes",
+         "servings":"16 servings",
+         "ingredients":[
+            {
+               "quantity":2.0,
+               "name":"flour",
+               "name_debug":"2 cups all-purpose flour",
+               "measured_unit":"cup",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":1.0,
+               "name":"cinnamon",
+               "name_debug":"1 1/2 teaspoons of cinnamon",
+               "measured_unit":"undefined",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.5,
+               "name":"nutmeg",
+               "name_debug":"1/2 teaspoon ground nutmeg",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.25,
+               "name":"ginger",
+               "name_debug":"1/4 teaspoon ground ginger",
+               "measured_unit":"teaspoon",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"baking soda",
+               "name_debug":"1 teaspoon baking soda",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.75,
+               "name":"salt",
+               "name_debug":"3/4 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":1.0,
+               "name":"butter",
+               "name_debug":"1 cup unsalted butter, at room temperature",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.75,
+               "name":"sugar",
+               "name_debug":"3/4 cup granulated sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":0.75,
+               "name":"brown sugar",
+               "name_debug":"3/4 cup brown sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"egg",
+               "name_debug":"1 large egg",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"",
+               "name_debug":"2 teaspoons vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"pumpkin",
+               "name_debug":"1 cup canned pumpkin puree",
+               "measured_unit":"cup",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"chocolate",
+               "name_debug":"1 cup chocolate chips",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.6666666666666666,
+               "name":"flour",
+               "name_debug":"2/3 cup all-purpose flour",
+               "measured_unit":"cup",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.5,
+               "name":"brown sugar",
+               "name_debug":"1/2 cup packed light brown sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"cinnamon",
+               "name_debug":"1/2 teaspoon ground cinnamon",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":6.0,
+               "name":"butter",
+               "name_debug":"6 tablespoons cold unsalted butter, cut into small chunks",
+               "measured_unit":"tablespoon",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"chocolate",
+               "name_debug":"1/2 cup chocolate chips",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Chocolate Pudding Cake",
+         "summary":"This rich and moist chocolate cake with a silky chocolate pudding sauce is easy to make and always a hit! We like to serve the cake with vanilla ice cream.",
+         "content":"Preheat the oven to 350 degrees F. Grease a 9 x 13-inch baking pan and set aside. In a large mixing bowl, combine flour, 1 cup of the brown sugar, baking powder, baking soda, and salt. Whisk until well combined. If there are lumps of brown sugar, use your hands to break them up. Stir in chocolate chips and set aside. In a small saucepan, melt the butter and chocolate together over medium-low heat. In a separate small saucepan, heat buttermilk over low heat until barely warmed. You don\u2019t want it to bubble or boil. Remove from heat. Remove chocolate and butter mixture from heat and stir in the vanilla. Pour mixture over dry ingredients. Add the buttermilk and stir until combined. Spread into the prepared pan. Combine the remaining 1 1/4 cups brown sugar with the cocoa in a small bowl. Whisk until smooth, using your hands to break up any brown sugar clumps. Sprinkle mixture evenly over the chocolate cake batter. Pour the boiling water evenly over the cake. Yes, it will look like a mess, but I promise it will turn out! Carefully transfer the pan to the oven. Bake for 30-35 minutes or until the center is firm to the touch. Remove cake from oven and cool on a cooling rack for at least 30 minutes before serving. To serve, invert each serving on a plate so that the fudge sauce on the bottom becomes a topping. Spoon any extra sauce in the pan over the top. You can serve the cake at room temperature or warm. Top with ice cream, if desired.",
+         "preparation_time":"50 minutes",
+         "servings":"Serves 12",
+         "ingredients":[
+            {
+               "quantity":2.0,
+               "name":"flour",
+               "name_debug":"2 1/2 cups all-purpose flour",
+               "measured_unit":"undefined",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":2.0,
+               "name":"brown sugar",
+               "name_debug":"2 1/4 cups packed light brown sugar, divided",
+               "measured_unit":"undefined",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":3.0,
+               "name":"baking powder",
+               "name_debug":"3 teaspoons baking powder",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"baking soda",
+               "name_debug":"1 teaspoon baking soda",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"salt",
+               "name_debug":"1/2 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":1.0,
+               "name":"chocolate",
+               "name_debug":"1 cup chocolate chips",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"butter",
+               "name_debug":"2 tablespoons unsalted butter",
+               "measured_unit":"tablespoon",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":2.0,
+               "name":"chocolate",
+               "name_debug":"2 ounces unsweetened chocolate",
+               "measured_unit":"ounce",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"buttermilk",
+               "name_debug":"2 cups buttermilk",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 teaspoon vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"cocoa",
+               "name_debug":"1/2 cup plus 2 tablespoons unsweetened cocoa (we use dutch processed cocoa)",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"",
+               "name_debug":"2 1/2 cups boiling water",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Dark Chocolate Chunk, Pistachio, and Sea Salt Cookies",
+         "summary":"Buttery cookies with dark chocolate chunks, chopped pistachios, and a touch of sea salt! These cookies will rock your world!",
+         "content":"Preheat oven to 350 degrees F. Line a large baking sheet with a Silpat baking mat or parchment paper and set aside. In a large bowl, whisk together flour, salt, baking powder, and baking soda. Set aside. Using a mixer, cream butter and sugars together until light and fluffy, about 3 minutes. Add the egg and vanilla and beat for an additional 2 minutes. With the mixer on low, slowly add in the dry ingredients. Mix until just incorporated. Stir in the pistachios and chocolate chunks. Using a spoon or cookie scoop, form tablespoons size balls of cookie dough. Place balls on prepared baking sheet, about 2 inches apart. Sprinkle cookie dough balls with sea salt. Bake cookies for 12 minutes, or until lightly browned around the edges. Let cookies sit on baking sheet for 2 minutes. Transfer cookies to a wire cooling rack and cool completely. Store in an air-tight container for up to 4 days.",
+         "preparation_time":"25 minutes",
+         "servings":"2 dozen cookies",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"flour",
+               "name_debug":"1 1/2 cups all-purpose flour",
+               "measured_unit":"undefined",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.5,
+               "name":"salt",
+               "name_debug":"1/2 teaspoon sea salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.75,
+               "name":"baking powder",
+               "name_debug":"3/4 teaspoon baking powder",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"baking soda",
+               "name_debug":"1/2 teaspoon baking soda",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"butter",
+               "name_debug":"1/2 cup unsalted butter, at room temperature",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.25,
+               "name":"sugar",
+               "name_debug":"1/4 cup granulated sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":0.75,
+               "name":"brown sugar",
+               "name_debug":"3/4 cup light brown sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"egg",
+               "name_debug":"1 large egg",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 teaspoon vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.75,
+               "name":"pistachio",
+               "name_debug":"3/4 cup chopped pistachios, shells removed",
+               "measured_unit":"cup",
+               "category":"nuts-and-oilseeds"
+            },
+            {
+               "quantity":1.0,
+               "name":"chocolate",
+               "name_debug":"1 cup chopped dark chocolate",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt",
+               "name_debug":"sea salt, for sprinkling on cookies",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Lemon Almond Bread",
+         "summary":"Lemon Almond Bread that is delicious enough to serve as a dessert. I am still calling it bread though so I can eat it for breakfast:)",
+         "content":"Preheat oven to 350\u00c2\u00b0 F. Spray a 8 1/2 x 4 1/2 loaf pan with cooking spray and set aside. In a large bowl, whisk together the flour, salt, and baking powder. In a small bowl, combine sugar and lemon zest. Rub together with your fingers until fragrant. Whisk into the flour mixture. Set aside. In a separate medium bowl, combine the almond milk, oil, eggs, lemon juice, vanilla, and almond extract. Slowly add the wet ingredients to the dry ingredients. Stir until combined. Pour batter into prepared loaf pan. Bake for 55-60 minutes, or until toothpick comes out clean. Place the loaf on a cooling rack and cool for 15 minutes. Loosen the sides of the bread with a knife. Carefully remove loaf from pan. Let cool completely on wire rack. While the bread is cooling, make the lemon glaze. In a small bowl, combine powdered sugar, lemon juice, and almond extract. Whisk until smooth. Drizzle the glaze of the lemon almond bread. Sprinkle sliced almonds over the bread. Cut and serve.",
+         "preparation_time":"70 minutes",
+         "servings":"1 loaf",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"flour",
+               "name_debug":"1 1/2 cups all-purpose flour",
+               "measured_unit":"undefined",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.5,
+               "name":"salt",
+               "name_debug":"1/2 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":1.0,
+               "name":"baking powder",
+               "name_debug":"1 teaspoon baking powder",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"sugar",
+               "name_debug":"1 cup granulated sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":2.0,
+               "name":"lemon",
+               "name_debug":"2 tablespoons lemon zest",
+               "measured_unit":"tablespoon",
+               "category":"fruits"
+            },
+            {
+               "quantity":0.75,
+               "name":"",
+               "name_debug":"3/4 cup almond breeze\u00e2\u00a0almondmilk original unsweetened",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"vegetable oil",
+               "name_debug":"1/2 cup canola or vegetable oil",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"egg",
+               "name_debug":"2 large eggs, slightly beaten",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"lemon juice",
+               "name_debug":"1 teaspoon fresh lemon juice",
+               "measured_unit":"teaspoon",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 teaspoon vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 teaspoon almond extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"sugar",
+               "name_debug":"1 cup powdered sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"lemon juice",
+               "name_debug":"1 1/2 tablespoons fresh lemon juice",
+               "measured_unit":"undefined",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 teaspoon almond extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":3.0,
+               "name":"",
+               "name_debug":"3 tablespoons sliced almonds, for garnishing the loaf",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Chocolate Zucchini Coconut Cake",
+         "summary":"Rich and decadent chocolate zucchini coconut cake topped with toasted coconut frosting! The BEST way to enjoy summer zucchini!",
+         "content":"Preheat the oven to 325\u00c2\u00b0F. Grease a 9\u2033 x 13\u2033 pan with non-stick cooking spray and set aside. In a large bowl, wnisk together flour, cocoa, baking soda, baking powder, and salt. Set aside. In the bowl of a stand mixer, beat together the butter, coconut oil, and sugar until smooth, about 2 minutes. Add the eggs and vanilla extract, beat until smooth. Add the Greek yogurt and mix until combined. Slowly mix in the dry ingredients. Mix until just combined. Fold in the zucchini, coconut, and chocolate chips. Spread batter into prepared pan. Bake the cake for 40-45 minutes, until the top springs back lightly when touched and a toothpick inserted in the center comes out clean. Remove cake from oven and cool completely on a wire cooling rack. While the cake is cooling, make the coconut frosting. In the bowl of a stand mixer, beat the butter until smooth. Gradually add the sugar and mix until creamy and smooth, about 3 minutes. Add in the coconut and vanilla extract and beat until smooth. Frost the cooled cake with coconut frosting. Sprinkle toasted coconut over the top of the cake. Cut cake into pieces and serve.",
+         "preparation_time":"60 minutes",
+         "servings":"1 9x13 cake",
+         "ingredients":[
+            {
+               "quantity":2.0,
+               "name":"flour",
+               "name_debug":"2 1/2 cups all-purpose flour",
+               "measured_unit":"undefined",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.75,
+               "name":"cocoa",
+               "name_debug":"3/4 cup dutch-process cocoa",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"baking soda",
+               "name_debug":"1 teaspoon baking soda",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"baking powder",
+               "name_debug":"1/2 teaspoon baking powder",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"salt",
+               "name_debug":"1/2 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.5,
+               "name":"butter",
+               "name_debug":"1/2 cup unsalted butter, at room temperature",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"coconut",
+               "name_debug":"1/2 cup coconut oil, melted and cooled to room temperature",
+               "measured_unit":"cup",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"sugar",
+               "name_debug":"1 1/2 cups granulated sugar",
+               "measured_unit":"undefined",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 teaspoon vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"egg",
+               "name_debug":"2 large eggs",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"yogurt",
+               "name_debug":"1/2 cup plain greek yogurt",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":3.0,
+               "name":"zucchini",
+               "name_debug":"3 cups shredded zucchini",
+               "measured_unit":"cup",
+               "category":"vegetables"
+            },
+            {
+               "quantity":0.5,
+               "name":"coconut",
+               "name_debug":"1/2 cup sweetened flaked coconut",
+               "measured_unit":"cup",
+               "category":"fruits"
+            },
+            {
+               "quantity":0.5,
+               "name":"chocolate",
+               "name_debug":"1/2 cup chocolate chips",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"butter",
+               "name_debug":"1 cup unsalted butter, at room temperature",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":3.0,
+               "name":"sugar",
+               "name_debug":"3 1/2 cups confectioners\u2019 sugar",
+               "measured_unit":"undefined",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"coconut",
+               "name_debug":"1 1/2 teaspoons coconut extract 1/2 teaspoon vanilla extract",
+               "measured_unit":"undefined",
+               "category":"fruits"
+            },
+            {
+               "quantity":0.5,
+               "name":"coconut",
+               "name_debug":"1/2 cup toasted coconut, for sprinkling cake",
+               "measured_unit":"cup",
+               "category":"fruits"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Salted Caramel Apple Crumb Bars",
+         "summary":"Salted Caramel Apple Crumb Bars-the perfect dessert for fall. These bars are also good with a scoop of vanilla ice cream!",
+         "content":"Preheat the oven to 375 degrees F. Spray a 9\u00c3\u009713-inch baking pan with cooking spray and set aside. For the apple filling- place the diced apples in a large bowl and sprinkle with lemon juice. Mix gently. In a separate bowl whisk together flour, cornstarch, sugar, salt, cinnamon, nutmeg, and ground all-spice. Pour over the apples and carefully combine. Set aside. For the dough-in a large bowl whisk together the flour, sugar, baking powder, salt, and cinnamon. Cut in the butter with a pastry blender or by using your hands, until butter is mixed in, but you still have small chunks of butter. Mix the egg and vanilla together. Add into the flour and butter mixture and combine. The dough will be crumbly. Pat half of the dough into the prepared pan. Spread the apple mixture evenly over the bottom crust. Drizzle about 3/4 cup of salted caramel sauce over the apple filling. Crumble the remaining dough over the apple caramel layer and pat gently. 5. Bake for 45 minutes, or until the top is golden brown. Cool completely on a wire rack. Cut into squares. Drizzle salted caramel sauce over the squares and serve. Note-you won\u2019t use all of the salted caramel sauce for this recipe. Store the leftover sauce in the refrigerator for up to 2 weeks.",
+         "preparation_time":"",
+         "servings":"16 bars",
+         "ingredients":[
+
+         ],
+         "valid":false
+      },
+      {
+         "name":"Sweet Potato Kale Pizza with Rosemary & Red Onion",
+         "summary":"",
+         "content":"Preheat the oven to 400 degrees F. Place the sweet potato slices and red onion slices in a bow and toss with 1/2 tablespoon of the olive oil. Season with salt and pepper. Place on a large baking sheet and bake for about 20 minutes, or until the sweet potatoes are soft and tender. Make sure you turn them once during the 20 minutes. Remove from oven and let cool while you prepare the pizza dough. Turn the oven to 500 degrees F or as high as your oven will go. If you have a pizza stone, place the pizza stone in the oven to get hot. On a lightly floured surface, roll out the pizza dough, using a rolling pin. Roll it out to about 3/8 of an inch. Place the pizza dough on a pizza peel or pan that has been generously coated with corn meal. Lightly brush the dough with the remaining 1 tablespoon of olive oil. In a small bowl, toss the kale with balsamic vinegar. Top the pizza dough with mozzarella cheese, sweet potato slices, kale, red onion slices, and fresh rosemary. Place the pizza in the oven-directly on the pizza stone, if using one, or on the oven rack. Bake for 10-15 minutes or until pizza crust is golden and cheese is melted. Remove from oven and let cool for a few minutes before slicing. Slice and serve warm.",
+         "preparation_time":"",
+         "servings":"1 pizza",
+         "ingredients":[
+            {
+               "quantity":"undefined",
+               "name":"",
+               "name_debug":"your favorite pizza dough-we like this pizza dough recipe",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 large sweet potato, thinly sliced, about 1/4 inch thick",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"onion",
+               "name_debug":"1/2 red onion, sliced",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":1.0,
+               "name":"olive oil",
+               "name_debug":"1 1/2 tablespoon olive oil, divided",
+               "measured_unit":"undefined",
+               "category":"nuts-and-oilseeds"
+            },
+            {
+               "quantity":"undefined",
+               "name":"onion salt",
+               "name_debug":"salt and pepper, for seasoning potato slices and onion",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"mozzarella cheese",
+               "name_debug":"1 1/2 cups mozzarella cheese",
+               "measured_unit":"undefined",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 1/2 cups chopped kale",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"balsamic vinegar",
+               "name_debug":"1 tablespoon balsamic vinegar",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"rosemary",
+               "name_debug":"1 teaspoon, freshly chopped rosemary",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Orange Cranberry Bread",
+         "summary":"Sweet orange bread dotted with fresh cranberries and drizzled with an orange glaze! This bread is perfect for the holiday season!",
+         "content":"Preheat oven to 350\u00c2\u00b0 F. Spray a 8 1/2 x 4 1/2 loaf pan with cooking spray and set aside. In a large bowl, whisk together the flour, salt, and baking powder. In a small bowl, combine sugar and orange zest. Rub together with your fingers until fragrant. Whisk into the flour mixture. Set aside. In a separate medium bowl, combine the buttermilk, oil, eggs, orange juice, and vanilla. Slowly add the wet ingredients to the dry ingredients. Stir until just combined. Fold in the cranberries. Pour batter into prepared loaf pan. Bake for 70-75 minutes, or until toothpick comes out clean. If your loaf starts to get too brown drape a piece of foil over the top to finish baking. I did this during the last 10 minutes of the baking time. Remove bread from oven and place on a cooling rack and cool for 15 minutes. Loosen the sides of the bread with a knife. Carefully remove loaf from pan. Let cool completely on wire rack. While the bread is cooling, make the orange glaze. In a small bowl, combine powdered sugar, orange juice, and orange zest. Whisk until smooth. Drizzle the glaze over the bread. Cut and serve. Note-store the bread, wrapped, on the counter for 2-3 days.",
+         "preparation_time":"95 minutes",
+         "servings":"1 loaf",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"flour",
+               "name_debug":"1 1/2 cups all-purpose flour",
+               "measured_unit":"undefined",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":0.5,
+               "name":"salt",
+               "name_debug":"1/2 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":1.0,
+               "name":"baking powder",
+               "name_debug":"1 teaspoon baking powder",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"sugar",
+               "name_debug":"1 cup granulated sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":"undefined",
+               "name":"orange",
+               "name_debug":"zest of 1 large orange",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.75,
+               "name":"buttermilk",
+               "name_debug":"3/4 cup buttermilk",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"vegetable oil",
+               "name_debug":"1/2 cup canola or vegetable oil",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"egg",
+               "name_debug":"2 large eggs, slightly beaten",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"orange",
+               "name_debug":"1 tablespoon fresh orange juice",
+               "measured_unit":"tablespoon",
+               "category":"fruits"
+            },
+            {
+               "quantity":0.5,
+               "name":"",
+               "name_debug":"1/2 teaspoon vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"cranberry",
+               "name_debug":"1 cup fresh cranberries",
+               "measured_unit":"cup",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"sugar",
+               "name_debug":"1 cup powdered sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"orange",
+               "name_debug":"1 1/2 tablespoons fresh orange juice",
+               "measured_unit":"undefined",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"orange",
+               "name_debug":"1 teaspoon orange zest",
+               "measured_unit":"teaspoon",
+               "category":"fruits"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Sweet Potato Pomegranate Salad",
+         "summary":"Sweet potato and pomegranate salad with feta cheese, pepitas, and a light pomegranate dressing. This salad is great as a side dish for any fall or holiday meal!",
+         "content":"Preheat the oven to 400 degrees F. Place the sweet potatoes on a large baking sheet. Drizzle with olive oil and toss until sweet potatoes are well coated. Season with salt and pepper, to taste. Roast for 20-30 minutes, stirring occasionally, or until sweet potatoes are tender. Remove from oven. Place the sweet potatoes in a large bowl. Add pomegranate arils, pepitas, and feta cheese. In a small bowl, whisk together pomegranate juice, red wine vinegar, honey, olive oil, salt, and pepper. Drizzle dressing over sweet potato salad. Gently toss. Serve immediately.",
+         "preparation_time":"40 minutes",
+         "servings":"Serves 6",
+         "ingredients":[
+            {
+               "quantity":4.0,
+               "name":"",
+               "name_debug":"4 large sweet potatoes, peeled and cut into 1-inch cubes",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"olive oil",
+               "name_debug":"1 tablespoon olive oil",
+               "measured_unit":"tablespoon",
+               "category":"nuts-and-oilseeds"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt",
+               "name_debug":"salt and pepper, to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"pomegranate",
+               "name_debug":"1 cup pomegranate arils",
+               "measured_unit":"cup",
+               "category":"fruits"
+            },
+            {
+               "quantity":0.5,
+               "name":"",
+               "name_debug":"1/2 cup pepitas",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"feta cheese",
+               "name_debug":"1/2 cup feta cheese",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":2.0,
+               "name":"pomegranate",
+               "name_debug":"2 tablespoons pomegranate juice",
+               "measured_unit":"tablespoon",
+               "category":"fruits"
+            },
+            {
+               "quantity":2.0,
+               "name":"red wine vinegar",
+               "name_debug":"2 tablespoons red wine vinegar",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"honey",
+               "name_debug":"1 tablespoon honey",
+               "measured_unit":"tablespoon",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":2.0,
+               "name":"olive oil",
+               "name_debug":"2 tablespoons olive oil",
+               "measured_unit":"tablespoon",
+               "category":"nuts-and-oilseeds"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt black pepper",
+               "name_debug":"salt and freshly ground black pepper, to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Caprese Garlic Bread",
+         "summary":"Garlic bread with fresh mozzarella cheese, tomatoes, basil, and a drizzle of balsamic! The best garlic bread you will ever eat!",
+         "content":"Preheat oven to 400 degrees F. Place both sides of the baguette on a large baking sheet with the cut side up. In a small bowl, combine butter and garlic and spread evenly on bread halves. Place the mozzarella cheese slices on top of the bread, making sure the cheese covers the bread completely. Bake the bread for 12-15 minutes or until the cheese is melted. While the bread is in the oven, make the balsamic reduction. Place the balsamic vinegar in a small saucepan. Bring the vinegar to a boil, decrease the heat to low, and simmer, stirring occasionally, until the mixture is reduced by about half. This should only take about 5-7 minutes. Set aside. Remove the bread from oven. Top the bread with tomato slices. Season with salt and pepper, to taste. Add the fresh basil and drizzle with balsamic reduction. Cut into slices and serve.",
+         "preparation_time":"20 minutes",
+         "servings":"Serves 8",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"bread",
+               "name_debug":"1 loaf ciabatta bread, horizontally cut in half",
+               "measured_unit":"loaf",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":4.0,
+               "name":"butter",
+               "name_debug":"4 tablespoons salted butter",
+               "measured_unit":"tablespoon",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":3.0,
+               "name":"garlic",
+               "name_debug":"3 cloves garlic, minced",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":12.0,
+               "name":"mozzarella cheese",
+               "name_debug":"12 oz. fresh mozzarella cheese, sliced",
+               "measured_unit":"oz",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"balsamic vinegar",
+               "name_debug":"1/2 cup balsamic vinegar",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"tomato",
+               "name_debug":"2 medium tomatoes, sliced",
+               "measured_unit":"undefined",
+               "category":"fruits"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt black pepper",
+               "name_debug":"salt and freshly ground black pepper, to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.3333333333333333,
+               "name":"basil",
+               "name_debug":"1/3 cup chopped fresh basil",
+               "measured_unit":"cup",
+               "category":"spices-and-herbs"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Zucchini Noodles with Pesto",
+         "summary":"Turn your zucchini into noodles and toss with fresh basil pesto. A fresh and healthy meal in minutes!",
+         "content":"Use a julienne peeler or mandoline to slice the zucchini into noodles. Set aside. Combine the basil and garlic in a food processor and pulse until coarsely chopped. Slowly add the olive oil in a constant stream while the food processor is on. Stop the machine and scrape down the sides of the food processor with a rubber spatula. Add the lemon juice and Parmesan cheese. Pulse until blended. Season with salt and pepper. Combine the zucchini noodles and pesto. Toss until zucchini noodles are well coated. Top with tomatoes, if using. Serve at room temperature or chilled. Note-if you want to cook the zucchini noodles, you can. Just add the zucchini pesto noodles to a skillet and saut\u00c3\u00a9 them up over medium heat. It only takes a few minutes.",
+         "preparation_time":"15 minutes",
+         "servings":"Serves 4",
+         "ingredients":[
+            {
+               "quantity":4.0,
+               "name":"zucchini",
+               "name_debug":"4 small zucchini, ends trimmed",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":2.0,
+               "name":"basil",
+               "name_debug":"2 cups packed fresh basil leaves",
+               "measured_unit":"cup",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":2.0,
+               "name":"garlic",
+               "name_debug":"2 cloves garlic",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":0.3333333333333333,
+               "name":"olive oil",
+               "name_debug":"1/3 cup extra-virgin olive oil",
+               "measured_unit":"cup",
+               "category":"nuts-and-oilseeds"
+            },
+            {
+               "quantity":2.0,
+               "name":"lemon juice",
+               "name_debug":"2 teaspoons fresh lemon juice",
+               "measured_unit":"teaspoon",
+               "category":"fruits"
+            },
+            {
+               "quantity":0.25,
+               "name":"parmesan cheese",
+               "name_debug":"1/4 cup freshly grated parmesan cheese",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt black pepper",
+               "name_debug":"kosher salt and freshly ground black pepper, to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"tomato cherry",
+               "name_debug":"cherry or grape tomatoes, optional",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Grilled Zucchini Nachos",
+         "summary":"Grilled zucchini rounds turned into chips and topped with all of your favorite nacho toppings! Grilled Zucchini Nachos are a great way to use up your summer zucchini!",
+         "content":"Put the sliced zucchini chips into a large bowl and toss with olive oil. Season with salt and pepper, to taste. Place zucchini on a a grill pan or directly on a hot grill, over medium heat. Grill for 4 to 5 minutes or until zucchini is tender. Sprinkle cheese directly over zucchini chips and cook until cheese is melted, about 1 minute. Remove zucchini from grill and place on a platter or onto plates. Top with black beans, tomatoes, avocado, green onion, cilantro, and a squeeze of fresh lime juice. Serve immediately.",
+         "preparation_time":"16 minutes",
+         "servings":"Serves 4",
+         "ingredients":[
+            {
+               "quantity":4.0,
+               "name":"zucchini",
+               "name_debug":"4 small zucchini, sliced into \u201cchips,\u201d about 1/4 inch thick rounds",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":"undefined",
+               "name":"zucchini olive oil",
+               "name_debug":"olive oil, for brushing zucchini chips",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt",
+               "name_debug":"salt and pepper, to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"cheddar cheese",
+               "name_debug":"1 cup shredded cheddar cheese",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 (15 oz) can black beans, rinsed and drained",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"tomato",
+               "name_debug":"2 small tomatoes, chopped",
+               "measured_unit":"undefined",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"avocado",
+               "name_debug":"1 large avocado, chopped, seed removed",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":2.0,
+               "name":"onion",
+               "name_debug":"2 green onions, chopped",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":0.25,
+               "name":"",
+               "name_debug":"1/4 cup chopped cilantro",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 lime",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Parmesan Crusted Pesto Grilled Cheese Sandwich",
+         "summary":"The salty Parmesan crust takes this gourmet pesto grilled cheese sandwich to a whole new level!",
+         "content":"Heat a non-stick pan over medium heat. Butter the outside of each slice of bread. Spread basil pesto on the inside of each slice of bread. Place the mozzarella cheese slices on top of one piece of bread. Top with the other slice of bread. Sprinkle half of the Parmesan cheese on the outside of one side of the sandwich. Place the sandwich, cheese side down, on the hot pan. Grill for 2 minutes or until Parmesan cheese is crusted and golden brown. Sprinkle the rest of the Parmesan cheese on the outside of the other side of the sandwich. Cook until golden brown and the cheese has melted, about 2 more minutes. Serve immediately.",
+         "preparation_time":"15 minutes",
+         "servings":"1 sandwich",
+         "ingredients":[
+            {
+               "quantity":2.0,
+               "name":"bread",
+               "name_debug":"2 slices ciabatta or french bread",
+               "measured_unit":"slice",
+               "category":"cereals-and-pulses"
+            },
+            {
+               "quantity":1.0,
+               "name":"bread butter",
+               "name_debug":"1 tablespoon soft butter, for brushing the bread",
+               "measured_unit":"tablespoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"mozzarella cheese",
+               "name_debug":"2 slices mozzarella cheese",
+               "measured_unit":"slice",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":2.0,
+               "name":"basil",
+               "name_debug":"2 tablespoons basil pesto",
+               "measured_unit":"tablespoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.3333333333333333,
+               "name":"parmesan cheese",
+               "name_debug":"1/3 cup finely shredded parmesan cheese (i use my microplane)",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Creamy Tomato Tortellini Soup",
+         "summary":"Creamy tomato soup with cheese tortellini! You will think this soup is made with heavy cream, but the secret is Greek yogurt! We love this simple soup!",
+         "content":"In a large pot, heat the olive oil over medium heat. Add the onion and garlic and cook until tender, about 5 minutes. Stir in the bay leaves and crushed red pepper flakes. Add the diced tomatoes and vegetable broth. Stir in fresh basil and season with salt and black pepper, to taste. Simmer on low for 15 minutes. Remove the bay leaves from the pot. Use a hand immersion blender to blend the soup (or carefully transfer soup to a blender to blend and return to the pot). Stir in the Greek yogurt until well combined. Stir in the cheese tortellini and cook on medium-low until tortellini is cooked, about 7-8 minutes. Serve warm.",
+         "preparation_time":"35 minutes",
+         "servings":"Serves 6-8",
+         "ingredients":[
+            {
+               "quantity":1.0,
+               "name":"olive oil",
+               "name_debug":"1 tablespoon olive oil",
+               "measured_unit":"tablespoon",
+               "category":"nuts-and-oilseeds"
+            },
+            {
+               "quantity":0.5,
+               "name":"onion",
+               "name_debug":"1/2 cup chopped onion",
+               "measured_unit":"cup",
+               "category":"vegetables"
+            },
+            {
+               "quantity":3.0,
+               "name":"garlic",
+               "name_debug":"3 cloves garlic, minced",
+               "measured_unit":"undefined",
+               "category":"vegetables"
+            },
+            {
+               "quantity":2.0,
+               "name":"bay leaf",
+               "name_debug":"2 bay leaves",
+               "measured_unit":"undefined",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":"undefined",
+               "name":"",
+               "name_debug":"dash of crushed red pepper flakes",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"tomato",
+               "name_debug":"2 (28 oz) cans diced tomatoes",
+               "measured_unit":"undefined",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 (32 oz) container vegetable broth",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.25,
+               "name":"basil",
+               "name_debug":"1/4 cup chopped fresh basil",
+               "measured_unit":"cup",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":"undefined",
+               "name":"salt black pepper",
+               "name_debug":"salt and freshly ground black pepper, to taste",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.5,
+               "name":"yogurt",
+               "name_debug":"1/2 cup plain greek yogurt, at room temperature",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":2.0,
+               "name":"",
+               "name_debug":"2 (9 oz) packages fresh or frozen cheese tortellini",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"basil parmesan cheese",
+               "name_debug":"grated parmesan cheese and fresh basil, for garnish, optional",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Salted Caramel Easter Popcorn",
+         "summary":"This sweet and salty popcorn treat is perfect for Easter and spring time snacking!",
+         "content":"In a large bowl, combine popcorn and pretzels. Set aside. In a medium saucepan, bring sugar, 1/2 teaspoon salt, and water to a boil over medium high heat. Boil, undisturbed, until mixture is amber in color, for about 8-12 minutes. Remove pan from heat and slowly pour in the heavy cream. Be careful because the mixture will bubble up. Stir until smooth and add vanilla extract, marshmallows, and drop of red food coloring-if using. Stir until marshmallows are melted and mixture is smooth. Pour caramel mixture over popcorn and pretzels and gently stir with a rubber spatula until popcorn is well coated. Stir in the pretzel M&M\u2019s. Transfer mixture to a large baking sheet and sprinkle with sea salt. Let cool completely. Note-I used air popped popcorn, but stove or microwave popcorn will work as well. I used red food coloring to make the popcorn pink for Easter. I also used Easter Pretzel M&M\u2019s. You can always change up the color or leave the popcorn plain. And feel free to stir in your favorite M&M\u2019s or other Easter candy. Robin Eggs or Mini Cadbury Eggs would be good too!",
+         "preparation_time":"",
+         "servings":"About 8 cups popcorn",
+         "ingredients":[
+            {
+               "quantity":6.0,
+               "name":"",
+               "name_debug":"6 cups plain popped popcorn",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":2.0,
+               "name":"",
+               "name_debug":"2 cups coarsely chopped salted pretzels",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"sugar",
+               "name_debug":"1 cup granulated sugar",
+               "measured_unit":"cup",
+               "category":"sugar-and-sugar-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"salt",
+               "name_debug":"1/2 teaspoon sea salt, plus more for sprinkling",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":0.25,
+               "name":"",
+               "name_debug":"1/4 cup water",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.3333333333333333,
+               "name":"cream",
+               "name_debug":"1/3 cup heavy cream",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":0.5,
+               "name":"",
+               "name_debug":"1/2 teaspoon vanilla extract",
+               "measured_unit":"teaspoon",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 cup miniature marshmallows",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"",
+               "name_debug":"drop of red food coloring-if you want to make the popcorn pink for easter",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 1/2 cups easter pretzel m&m\u2019s",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Coconut Macaroon Nutella Nests",
+         "summary":"Coconut cookie nests filled with Nutella and Easter egg candies. These cookies are perfect for Spring and Easter.",
+         "content":"Preheat the oven to 325\u00c2\u00b0F. Line a large baking sheet with parchment paper or a Silpat mat. In a large bowl, stir together the sweetened condensed milk, egg white, vanilla extract, and salt. Stir until combined. Add in the coconut and mix well. With a spoon, scoop up about 2 Tablespoons of the dough and place the dough onto the prepared baking sheet. Form the cookies into the shape of a bird nest. Press down the center with your thumb. Bake cookies for 17 to 20 minutes, or until slightly golden brown. Remove from the oven and press your thumb down in the center of the nests again. Cool the cookies on the baking sheets for about 5 minutes or until they are firm and set. Remove with a spatula onto a cooling rack. Cool completely. Place about a tablespoon of Nutella in the center of each nest. Place 3 egg candies in the center of the nest. Finish decorating the nests and serve. Note-you can make these 2-3 days in advance. Store in an air tight container on the counter.",
+         "preparation_time":"",
+         "servings":"10  nests",
+         "ingredients":[
+            {
+               "quantity":0.6666666666666666,
+               "name":"milk",
+               "name_debug":"2/3 cup sweetened condensed milk",
+               "measured_unit":"cup",
+               "category":"dairy-products"
+            },
+            {
+               "quantity":1.0,
+               "name":"egg",
+               "name_debug":"1 large egg white",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 1/2 teaspoons vanilla",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":0.125,
+               "name":"salt",
+               "name_debug":"1/8 teaspoon salt",
+               "measured_unit":"teaspoon",
+               "category":"spices-and-herbs"
+            },
+            {
+               "quantity":3.0,
+               "name":"coconut",
+               "name_debug":"3 1/2 cups sweetened coconut",
+               "measured_unit":"undefined",
+               "category":"fruits"
+            },
+            {
+               "quantity":1.0,
+               "name":"",
+               "name_debug":"1 cup nutella",
+               "measured_unit":"cup",
+               "category":"other-ingredients"
+            },
+            {
+               "quantity":"undefined",
+               "name":"chocolate egg",
+               "name_debug":"chocolate easter egg candy (use your favorite)",
+               "measured_unit":"undefined",
+               "category":"other-ingredients"
+            }
+         ],
+         "valid":false
+      },
+      {
+         "name":"Honey Cinnamon Roasted Chickpeas",
+         "summary":"Sweet and crunchy Honey Cinnamon Roasted Chickpeas make a great healthy snack. They are simple to make and will remind you of your favorite roasted cinnamon nuts. They also make a great gift during the holiday season.",
+         "content":"1. Preheat oven to 375 degrees F. 2. Drain chickpeas (garbanzo beans) and rinse them under cold water until starch is removed. Place chickpeas on a paper towel to dry. You can peel of the skins if you wish. 3. In a small bowl, whisk together the oil, cinnamon, and sugar. Place chickpeas in bowl and stir until all of the chickpeas are evenly coated. Spread out the chickpeas on a large baking sheet and bake for 35-40 minutes, or until chickpeas are crunchy and no longer soft in the middle. 4. Place hot, roasted chickpeas in a small bowl and coat evenly with honey. Spread chickpeas back out on baking sheet and allow to dry. Store in an airtight container at room temperature. Note: This recipe can easily be doubled or tripled.",
+         "preparation_time":"",
+         "servings":"2 cups roasted chickpeas",
+         "ingredients":[
+
+         ],
+         "valid":false
+      }
+   ]
+}

@@ -7,7 +7,7 @@ import food_ndtv_parser as food_ndfv
 
 
 def f2f_api():
-    result = f2f.send_requests(250)
+    result = f2f.send_requests(11, 16)
     links = f2f.parse_api_response(result)
     recipes = []
     for website in f2f.valid_websites.keys():
@@ -44,6 +44,9 @@ def worldopenfoodfacts_experimental():
 f2f_api()
 x = f2f.measured_unit_potentials
 u.write(json.dumps(x), "measured_unit_potentials", "")
+
+# atentie unele ingrediente se repeta, de validat asta
+# dupa ce se stabileste numele sa se faca automat sau manual
 
 # to check encoding at output
 # to validate add measurement unit where I can do that

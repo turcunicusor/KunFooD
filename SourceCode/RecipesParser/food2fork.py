@@ -10,10 +10,11 @@ from nltk.stem import WordNetLemmatizer
 # globals
 def get_ing():
     data = json.loads(u.read("_ingredients_with_category.json"))
-    ingredients_global = list()
+    ingredients_global = dict()
     ing_count = 0
     for key, value in data.items():
-        ingredients_global.extend(value["ing"])
+        for val in value["ing"]:
+            ingredients_global[val] = key
         ing_count += int(value["count"])
     return ingredients_global
 
@@ -30,11 +31,11 @@ valid_websites = {
 
 measured_unit = ['slice', 'ounce', 'can', 'package', 'chip', 'stalk', 'cup', 'sugar', 'tablespoon', 'box', 'teaspoon', 'leaf', 'envelope', 'loaf', 'oz']
 
-def send_requests(page_nr=1):
+def send_requests(min, max):
     app_key = "b0ea215bec6aec0022f947193a1f6f02"
     url_req_template = "http://food2fork.com/api/search?key={key}&page={page}"
     responses = []
-    for i in range(0, page_nr):
+    for i in range(min, max):
         url = url_req_template.format(key=app_key, page=i)
         try:
             req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -58,9 +59,10 @@ def parse_api_response(responses):
             if result:
                 recipes_links[result].append(recipe_url)
     # make links unique
+    d = dict()
     for key, value in recipes_links.items():
-        value = list(set(value))
-    return recipes_links
+        d[key] = list(set(value))
+    return d
 
 
 def validate_url(recipe_url):
@@ -222,7 +224,7 @@ def lematize_list(lst):
 def extract_valid_ingredients(candidate_ingredients):
     candidate_ingredients = " " + candidate_ingredients + " "
     ing_true = list()
-    for ing in ing_global:
+    for ing in ing_global.keys():
         r = re.search("(\W)+" + ing + "(\W)+", candidate_ingredients)
         if (r):
             ing_true.append(ing)
@@ -250,13 +252,17 @@ def parse_ingredients(ingredients):
             valid = False
         ing["name"] = name
         ing["name_debug"] = ingredient
-        ing["name_lematized_debug"] = " ".join(args)
         if args[1] in measured_unit:
             ing["measured_unit"] = args[1]
         else:
             measured_unit_potentials.append(args[1])
             ing["measured_unit"] = "undefined"
             valid = False
-        ing["category"] = "undefined"
+        ing["category"] = ing_global.get(name, "undefined")
         ingredients_json.append(ing)
+        if ing["category"] == "undefined" or ing["quantity"] == "undefined":
+            valid = False
+            ing["category"] = "other-ingredients"
+    if len(ingredients_json) == 0:
+        valid = False
     return ingredients_json, valid
