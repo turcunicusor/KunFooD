@@ -892,7 +892,7 @@
          "ingredients":[
             {
                "quantity":6.0,
-               "name":"jalapeno",
+               "name":"jalapeno pepper",
                "name_debug":"6 jalapeno peppers",
                "measured_unit":"undefined",
                "category":"vegetables"
@@ -906,23 +906,23 @@
             },
             {
                "quantity":1.0,
-               "name":"beef",
+               "name":"ground beef",
                "name_debug":"1 1/2 pound ground beef",
-               "measured_unit":"undefined",
+               "measured_unit":"pound",
                "category":"meat"
             },
             {
-               "quantity":"undefined",
-               "name":"salt",
+               "quantity":0,
+               "name":"salt and pepper",
                "name_debug":"salt and pepper to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
                "quantity":8.0,
                "name":"bacon",
                "name_debug":"8 strips bacon",
-               "measured_unit":"undefined",
+               "measured_unit":"strip",
                "category":"meat"
             },
             {
@@ -934,9 +934,9 @@
             },
             {
                "quantity":4.0,
-               "name":"",
+               "name":"hamburger bun",
                "name_debug":"4 hamburger buns",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
@@ -955,13 +955,13 @@
             },
             {
                "quantity":4.0,
-               "name":"jalapeno mayonnaise",
+               "name":"mayonnaise",
                "name_debug":"4 tablespoons mayonnaise or roasted jalapeno mayonnaise",
                "measured_unit":"tablespoon",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Okonomiyaki (Japanese Pancake)",
@@ -979,7 +979,7 @@
             },
             {
                "quantity":0.75,
-               "name":"",
+               "name":"water",
                "name_debug":"3/4 cup dashi or water",
                "measured_unit":"cup",
                "category":"other-ingredients"
@@ -988,35 +988,35 @@
                "quantity":1.0,
                "name":"egg",
                "name_debug":"1 egg",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":0.25,
                "name":"cabbage",
                "name_debug":"1/4 of a cabbage, about 2-3 cups packed, shredded",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"carrot",
                "name_debug":"1 carrot,grated",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
                "name":"zucchini",
                "name_debug":"1 small zucchini, grated",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
                "quantity":1.0,
-               "name":"onion",
+               "name":"green onion",
                "name_debug":"1 green onion, sliced",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
@@ -1027,28 +1027,28 @@
                "category":"meat"
             },
             {
-               "quantity":"undefined",
-               "name":"",
+               "quantity":0,
+               "name":"okonomiyaki sauce",
                "name_debug":"okonomiyaki sauce (or worcestershire sauce) to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
+               "quantity":0,
                "name":"mayonnaise",
                "name_debug":"mayonnaise to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
-               "name":"onion",
+               "quantity":0,
+               "name":"green onion",
                "name_debug":"green onions to taste, sliced",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Guinness Chocolate Pudding",
@@ -1059,7 +1059,7 @@
          "ingredients":[
             {
                "quantity":1.0,
-               "name":"",
+               "name":"guinness draught",
                "name_debug":"1 can guinness draught",
                "measured_unit":"can",
                "category":"other-ingredients"
@@ -1073,7 +1073,7 @@
             },
             {
                "quantity":7.0,
-               "name":"chocolate",
+               "name":"dark chocolate",
                "name_debug":"7 ounces dark chocolate, finely chopped",
                "measured_unit":"ounce",
                "category":"other-ingredients"
@@ -1082,7 +1082,7 @@
                "quantity":8.0,
                "name":"egg",
                "name_debug":"8 large egg yolks",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
@@ -1093,7 +1093,7 @@
                "category":"sugar-and-sugar-products"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Bacon Guacamole",
@@ -1106,67 +1106,67 @@
                "quantity":4.0,
                "name":"bacon",
                "name_debug":"4 strips of bacon",
-               "measured_unit":"undefined",
+               "measured_unit":"strip",
                "category":"meat"
             },
             {
                "quantity":2.0,
                "name":"avocado",
                "name_debug":"2 large avocados, mashed",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"lime joice",
                "name_debug":"1 lime, juice",
                "measured_unit":"undefined",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"jalapeno",
+               "name":"jalapeno pepper",
                "name_debug":"1 jalapeno pepper, finely diced",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
                "quantity":1.0,
                "name":"tomato",
                "name_debug":"1 medium tomato, seeded and finely diced",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"fruits"
             },
             {
                "quantity":0.25,
-               "name":"onion",
+               "name":"red onion",
                "name_debug":"1/4 cup red onion, finely diced",
                "measured_unit":"cup",
                "category":"vegetables"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"cilantro",
                "name_debug":"1 tablespoon cilantro, chopped",
                "measured_unit":"tablespoon",
                "category":"other-ingredients"
             },
             {
                "quantity":0.5,
-               "name":"",
+               "name":"cumin",
                "name_debug":"1/2 teaspoon cumin, toasted and ground",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
-               "name":"salt",
+               "quantity":0,
+               "name":"salt and pepper",
                "name_debug":"salt and pepper to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Poached Egg on Toast with Chipotle Mayonnaise, Bacon and Avocado Chipotle Lime Mayo",
@@ -1179,7 +1179,7 @@
                "quantity":4.0,
                "name":"egg",
                "name_debug":"4 eggs",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
@@ -1191,7 +1191,7 @@
             },
             {
                "quantity":0.25,
-               "name":"",
+               "name":"chipotle lime mayo",
                "name_debug":"1/4 cup chipotle lime mayo (see below)",
                "measured_unit":"cup",
                "category":"other-ingredients"
@@ -1200,7 +1200,7 @@
                "quantity":2.0,
                "name":"avocado",
                "name_debug":"2 avocados, sliced",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
@@ -1219,27 +1219,27 @@
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"chipotle chili",
                "name_debug":"1 chipotle chili in adobo sauce or to taste, chopped",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"adobo sauce",
                "name_debug":"1 teaspoon adobo sauce",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
             },
             {
                "quantity":0.5,
-               "name":"",
+               "name":"lime juice",
                "name_debug":"1/2 lime, juice",
                "measured_unit":"undefined",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Toffee Ice Cream Brownie Bars",
@@ -1250,7 +1250,7 @@
          "ingredients":[
             {
                "quantity":1.0,
-               "name":"butter",
+               "name":"unsalted butter",
                "name_debug":"1 cup (2 sticks) unsalted butter",
                "measured_unit":"cup",
                "category":"dairy-products"
@@ -1259,14 +1259,14 @@
                "quantity":2.0,
                "name":"sugar",
                "name_debug":"2 1/4 cups sugar",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"sugar-and-sugar-products"
             },
             {
                "quantity":1.0,
                "name":"cocoa",
                "name_debug":"1 1/4 cups dutch-process cocoa",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
@@ -1285,7 +1285,7 @@
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"vanilla extract",
                "name_debug":"1 tablespoon vanilla extract",
                "measured_unit":"tablespoon",
                "category":"other-ingredients"
@@ -1294,14 +1294,14 @@
                "quantity":4.0,
                "name":"egg",
                "name_debug":"4 large eggs",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
                "name":"flour",
                "name_debug":"1 1/2 cups all purpose flour",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"cereals-and-pulses"
             },
             {
@@ -1313,27 +1313,27 @@
             },
             {
                "quantity":1.5,
-               "name":"cream",
+               "name":"vanilla ice cream",
                "name_debug":"1.5 quart of vanilla ice cream, softened",
-               "measured_unit":"undefined",
+               "measured_unit":"quart",
                "category":"dairy-products"
             },
             {
                "quantity":2.0,
-               "name":"",
+               "name":"candy bar",
                "name_debug":"2 cups chopped heath candy bars, divided",
                "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
-               "name":"caramel",
+               "quantity":1,
+               "name":"caramel sauce",
                "name_debug":"salted caramel sauce , for serving, if desired",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Pumpkin Cinnamon Streusel Pancakes",
@@ -1344,13 +1344,6 @@
          "ingredients":[
             {
                "quantity":0.5,
-               "name":"flour",
-               "name_debug":"1/2 cup all-purpose flour",
-               "measured_unit":"cup",
-               "category":"cereals-and-pulses"
-            },
-            {
-               "quantity":0.5,
                "name":"brown sugar",
                "name_debug":"1/2 cup brown sugar, packed",
                "measured_unit":"cup",
@@ -1358,28 +1351,28 @@
             },
             {
                "quantity":1.0,
-               "name":"cinnamon",
+               "name":"ground cinnamon",
                "name_debug":"1 teaspoon ground cinnamon",
                "measured_unit":"teaspoon",
                "category":"spices-and-herbs"
             },
             {
                "quantity":6.0,
-               "name":"butter",
+               "name":"unsalted butter",
                "name_debug":"6 tablespoons cold unsalted butter, cut into chunks",
                "measured_unit":"tablespoon",
                "category":"dairy-products"
             },
             {
                "quantity":0.75,
-               "name":"flour",
+               "name":"all-purpose flour",
                "name_debug":"3/4 cup all-purpose flour",
                "measured_unit":"cup",
                "category":"cereals-and-pulses"
             },
             {
                "quantity":0.5,
-               "name":"flour",
+               "name":"wheat flour",
                "name_debug":"1/2 cup whole wheat flour",
                "measured_unit":"cup",
                "category":"cereals-and-pulses"
@@ -1421,14 +1414,14 @@
             },
             {
                "quantity":0.125,
-               "name":"ginger",
+               "name":"ground ginger",
                "name_debug":"1/8 teaspoon ground ginger",
                "measured_unit":"teaspoon",
                "category":"vegetables"
             },
             {
                "quantity":0.125,
-               "name":"",
+               "name":"ground clove",
                "name_debug":"1/8 teaspoon ground cloves",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
@@ -1442,7 +1435,7 @@
             },
             {
                "quantity":0.5,
-               "name":"pumpkin",
+               "name":"canned pumpkin",
                "name_debug":"1/2 cup canned pumpkin (not pumpkin pie filling)",
                "measured_unit":"cup",
                "category":"vegetables"
@@ -1451,7 +1444,7 @@
                "quantity":1.0,
                "name":"egg",
                "name_debug":"1 large egg",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
@@ -1463,13 +1456,13 @@
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"vanilla extract",
                "name_debug":"1 teaspoon vanilla extract",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Chickpea, Avocado, & Feta Salad",
@@ -1480,7 +1473,7 @@
          "ingredients":[
             {
                "quantity":1.0,
-               "name":"",
+               "name":"chickpeas",
                "name_debug":"1 can chickpeas, rinsed and drained",
                "measured_unit":"can",
                "category":"other-ingredients"
@@ -1489,19 +1482,19 @@
                "quantity":2.0,
                "name":"avocado",
                "name_debug":"2 avocados, pitted, and chopped",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
                "quantity":0.3333333333333333,
-               "name":"",
+               "name":"cilantro",
                "name_debug":"1/3 cup chopped cilantro",
                "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
                "quantity":2.0,
-               "name":"onion",
+               "name":"green onion",
                "name_debug":"2 tablespoons green onion",
                "measured_unit":"tablespoon",
                "category":"vegetables"
@@ -1514,21 +1507,21 @@
                "category":"dairy-products"
             },
             {
-               "quantity":"undefined",
-               "name":"",
+               "quantity":1,
+               "name":"lime juice",
                "name_debug":"juice of 1 lime",
                "measured_unit":"undefined",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
-               "name":"salt black pepper",
+               "quantity":0,
+               "name":"salt and black pepper",
                "name_debug":"salt and black pepper, to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Quinoa Salad with Asparagus, Peas, Avocados & Lemon Basil Dressing",
@@ -1546,7 +1539,7 @@
             },
             {
                "quantity":3.0,
-               "name":"lemon juice",
+               "name":"fresh lemon juice",
                "name_debug":"3 tablespoons fresh lemon juice",
                "measured_unit":"tablespoon",
                "category":"fruits"
@@ -1560,9 +1553,9 @@
             },
             {
                "quantity":1.0,
-               "name":"garlic",
+               "name":"clove garlic",
                "name_debug":"1 clove garlic, minced",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
@@ -1573,15 +1566,15 @@
                "category":"spices-and-herbs"
             },
             {
-               "quantity":"undefined",
-               "name":"salt black pepper",
+               "quantity":0,
+               "name":"salt and black pepper",
                "name_debug":"salt and freshly ground black pepper, to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
                "quantity":2.0,
-               "name":"",
+               "name":"water",
                "name_debug":"2 cups water",
                "measured_unit":"cup",
                "category":"other-ingredients"
@@ -1611,7 +1604,7 @@
                "quantity":1.0,
                "name":"asparagus",
                "name_debug":"1 small bunch asparagus, about 15 spears, cut into 1-inch pieces",
-               "measured_unit":"undefined",
+               "measured_unit":"bunch",
                "category":"vegetables"
             },
             {
@@ -1623,7 +1616,7 @@
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"frozen peas",
                "name_debug":"1 cup frozen peas",
                "measured_unit":"cup",
                "category":"other-ingredients"
@@ -1632,14 +1625,14 @@
                "quantity":1.0,
                "name":"avocado",
                "name_debug":"1 avocado, chopped",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
-               "quantity":"undefined",
-               "name":"salt black pepper",
+               "quantity":0,
+               "name":"salt and black pepper",
                "name_debug":"salt and freshly ground black pepper, to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
@@ -1650,7 +1643,7 @@
                "category":"spices-and-herbs"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Pumpkin Chocolate Chip Streusel Cake",
@@ -1661,7 +1654,7 @@
          "ingredients":[
             {
                "quantity":2.0,
-               "name":"flour",
+               "name":"all-purpose flour",
                "name_debug":"2 cups all-purpose flour",
                "measured_unit":"cup",
                "category":"cereals-and-pulses"
@@ -1670,7 +1663,7 @@
                "quantity":1.0,
                "name":"cinnamon",
                "name_debug":"1 1/2 teaspoons of cinnamon",
-               "measured_unit":"undefined",
+               "measured_unit":"teaspoon",
                "category":"spices-and-herbs"
             },
             {
@@ -1703,14 +1696,14 @@
             },
             {
                "quantity":1.0,
-               "name":"butter",
+               "name":"unsalted butter",
                "name_debug":"1 cup unsalted butter, at room temperature",
                "measured_unit":"cup",
                "category":"dairy-products"
             },
             {
                "quantity":0.75,
-               "name":"sugar",
+               "name":"granulated sugar",
                "name_debug":"3/4 cup granulated sugar",
                "measured_unit":"cup",
                "category":"sugar-and-sugar-products"
@@ -1726,36 +1719,29 @@
                "quantity":1.0,
                "name":"egg",
                "name_debug":"1 large egg",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":2.0,
-               "name":"",
+               "name":"vanilla extract",
                "name_debug":"2 teaspoons vanilla extract",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"pumpkin",
+               "name":" pumpkin puree",
                "name_debug":"1 cup canned pumpkin puree",
                "measured_unit":"cup",
                "category":"vegetables"
             },
             {
                "quantity":1.0,
-               "name":"chocolate",
+               "name":"chocolate chips",
                "name_debug":"1 cup chocolate chips",
                "measured_unit":"cup",
                "category":"other-ingredients"
-            },
-            {
-               "quantity":0.6666666666666666,
-               "name":"flour",
-               "name_debug":"2/3 cup all-purpose flour",
-               "measured_unit":"cup",
-               "category":"cereals-and-pulses"
             },
             {
                "quantity":0.5,
@@ -1766,27 +1752,27 @@
             },
             {
                "quantity":0.5,
-               "name":"cinnamon",
+               "name":"ground cinnamon",
                "name_debug":"1/2 teaspoon ground cinnamon",
                "measured_unit":"teaspoon",
                "category":"spices-and-herbs"
             },
             {
                "quantity":6.0,
-               "name":"butter",
+               "name":"unsalted butter",
                "name_debug":"6 tablespoons cold unsalted butter, cut into small chunks",
                "measured_unit":"tablespoon",
                "category":"dairy-products"
             },
             {
                "quantity":0.5,
-               "name":"chocolate",
+               "name":"chocolate chips",
                "name_debug":"1/2 cup chocolate chips",
                "measured_unit":"cup",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Chocolate Pudding Cake",
@@ -1797,16 +1783,16 @@
          "ingredients":[
             {
                "quantity":2.0,
-               "name":"flour",
+               "name":"all-purpose sflour",
                "name_debug":"2 1/2 cups all-purpose flour",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"cereals-and-pulses"
             },
             {
                "quantity":2.0,
                "name":"brown sugar",
                "name_debug":"2 1/4 cups packed light brown sugar, divided",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"sugar-and-sugar-products"
             },
             {
@@ -1832,14 +1818,14 @@
             },
             {
                "quantity":1.0,
-               "name":"chocolate",
+               "name":"chocolate chips",
                "name_debug":"1 cup chocolate chips",
                "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
                "quantity":2.0,
-               "name":"butter",
+               "name":"unsalted butter",
                "name_debug":"2 tablespoons unsalted butter",
                "measured_unit":"tablespoon",
                "category":"dairy-products"
@@ -1860,7 +1846,7 @@
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"vanilla extract",
                "name_debug":"1 teaspoon vanilla extract",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
@@ -1874,13 +1860,13 @@
             },
             {
                "quantity":2.0,
-               "name":"",
+               "name":"water",
                "name_debug":"2 1/2 cups boiling water",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Dark Chocolate Chunk, Pistachio, and Sea Salt Cookies",
@@ -1891,14 +1877,14 @@
          "ingredients":[
             {
                "quantity":1.0,
-               "name":"flour",
+               "name":"all-purpose flour",
                "name_debug":"1 1/2 cups all-purpose flour",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"cereals-and-pulses"
             },
             {
                "quantity":0.5,
-               "name":"salt",
+               "name":"sea salt",
                "name_debug":"1/2 teaspoon sea salt",
                "measured_unit":"teaspoon",
                "category":"spices-and-herbs"
@@ -1919,14 +1905,14 @@
             },
             {
                "quantity":0.5,
-               "name":"butter",
+               "name":"unsalted butter",
                "name_debug":"1/2 cup unsalted butter, at room temperature",
                "measured_unit":"cup",
                "category":"dairy-products"
             },
             {
                "quantity":0.25,
-               "name":"sugar",
+               "name":"granulated sugar",
                "name_debug":"1/4 cup granulated sugar",
                "measured_unit":"cup",
                "category":"sugar-and-sugar-products"
@@ -1942,12 +1928,12 @@
                "quantity":1.0,
                "name":"egg",
                "name_debug":"1 large egg",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"vanilla extract",
                "name_debug":"1 teaspoon vanilla extract",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
@@ -1961,20 +1947,20 @@
             },
             {
                "quantity":1.0,
-               "name":"chocolate",
+               "name":"dark chocolate",
                "name_debug":"1 cup chopped dark chocolate",
                "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
-               "name":"salt",
+               "quantity":0,
+               "name":"sea salt",
                "name_debug":"sea salt, for sprinkling on cookies",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Lemon Almond Bread",
@@ -1985,9 +1971,9 @@
          "ingredients":[
             {
                "quantity":1.0,
-               "name":"flour",
+               "name":"all-purpose flour",
                "name_debug":"1 1/2 cups all-purpose flour",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"cereals-and-pulses"
             },
             {
@@ -2006,21 +1992,21 @@
             },
             {
                "quantity":1.0,
-               "name":"sugar",
+               "name":"granulated sugar",
                "name_debug":"1 cup granulated sugar",
                "measured_unit":"cup",
                "category":"sugar-and-sugar-products"
             },
             {
                "quantity":2.0,
-               "name":"lemon",
+               "name":"lemon zest",
                "name_debug":"2 tablespoons lemon zest",
                "measured_unit":"tablespoon",
                "category":"fruits"
             },
             {
                "quantity":0.75,
-               "name":"",
+               "name":"milk",
                "name_debug":"3/4 cup almond breeze\u00e2\u00a0almondmilk original unsweetened",
                "measured_unit":"cup",
                "category":"other-ingredients"
@@ -2036,7 +2022,7 @@
                "quantity":2.0,
                "name":"egg",
                "name_debug":"2 large eggs, slightly beaten",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
@@ -2048,14 +2034,14 @@
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"vanilla extract",
                "name_debug":"1 teaspoon vanilla extract",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"almond extract",
                "name_debug":"1 teaspoon almond extract",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
@@ -2071,25 +2057,18 @@
                "quantity":1.0,
                "name":"lemon juice",
                "name_debug":"1 1/2 tablespoons fresh lemon juice",
-               "measured_unit":"undefined",
+               "measured_unit":"tablespoon",
                "category":"fruits"
             },
             {
-               "quantity":1.0,
-               "name":"",
-               "name_debug":"1 teaspoon almond extract",
-               "measured_unit":"teaspoon",
-               "category":"other-ingredients"
-            },
-            {
                "quantity":3.0,
-               "name":"",
+               "name":"almonds",
                "name_debug":"3 tablespoons sliced almonds, for garnishing the loaf",
                "measured_unit":"tablespoon",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Chocolate Zucchini Coconut Cake",
@@ -2100,9 +2079,9 @@
          "ingredients":[
             {
                "quantity":2.0,
-               "name":"flour",
+               "name":"all-purpose flour",
                "name_debug":"2 1/2 cups all-purpose flour",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"cereals-and-pulses"
             },
             {
@@ -2135,28 +2114,28 @@
             },
             {
                "quantity":0.5,
-               "name":"butter",
+               "name":"unsalted butter",
                "name_debug":"1/2 cup unsalted butter, at room temperature",
                "measured_unit":"cup",
                "category":"dairy-products"
             },
             {
                "quantity":0.5,
-               "name":"coconut",
+               "name":"coconut oil",
                "name_debug":"1/2 cup coconut oil, melted and cooled to room temperature",
                "measured_unit":"cup",
                "category":"fruits"
             },
             {
                "quantity":1.0,
-               "name":"sugar",
+               "name":"granulated sugar",
                "name_debug":"1 1/2 cups granulated sugar",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"sugar-and-sugar-products"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"vanilla extract",
                "name_debug":"1 teaspoon vanilla extract",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
@@ -2165,12 +2144,12 @@
                "quantity":2.0,
                "name":"egg",
                "name_debug":"2 large eggs",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":0.5,
-               "name":"yogurt",
+               "name":"greek yogurt",
                "name_debug":"1/2 cup plain greek yogurt",
                "measured_unit":"cup",
                "category":"dairy-products"
@@ -2191,14 +2170,14 @@
             },
             {
                "quantity":0.5,
-               "name":"chocolate",
+               "name":"chocolate chips",
                "name_debug":"1/2 cup chocolate chips",
                "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"butter",
+               "name":"unsalted butter",
                "name_debug":"1 cup unsalted butter, at room temperature",
                "measured_unit":"cup",
                "category":"dairy-products"
@@ -2207,14 +2186,14 @@
                "quantity":3.0,
                "name":"sugar",
                "name_debug":"3 1/2 cups confectioners\u2019 sugar",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"sugar-and-sugar-products"
             },
             {
                "quantity":1.0,
                "name":"coconut",
                "name_debug":"1 1/2 teaspoons coconut extract 1/2 teaspoon vanilla extract",
-               "measured_unit":"undefined",
+               "measured_unit":"teaspoon",
                "category":"fruits"
             },
             {
@@ -2225,18 +2204,7 @@
                "category":"fruits"
             }
          ],
-         "valid":false
-      },
-      {
-         "name":"Salted Caramel Apple Crumb Bars",
-         "summary":"Salted Caramel Apple Crumb Bars-the perfect dessert for fall. These bars are also good with a scoop of vanilla ice cream!",
-         "content":"Preheat the oven to 375 degrees F. Spray a 9\u00c3\u009713-inch baking pan with cooking spray and set aside. For the apple filling- place the diced apples in a large bowl and sprinkle with lemon juice. Mix gently. In a separate bowl whisk together flour, cornstarch, sugar, salt, cinnamon, nutmeg, and ground all-spice. Pour over the apples and carefully combine. Set aside. For the dough-in a large bowl whisk together the flour, sugar, baking powder, salt, and cinnamon. Cut in the butter with a pastry blender or by using your hands, until butter is mixed in, but you still have small chunks of butter. Mix the egg and vanilla together. Add into the flour and butter mixture and combine. The dough will be crumbly. Pat half of the dough into the prepared pan. Spread the apple mixture evenly over the bottom crust. Drizzle about 3/4 cup of salted caramel sauce over the apple filling. Crumble the remaining dough over the apple caramel layer and pat gently. 5. Bake for 45 minutes, or until the top is golden brown. Cool completely on a wire rack. Cut into squares. Drizzle salted caramel sauce over the squares and serve. Note-you won\u2019t use all of the salted caramel sauce for this recipe. Store the leftover sauce in the refrigerator for up to 2 weeks.",
-         "preparation_time":"",
-         "servings":"16 bars",
-         "ingredients":[
-
-         ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Sweet Potato Kale Pizza with Rosemary & Red Onion",
@@ -2246,52 +2214,52 @@
          "servings":"1 pizza",
          "ingredients":[
             {
-               "quantity":"undefined",
-               "name":"",
+               "quantity":1,
+               "name":"pizza dough-we",
                "name_debug":"your favorite pizza dough-we like this pizza dough recipe",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"potato",
                "name_debug":"1 large sweet potato, thinly sliced, about 1/4 inch thick",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":0.5,
-               "name":"onion",
+               "name":"red onion",
                "name_debug":"1/2 red onion, sliced",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
                "quantity":1.0,
                "name":"olive oil",
                "name_debug":"1 1/2 tablespoon olive oil, divided",
-               "measured_unit":"undefined",
+               "measured_unit":"tablespoon",
                "category":"nuts-and-oilseeds"
             },
             {
-               "quantity":"undefined",
-               "name":"onion salt",
+               "quantity":0,
+               "name":"salt and pepper",
                "name_debug":"salt and pepper, for seasoning potato slices and onion",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
                "name":"mozzarella cheese",
                "name_debug":"1 1/2 cups mozzarella cheese",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"dairy-products"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"kale",
                "name_debug":"1 1/2 cups chopped kale",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
@@ -2309,7 +2277,7 @@
                "category":"spices-and-herbs"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Orange Cranberry Bread",
@@ -2320,9 +2288,9 @@
          "ingredients":[
             {
                "quantity":1.0,
-               "name":"flour",
+               "name":"all-purpose flour",
                "name_debug":"1 1/2 cups all-purpose flour",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"cereals-and-pulses"
             },
             {
@@ -2341,16 +2309,16 @@
             },
             {
                "quantity":1.0,
-               "name":"sugar",
+               "name":"granulated sugar",
                "name_debug":"1 cup granulated sugar",
                "measured_unit":"cup",
                "category":"sugar-and-sugar-products"
             },
             {
-               "quantity":"undefined",
-               "name":"orange",
+               "quantity":1,
+               "name":"orange zest",
                "name_debug":"zest of 1 large orange",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
@@ -2371,53 +2339,39 @@
                "quantity":2.0,
                "name":"egg",
                "name_debug":"2 large eggs, slightly beaten",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"orange",
+               "name":"fresh orange juice",
                "name_debug":"1 tablespoon fresh orange juice",
                "measured_unit":"tablespoon",
                "category":"fruits"
             },
             {
                "quantity":0.5,
-               "name":"",
+               "name":"vanilla extract",
                "name_debug":"1/2 teaspoon vanilla extract",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"cranberry",
+               "name":"fresh cranberry",
                "name_debug":"1 cup fresh cranberries",
                "measured_unit":"cup",
                "category":"fruits"
             },
             {
                "quantity":1.0,
-               "name":"sugar",
+               "name":"powdered sugar",
                "name_debug":"1 cup powdered sugar",
                "measured_unit":"cup",
                "category":"sugar-and-sugar-products"
-            },
-            {
-               "quantity":1.0,
-               "name":"orange",
-               "name_debug":"1 1/2 tablespoons fresh orange juice",
-               "measured_unit":"undefined",
-               "category":"fruits"
-            },
-            {
-               "quantity":1.0,
-               "name":"orange",
-               "name_debug":"1 teaspoon orange zest",
-               "measured_unit":"teaspoon",
-               "category":"fruits"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Sweet Potato Pomegranate Salad",
@@ -2428,9 +2382,9 @@
          "ingredients":[
             {
                "quantity":4.0,
-               "name":"",
+               "name":"potato",
                "name_debug":"4 large sweet potatoes, peeled and cut into 1-inch cubes",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
@@ -2441,22 +2395,22 @@
                "category":"nuts-and-oilseeds"
             },
             {
-               "quantity":"undefined",
-               "name":"salt",
+               "quantity":0,
+               "name":"salt and pepper",
                "name_debug":"salt and pepper, to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"pomegranate",
+               "name":"pomegranate arils",
                "name_debug":"1 cup pomegranate arils",
                "measured_unit":"cup",
                "category":"fruits"
             },
             {
                "quantity":0.5,
-               "name":"",
+               "name":"pepitas",
                "name_debug":"1/2 cup pepitas",
                "measured_unit":"cup",
                "category":"other-ingredients"
@@ -2497,14 +2451,14 @@
                "category":"nuts-and-oilseeds"
             },
             {
-               "quantity":"undefined",
-               "name":"salt black pepper",
+               "quantity":0,
+               "name":"salt and black pepper",
                "name_debug":"salt and freshly ground black pepper, to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Caprese Garlic Bread",
@@ -2515,23 +2469,23 @@
          "ingredients":[
             {
                "quantity":1.0,
-               "name":"bread",
+               "name":"ciabatta bread",
                "name_debug":"1 loaf ciabatta bread, horizontally cut in half",
                "measured_unit":"loaf",
                "category":"cereals-and-pulses"
             },
             {
                "quantity":4.0,
-               "name":"butter",
+               "name":"salted butter",
                "name_debug":"4 tablespoons salted butter",
                "measured_unit":"tablespoon",
                "category":"dairy-products"
             },
             {
                "quantity":3.0,
-               "name":"garlic",
+               "name":"clove garlic",
                "name_debug":"3 cloves garlic, minced",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
@@ -2552,25 +2506,25 @@
                "quantity":2.0,
                "name":"tomato",
                "name_debug":"2 medium tomatoes, sliced",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"fruits"
             },
             {
-               "quantity":"undefined",
-               "name":"salt black pepper",
+               "quantity":0,
+               "name":"salt and black pepper",
                "name_debug":"salt and freshly ground black pepper, to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
                "quantity":0.3333333333333333,
-               "name":"basil",
+               "name":"fresh basil",
                "name_debug":"1/3 cup chopped fresh basil",
                "measured_unit":"cup",
                "category":"spices-and-herbs"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Zucchini Noodles with Pesto",
@@ -2583,33 +2537,33 @@
                "quantity":4.0,
                "name":"zucchini",
                "name_debug":"4 small zucchini, ends trimmed",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
                "quantity":2.0,
-               "name":"basil",
+               "name":"basil leave",
                "name_debug":"2 cups packed fresh basil leaves",
                "measured_unit":"cup",
                "category":"spices-and-herbs"
             },
             {
                "quantity":2.0,
-               "name":"garlic",
+               "name":"clove garlic",
                "name_debug":"2 cloves garlic",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
                "quantity":0.3333333333333333,
-               "name":"olive oil",
+               "name":"extra-virgin olive oil",
                "name_debug":"1/3 cup extra-virgin olive oil",
                "measured_unit":"cup",
                "category":"nuts-and-oilseeds"
             },
             {
                "quantity":2.0,
-               "name":"lemon juice",
+               "name":"fresh lemon juice",
                "name_debug":"2 teaspoons fresh lemon juice",
                "measured_unit":"teaspoon",
                "category":"fruits"
@@ -2622,21 +2576,21 @@
                "category":"dairy-products"
             },
             {
-               "quantity":"undefined",
-               "name":"salt black pepper",
+               "quantity":0,
+               "name":"salt and black pepper",
                "name_debug":"kosher salt and freshly ground black pepper, to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
-               "name":"tomato cherry",
+               "quantity":1,
+               "name":"cherry",
                "name_debug":"cherry or grape tomatoes, optional",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Grilled Zucchini Nachos",
@@ -2649,21 +2603,21 @@
                "quantity":4.0,
                "name":"zucchini",
                "name_debug":"4 small zucchini, sliced into \u201cchips,\u201d about 1/4 inch thick rounds",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
-               "quantity":"undefined",
-               "name":"zucchini olive oil",
+               "quantity":0,
+               "name":"olive oil",
                "name_debug":"olive oil, for brushing zucchini chips",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
-               "name":"salt",
+               "quantity":0,
+               "name":"salt and pepper",
                "name_debug":"salt and pepper, to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
@@ -2675,48 +2629,48 @@
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"black beans",
                "name_debug":"1 (15 oz) can black beans, rinsed and drained",
-               "measured_unit":"undefined",
+               "measured_unit":"can",
                "category":"other-ingredients"
             },
             {
                "quantity":2.0,
                "name":"tomato",
                "name_debug":"2 small tomatoes, chopped",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"fruits"
             },
             {
                "quantity":1.0,
                "name":"avocado",
                "name_debug":"1 large avocado, chopped, seed removed",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
                "quantity":2.0,
-               "name":"onion",
+               "name":"green onion",
                "name_debug":"2 green onions, chopped",
                "measured_unit":"undefined",
                "category":"vegetables"
             },
             {
                "quantity":0.25,
-               "name":"",
+               "name":"cilantro",
                "name_debug":"1/4 cup chopped cilantro",
                "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"lime",
                "name_debug":"1 lime",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Parmesan Crusted Pesto Grilled Cheese Sandwich",
@@ -2727,14 +2681,14 @@
          "ingredients":[
             {
                "quantity":2.0,
-               "name":"bread",
+               "name":"ciabatta",
                "name_debug":"2 slices ciabatta or french bread",
                "measured_unit":"slice",
                "category":"cereals-and-pulses"
             },
             {
                "quantity":1.0,
-               "name":"bread butter",
+               "name":"butter",
                "name_debug":"1 tablespoon soft butter, for brushing the bread",
                "measured_unit":"tablespoon",
                "category":"other-ingredients"
@@ -2748,7 +2702,7 @@
             },
             {
                "quantity":2.0,
-               "name":"basil",
+               "name":"basil pesto",
                "name_debug":"2 tablespoons basil pesto",
                "measured_unit":"tablespoon",
                "category":"spices-and-herbs"
@@ -2761,7 +2715,7 @@
                "category":"dairy-products"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Creamy Tomato Tortellini Soup",
@@ -2786,76 +2740,76 @@
             },
             {
                "quantity":3.0,
-               "name":"garlic",
+               "name":"clove garlic",
                "name_debug":"3 cloves garlic, minced",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"vegetables"
             },
             {
                "quantity":2.0,
-               "name":"bay leaf",
+               "name":"bay",
                "name_debug":"2 bay leaves",
-               "measured_unit":"undefined",
+               "measured_unit":"leaf",
                "category":"spices-and-herbs"
             },
             {
-               "quantity":"undefined",
-               "name":"",
+               "quantity":1,
+               "name":"dash",
                "name_debug":"dash of crushed red pepper flakes",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":2.0,
                "name":"tomato",
                "name_debug":"2 (28 oz) cans diced tomatoes",
-               "measured_unit":"undefined",
+               "measured_unit":"can",
                "category":"fruits"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"broth",
                "name_debug":"1 (32 oz) container vegetable broth",
-               "measured_unit":"undefined",
+               "measured_unit":"container",
                "category":"other-ingredients"
             },
             {
                "quantity":0.25,
-               "name":"basil",
+               "name":"fresh basil",
                "name_debug":"1/4 cup chopped fresh basil",
                "measured_unit":"cup",
                "category":"spices-and-herbs"
             },
             {
-               "quantity":"undefined",
-               "name":"salt black pepper",
+               "quantity":0,
+               "name":"salt and black pepper",
                "name_debug":"salt and freshly ground black pepper, to taste",
-               "measured_unit":"undefined",
+               "measured_unit":"to taste",
                "category":"other-ingredients"
             },
             {
                "quantity":0.5,
-               "name":"yogurt",
+               "name":"greek yogurt",
                "name_debug":"1/2 cup plain greek yogurt, at room temperature",
                "measured_unit":"cup",
                "category":"dairy-products"
             },
             {
                "quantity":2.0,
-               "name":"",
+               "name":"cheese tortellini",
                "name_debug":"2 (9 oz) packages fresh or frozen cheese tortellini",
-               "measured_unit":"undefined",
+               "measured_unit":"packages",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
-               "name":"basil parmesan cheese",
+               "quantity":1,
+               "name":"parmesan cheese",
                "name_debug":"grated parmesan cheese and fresh basil, for garnish, optional",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Salted Caramel Easter Popcorn",
@@ -2866,35 +2820,35 @@
          "ingredients":[
             {
                "quantity":6.0,
-               "name":"",
+               "name":"popcorn",
                "name_debug":"6 cups plain popped popcorn",
                "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
                "quantity":2.0,
-               "name":"",
+               "name":"pretzels",
                "name_debug":"2 cups coarsely chopped salted pretzels",
                "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"sugar",
+               "name":"granulated sugar",
                "name_debug":"1 cup granulated sugar",
                "measured_unit":"cup",
                "category":"sugar-and-sugar-products"
             },
             {
                "quantity":0.5,
-               "name":"salt",
+               "name":"sea salt",
                "name_debug":"1/2 teaspoon sea salt, plus more for sprinkling",
                "measured_unit":"teaspoon",
                "category":"spices-and-herbs"
             },
             {
                "quantity":0.25,
-               "name":"",
+               "name":"water",
                "name_debug":"1/4 cup water",
                "measured_unit":"cup",
                "category":"other-ingredients"
@@ -2908,34 +2862,27 @@
             },
             {
                "quantity":0.5,
-               "name":"",
+               "name":"vanilla extract",
                "name_debug":"1/2 teaspoon vanilla extract",
                "measured_unit":"teaspoon",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"marshmallows",
                "name_debug":"1 cup miniature marshmallows",
                "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
-               "name":"",
-               "name_debug":"drop of red food coloring-if you want to make the popcorn pink for easter",
-               "measured_unit":"undefined",
-               "category":"other-ingredients"
-            },
-            {
                "quantity":1.0,
-               "name":"",
+               "name":"m&m",
                "name_debug":"1 1/2 cups easter pretzel m&m\u2019s",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
+         "valid":true
       },
       {
          "name":"Coconut Macaroon Nutella Nests",
@@ -2953,16 +2900,16 @@
             },
             {
                "quantity":1.0,
-               "name":"egg",
+               "name":"egg white",
                "name_debug":"1 large egg white",
-               "measured_unit":"undefined",
+               "measured_unit":"piece",
                "category":"other-ingredients"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"vanilla",
                "name_debug":"1 1/2 teaspoons vanilla",
-               "measured_unit":"undefined",
+               "measured_unit":"teaspoon",
                "category":"other-ingredients"
             },
             {
@@ -2976,36 +2923,25 @@
                "quantity":3.0,
                "name":"coconut",
                "name_debug":"3 1/2 cups sweetened coconut",
-               "measured_unit":"undefined",
+               "measured_unit":"cup",
                "category":"fruits"
             },
             {
                "quantity":1.0,
-               "name":"",
+               "name":"nutella",
                "name_debug":"1 cup nutella",
                "measured_unit":"cup",
                "category":"other-ingredients"
             },
             {
-               "quantity":"undefined",
-               "name":"chocolate egg",
+               "quantity":1,
+               "name":"chocolate egg candy",
                "name_debug":"chocolate easter egg candy (use your favorite)",
-               "measured_unit":"undefined",
+               "measured_unit":"pack",
                "category":"other-ingredients"
             }
          ],
-         "valid":false
-      },
-      {
-         "name":"Honey Cinnamon Roasted Chickpeas",
-         "summary":"Sweet and crunchy Honey Cinnamon Roasted Chickpeas make a great healthy snack. They are simple to make and will remind you of your favorite roasted cinnamon nuts. They also make a great gift during the holiday season.",
-         "content":"1. Preheat oven to 375 degrees F. 2. Drain chickpeas (garbanzo beans) and rinse them under cold water until starch is removed. Place chickpeas on a paper towel to dry. You can peel of the skins if you wish. 3. In a small bowl, whisk together the oil, cinnamon, and sugar. Place chickpeas in bowl and stir until all of the chickpeas are evenly coated. Spread out the chickpeas on a large baking sheet and bake for 35-40 minutes, or until chickpeas are crunchy and no longer soft in the middle. 4. Place hot, roasted chickpeas in a small bowl and coat evenly with honey. Spread chickpeas back out on baking sheet and allow to dry. Store in an airtight container at room temperature. Note: This recipe can easily be doubled or tripled.",
-         "preparation_time":"",
-         "servings":"2 cups roasted chickpeas",
-         "ingredients":[
-
-         ],
-         "valid":false
+         "valid":true
       }
    ]
 }
