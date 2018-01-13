@@ -80,8 +80,9 @@ namespace Business
 
         public async Task<IEnumerable<Recipe>> GetByPrepatationTime(int minutes, Task<IEnumerable<Recipe>> recipes)
         {
+            int aproxError = 10;
             return (await recipes).Where(recipe =>
-                recipe.PreparationTime >= minutes - 5 && recipe.PreparationTime <= minutes + 5);
+                recipe.PreparationTime >= minutes - aproxError && recipe.PreparationTime <= minutes + aproxError);
         }
 
         public bool ContainsIngredient(Guid recipeId, Guid ingredientId)
@@ -140,7 +141,24 @@ namespace Business
 
         public async Task<IEnumerable<Recipe>> GetByFilter(Filter filter)
         {
-            return await GetAll();
+            Task<IEnumerable<Recipe>> recipes = GetAll();
+            if (filter.Cuisine != KitchenType.Unspecified)
+                recipes = GetByKitchenType(filter.Cuisine, recipes);
+            if (filter.Cost > 0)
+                recipes = GetByCost(filter.Cost, recipes);
+            if (filter.Name != "")
+                recipes = GetByName(filter.Name, recipes);
+            recipes = GetByRating(filter.Rating, recipes);
+            recipes = GetByVotesNumber(filter.VotesNumber, recipes);
+            if (filter.PreparationTime != 0)
+                recipes = GetByPrepatationTime(filter.PreparationTime, recipes);
+
+            if (filter.OnlyIngredients != null)
+                recipes = GetByOnlyIngredients(filter.OnlyIngredients, recipes);
+            else if (filter.ExcludedIngredients != null || filter.IncludedIngredients != null)
+                recipes = GetByIngredients(filter.IncludedIngredients, filter.ExcludedIngredients, recipes);
+
+            return await recipes;
         }
     }
 }
