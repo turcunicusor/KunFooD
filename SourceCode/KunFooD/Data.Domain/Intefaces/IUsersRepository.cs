@@ -8,5 +8,6 @@ namespace Data.Domain.Intefaces
     {
         Task<IEnumerable<User>> GetAdmins();
         Task<User> GetByEmail(string email);
+        Task<User> GetByName(string userName);
     }
 }

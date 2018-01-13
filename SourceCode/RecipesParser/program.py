@@ -47,21 +47,21 @@ def read_recipies(file_name):
         r['name'] = recipe["name"]
         r["summary"] = recipe["summary"]
         r["content"] = recipe["content"]
-        r["preparation_time"] = int(recipe["preparation_time"])
+        r["preparationTime"] = int(recipe["preparation_time"])
         r["servings"] = int(recipe["servings"])
         ing = []
         for ingredient in recipe["ingredients"]:
             i = dict()
             i["quantity"] = float(ingredient["quantity"])
             i["name"] = ingredient["name"]
-            i["measured_unit"] = ingredient["measured_unit"]
+            i["measurementUnit"] = ingredient["measured_unit"]
             i["category"] = ingredient["category"]
             ing.append(i)
         r["ingredients"] = ing
         recipes.append(r)
-    for recipe in recipes:
-        if recipe["name"] == "Maple Bourbon Bacon Jam":
-            print(json.dumps(recipe, sort_keys=True, indent=4, separators=(',', ': ')))
+    # for recipe in recipes:
+    #     if recipe["name"] == "Maple Bourbon Bacon Jam":
+    #         print(json.dumps(recipe, sort_keys=True, indent=4, separators=(',', ': ')))
     return recipes
 
 # ing_only()
@@ -74,5 +74,6 @@ def read_recipies(file_name):
 # dupa ce se stabileste numele sa se faca automat sau manual
 
 recipes = read_recipies("recipies_food2fork_valid_all.json")
-error = u.send_recipies("", recipes)
-print("Failed requests: " + error)
+error, res = u.send_recipes("http://localhost:55383/api/Recipes/", recipes)
+print("Failed requests: " + str(error))
+print(res)

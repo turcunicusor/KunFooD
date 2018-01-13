@@ -28,6 +28,10 @@ namespace WebApp
             services.AddTransient<IUsersRepository, UsersRepository>();
             services.AddTransient<IForumCategoryRepository, ForumCategoryRepository>();
             services.AddTransient<IForumThreadRepository, ForumThreadRepository>();
+            services.AddTransient<IFridgeRepository, FridgeRepository>();
+            services.AddTransient<IIngredientsCategoryRepository, IngredientsCategoryRepository>();
+            services.AddTransient<IIngredientsRepository, IngredientsRepository>();
+            services.AddTransient<IRecipesRepository, RecipesRepository>();
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc(options =>

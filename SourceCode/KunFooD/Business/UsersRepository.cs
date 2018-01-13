@@ -27,5 +27,10 @@ namespace Business
         {
             return await _databaseContext.Users.FirstOrDefaultAsync(user => user.Email.Equals(email));
         }
+
+        public async Task<User> GetByName(string userName)
+        {
+            return await _databaseContext.Users.FirstOrDefaultAsync(user => user.UserName.Equals(userName));
+        }
     }
 }
