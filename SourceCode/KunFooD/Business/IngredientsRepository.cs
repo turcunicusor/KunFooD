@@ -92,6 +92,7 @@ namespace Business
                 if (!categoryRepository.Exists(categoryName))
                 {
                     IngredientCategory igCat = IngredientCategory.Create(categoryName);
+                    await categoryRepository.Add(igCat);
                     categoryId = igCat.Id;
                 }
                 else
@@ -105,7 +106,14 @@ namespace Business
             else
             {
                 if (!categoryName.Equals("other-ingredients"))
+                {
+                    if (!categoryRepository.Exists(categoryName))
+                    {
+                        IngredientCategory igCat = IngredientCategory.Create(categoryName);
+                        await categoryRepository.Add(igCat);
+                    }
                     UpdateIngredientsCategory(name, categoryRepository.GetByName(categoryName).Id);
+                }
                 ingredient = GetByNameAndMeasure(name, measureUnit);
             }
             var fridgeRepo = new FridgeRepository(_databaseContext);
