@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Data.Domain.Entities.Food
 {
@@ -43,12 +44,13 @@ namespace Data.Domain.Entities.Food
 
         public int VotesNumber { get; set; }
         public int NrPeopleQuantity { get; set; }
-        public int PreparationTime { get; private set; } // timpul o sa fie exprimat in minute :)
+        public int PreparationTime { get; set; } // timpul o sa fie exprimat in minute :)
+//        public IEnumerable<Guid> WhoVoted { get; set; }
 
         public static Recipe Create(Guid userId, string name, string content, RecipeStatusType status, int preparationTime, 
             int nrPeopleQuant, KitchenType cuisine)
         {
-            var instance = new Recipe { Id = new Guid(), UserId = userId };
+            var instance = new Recipe { Id = Guid.NewGuid(), UserId = userId };
             instance.Update(content, preparationTime, status, cuisine, nrPeopleQuant);
             return instance;
         }

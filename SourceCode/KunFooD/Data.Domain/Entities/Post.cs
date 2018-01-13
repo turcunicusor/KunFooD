@@ -12,7 +12,7 @@ namespace Data.Domain.Entities
 
         public Post(string content)
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             CreatedAt = DateTime.Now;
             Content = content;
         }
