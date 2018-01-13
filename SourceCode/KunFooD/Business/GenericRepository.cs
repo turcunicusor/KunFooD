@@ -30,6 +30,7 @@ namespace Business
 
         public virtual async Task Add(T entity)
         {
+//            (_databaseContext as DbContext).ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
             await _entities.AddAsync(entity);
             await Save();
         }

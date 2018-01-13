@@ -14,35 +14,34 @@ namespace Business
         GenericRepository<Recipe>, IRecipesRepository
     {
         private readonly IDatabaseContext _databaseContext;
+        private readonly IFridgeRepository _fridgeRepository;
+        private readonly IIngredientsRepository _ingredientsRepository;
 
-        public RecipesRepository(IDatabaseContext databaseContext) : base(databaseContext)
+        public RecipesRepository(IDatabaseContext databaseContext, IFridgeRepository fridgeRepository, IIngredientsRepository ingredientsRepository) : base(databaseContext)
         {
             _databaseContext = databaseContext;
+            _fridgeRepository = fridgeRepository;
+            _ingredientsRepository = ingredientsRepository;
         }
 
-        public double GetCostById(Guid id)
+        public async Task<Double> GetCostById(Guid id)
         {
             double cost = 0;
-            var fridgeRepository = new FridgeRepository(_databaseContext);
-            var ingredientRepository = new IngredientsRepository(_databaseContext);
-            Ingredient ingredient;
-            IEnumerable<PairItem> pairs = fridgeRepository.GetByRecipe(id).Result;
+            IEnumerable<PairItem> pairs = await _fridgeRepository.GetByRecipe(id);
             foreach(PairItem pair in pairs)
             {
-                ingredient = ingredientRepository.FindById(pair.IngredientId).Result;
+                var ingredient = await _ingredientsRepository.FindById(pair.IngredientId);
                 cost += ingredient.Cost * pair.Quantity;
             }
-            
             return cost;
         }
 
         public async Task UpdateAllCosts()
         {
             IEnumerable<Recipe> recipes = await GetAll();
-
             foreach (Recipe recipe in recipes)
             {
-                recipe.Cost = GetCostById(recipe.Id);
+                recipe.Cost = await GetCostById(recipe.Id);
             }
             await Save();
         }
@@ -85,10 +84,9 @@ namespace Business
                 recipe.PreparationTime >= minutes - aproxError && recipe.PreparationTime <= minutes + aproxError);
         }
 
-        public bool ContainsIngredient(Guid recipeId, Guid ingredientId)
+        public async Task<bool> ContainsIngredient(Guid recipeId, Guid ingredientId)
         {
-            var fridgeRepository = new FridgeRepository(_databaseContext);
-            IEnumerable<PairItem> pairs = fridgeRepository.GetByRecipe(recipeId).Result;
+            IEnumerable<PairItem> pairs = await _fridgeRepository.GetByRecipe(recipeId);
             foreach (PairItem pair in pairs)
             {
                 if (pair.IngredientId == ingredientId)
@@ -97,28 +95,27 @@ namespace Business
             return false;
         }
 
-        public int IngredientsNumber(Guid recipeId)
+        public async Task<int> IngredientsNumber(Guid recipeId)
         {
-            var fridgeRepository = new FridgeRepository(_databaseContext);
-            IEnumerable<PairItem> pairs = fridgeRepository.GetByRecipe(recipeId).Result;
+            IEnumerable<PairItem> pairs = await _fridgeRepository.GetByRecipe(recipeId);
             return pairs.Count();
         }
 
-        public bool IncludesTheseIngredients(Guid recipeId, List<Ingredient> ingredients)
+        public async Task<bool> IncludesTheseIngredients(Guid recipeId, List<Ingredient> ingredients)
         {
             foreach (var ingredient in ingredients)
             {
-                if (false == ContainsIngredient(recipeId, ingredient.Id))
+                if (false == await ContainsIngredient(recipeId, ingredient.Id))
                     return false;
             }
             return true;
         }
 
-        public bool ExcludesTheseIngredients(Guid recipeId, List<Ingredient> ingredients)
+        public async Task<bool> ExcludesTheseIngredients(Guid recipeId, List<Ingredient> ingredients)
         {
             foreach (var ingredient in ingredients)
             {
-                if (ContainsIngredient(recipeId, ingredient.Id))
+                if (await ContainsIngredient(recipeId, ingredient.Id))
                     return false;
             }
             return true;
@@ -127,16 +124,13 @@ namespace Business
         public async Task<IEnumerable<Recipe>> GetByIngredients(List<Ingredient> included, List<Ingredient> excluded, Task<IEnumerable<Recipe>> recipes)
         {
             //the lists should contain different ingrdients
-            return (await recipes).Where(recipe =>
-                IncludesTheseIngredients(recipe.Id, included) && ExcludesTheseIngredients(recipe.Id, excluded));
+            return (IEnumerable<Recipe>) (await recipes).Select(async recipe=> await IncludesTheseIngredients(recipe.Id, included) && await ExcludesTheseIngredients(recipe.Id, excluded));
         }
 
         public async Task<IEnumerable<Recipe>> GetByOnlyIngredients(List<Ingredient> ingredients, Task<IEnumerable<Recipe>> recipes)
         {
-            //the lists should contain different ingrdients
-
-            return (await recipes).Where(recipe =>
-                IncludesTheseIngredients(recipe.Id, ingredients) && ingredients.Count == IngredientsNumber(recipe.Id));
+            //the lists should contain different ingredients
+            return (IEnumerable<Recipe>)(await recipes).Select(async recipe =>await IncludesTheseIngredients(recipe.Id, ingredients) && ingredients.Count == await IngredientsNumber(recipe.Id));
         }
 
         public async Task<IEnumerable<Recipe>> GetByFilter(Filter filter)

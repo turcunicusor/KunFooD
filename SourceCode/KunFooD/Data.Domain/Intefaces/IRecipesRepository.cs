@@ -8,7 +8,7 @@ namespace Data.Domain.Intefaces
 {
     public interface IRecipesRepository : IGenericRepository<Recipe>
     {
-        double GetCostById(Guid id);
+        Task<Double> GetCostById(Guid id);
         Task UpdateAllCosts();
         Task<IEnumerable<Recipe>> GetByKitchenType(KitchenType cuisine, Task<IEnumerable<Recipe>> recipes);
         Task<IEnumerable<Recipe>> GetByCost(Double cost, Task<IEnumerable<Recipe>> recipes);

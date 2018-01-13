@@ -12,69 +12,64 @@ namespace Business
         GenericRepository<Ingredient>, IIngredientsRepository
     {
         private readonly IDatabaseContext _databaseContext;
+        private readonly IIngredientsCategoryRepository _ingredientsCategoryRepository;
+        private readonly IFridgeRepository _fridgeRepository;
 
-        public IngredientsRepository(IDatabaseContext databaseContext) : base(databaseContext)
+        public IngredientsRepository(IDatabaseContext databaseContext, IIngredientsCategoryRepository ingredientsCategoryRepository, IFridgeRepository fridgeRepository) : base(databaseContext)
         {
             _databaseContext = databaseContext;
+            _ingredientsCategoryRepository = ingredientsCategoryRepository;
+            _fridgeRepository = fridgeRepository;
         }
 
-        public bool Exists(String name)
+        public async Task<bool> Exists(String name)
         {
-            IEnumerable<Ingredient> ingredients = GetAll().Result;
+            IEnumerable<Ingredient> ingredients = await GetAll();
             foreach (var ingredient in ingredients)
-            {
                 if (name.Equals(ingredient.Name))
                     return true;
-            }
             return false;
         }
 
-        public bool Exists(String name, string measureUnit)
+        public async Task<bool> Exists(String name, string measureUnit)
         {
-            IEnumerable<Ingredient> ingredients = GetAll().Result;
+            IEnumerable<Ingredient> ingredients = await GetAll();
             foreach (var ingredient in ingredients)
-            {
                 if (name.Equals(ingredient.Name) && measureUnit.Equals(ingredient.MeasuredUnit))
                     return true;
-            }
             return false;
         }
 
-        public Ingredient GetByNameAndMeasure(String name, String measureUnit)
+        public async Task<Ingredient> GetByNameAndMeasure(String name, String measureUnit)
         {
-            IEnumerable<Ingredient> ingredients = GetAll().Result;
+            IEnumerable<Ingredient> ingredients = await GetAll();
             foreach (var ingredient in ingredients)
-            {
                 if (name.Equals(ingredient.Name) && measureUnit.Equals(ingredient.MeasuredUnit))
                     return ingredient;
-            }
             return null;
         }
 
-        public void UpdateIngredientsCategory(String ingredientName, Guid? categoryId)
+        public async Task UpdateIngredientsCategory(String ingredientName, Guid? categoryId)
         {
             //Guid? categoryId = GetSpecificCategory(ingredientName);
             if (categoryId != null)
             {
-                IEnumerable<Ingredient> ingredients = GetAll().Result;
+                IEnumerable<Ingredient> ingredients = await GetAll();
                 foreach (var ingredient in ingredients)
-                {
                     if (ingredientName.Equals(ingredient.Name))
                         ingredient.Update(categoryId ?? Guid.Empty, ingredient.Name, ingredient.MeasuredUnit, ingredient.Cost);
-                }
                 _databaseContext.SaveChanges();
             }
         }
 
-        public Guid? GetSpecificCategory(String ingredientName)
+        public async Task<Guid?> GetSpecificCategory(String ingredientName)
         {
-            IEnumerable<Ingredient> ingredients = GetAll().Result;
-            var categoryRepo = new IngredientsCategoryRepository(_databaseContext);
+            IEnumerable<Ingredient> ingredients = await GetAll();
             foreach (var ingredient in ingredients)
             {
                 if (ingredientName.Equals(ingredient.Name))
                 {
-                    if (!categoryRepo.FindById(ingredient.IngredientCategoryId).Result.Name.Equals("other-ingredients"))
+                    if (!(await _ingredientsCategoryRepository.FindById(ingredient.IngredientCategoryId)).Name.Equals("other-ingredients"))
                         return ingredient.IngredientCategoryId;
                 }
             }
@@ -84,40 +79,38 @@ namespace Business
         public async Task AddIngredientCustom(Guid recipeId, string categoryName, string measureUnit, string name,
             double quantity)
         {
-            var categoryRepository = new IngredientsCategoryRepository(_databaseContext);
             Ingredient ingredient;
-            if (!Exists(name, measureUnit))
+            if (!await Exists(name, measureUnit))
             {
                 Guid categoryId;
-                if (!categoryRepository.Exists(categoryName))
+                if (! await _ingredientsCategoryRepository.Exists(categoryName))
                 {
                     IngredientCategory igCat = IngredientCategory.Create(categoryName);
-                    await categoryRepository.Add(igCat);
+                    await _ingredientsCategoryRepository.Add(igCat);
                     categoryId = igCat.Id;
                 }
                 else
                 {
-                    categoryId = categoryRepository.GetByName(categoryName).Id;
+                    categoryId = (await _ingredientsCategoryRepository.GetByName(categoryName)).Id;
                 }
                 ingredient = Ingredient.Create(categoryId, name, measureUnit, 0);
                 await Add(ingredient);
-                UpdateIngredientsCategory(name, GetSpecificCategory(name));
+                await UpdateIngredientsCategory(name, await GetSpecificCategory(name));
             }
             else
             {
                 if (!categoryName.Equals("other-ingredients"))
                 {
-                    if (!categoryRepository.Exists(categoryName))
+                    if (! await _ingredientsCategoryRepository.Exists(categoryName))
                     {
                         IngredientCategory igCat = IngredientCategory.Create(categoryName);
-                        await categoryRepository.Add(igCat);
+                        await _ingredientsCategoryRepository.Add(igCat);
                     }
-                    UpdateIngredientsCategory(name, categoryRepository.GetByName(categoryName).Id);
+                    await UpdateIngredientsCategory(name, (await _ingredientsCategoryRepository.GetByName(categoryName)).Id);
                 }
-                ingredient = GetByNameAndMeasure(name, measureUnit);
+                ingredient = await GetByNameAndMeasure(name, measureUnit);
             }
-            var fridgeRepo = new FridgeRepository(_databaseContext);
-            await fridgeRepo.Add(PairItem.Create(ingredient.Id, recipeId, quantity));
+            await _fridgeRepository.Add(PairItem.Create(ingredient.Id, recipeId, quantity));
         }
     }
 }

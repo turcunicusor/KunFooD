@@ -16,7 +16,7 @@ namespace Data.Domain.Entities.Forum
 
         public static Category Create(string name, string description)
         {
-            var instance = new Category { Id = new Guid(), CreatedAt = DateTime.Now };
+            var instance = new Category { Id = Guid.NewGuid(), CreatedAt = DateTime.Now };
             instance.Update(name, description);
             return instance;
         }

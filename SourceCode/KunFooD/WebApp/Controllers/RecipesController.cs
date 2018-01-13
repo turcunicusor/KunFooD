@@ -30,6 +30,10 @@ namespace WebApp.Controllers
             User adminUser = await _usersRepository.GetByName("admin");
             var recipe = Recipe.Create(adminUser.Id, recipeDto.Name, recipeDto.Content, RecipeStatusType.Approved,
                 recipeDto.PreparationTime, recipeDto.Servings, KitchenType.Unspecified);
+            await _recipesRepository.Add(recipe);
+            foreach (var ingredient in recipeDto.Ingredients)
+                await _ingredientsRepository.AddIngredientCustom(recipe.Id, ingredient.Category, ingredient.MeasurementUnit,
+                    ingredient.Name, ingredient.Quantity);
             return Ok(recipe);
         }
     }

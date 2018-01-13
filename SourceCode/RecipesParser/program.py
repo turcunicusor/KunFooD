@@ -76,4 +76,3 @@ def read_recipies(file_name):
 recipes = read_recipies("recipies_food2fork_valid_all.json")
 error, res = u.send_recipes("http://localhost:55383/api/Recipes/", recipes)
 print("Failed requests: " + str(error))
-print(res)

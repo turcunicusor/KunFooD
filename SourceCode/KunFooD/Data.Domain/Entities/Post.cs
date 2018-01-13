@@ -19,7 +19,7 @@ namespace Data.Domain.Entities
 
         public Post()
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
             CreatedAt = DateTime.Now;
         }
     }

@@ -18,7 +18,7 @@ namespace Data.Domain.Entities.Forum
 
         public static Thread Create(string name, string description, Guid userId, Guid categoryId)
         {
-            var instance = new Thread { Id = new Guid(), CreatedAt = DateTime.Now, UserId = userId, CategoryId = categoryId };
+            var instance = new Thread { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UserId = userId, CategoryId = categoryId };
             instance.Update(name, description);
             return instance;
         }

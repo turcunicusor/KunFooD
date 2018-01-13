@@ -21,8 +21,8 @@ namespace Business
 
         public async Task Delete(Guid ingredientId, Guid recipeId)
         {
-            var pairItem = Get(ingredientId, recipeId);
-            _databaseContext.PairItems.Remove(pairItem.Result);
+            var pairItem = await Get(ingredientId, recipeId);
+            _databaseContext.PairItems.Remove(pairItem);
             await Save();
         }
 
