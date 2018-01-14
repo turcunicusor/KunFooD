@@ -51,14 +51,15 @@ namespace Data.Domain.Entities.Food
             int nrPeopleQuant, KitchenType cuisine)
         {
             var instance = new Recipe { Id = Guid.NewGuid(), UserId = userId };
-            instance.Update(content, preparationTime, status, cuisine, nrPeopleQuant);
+            instance.Update(name, content, preparationTime, status, cuisine, nrPeopleQuant);
             return instance;
         }
 
-        public void Update(string content, int preparationTime, RecipeStatusType status, KitchenType cuisine, int nrPeopleQuantity)
+        public void Update(string name, string content, int preparationTime, RecipeStatusType status, KitchenType cuisine, int nrPeopleQuantity)
         {
             Content = content;
             PreparationTime = preparationTime;
+            Name = name;
             Cuisine = cuisine;
             NrPeopleQuantity = nrPeopleQuantity;
             Cost = 0;

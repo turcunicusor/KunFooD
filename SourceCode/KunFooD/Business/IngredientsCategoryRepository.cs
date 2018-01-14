@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Data.Domain.Entities.Food;
 using Data.Domain.Intefaces;
 using Data.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Business
 {
@@ -17,22 +19,16 @@ namespace Business
             _databaseContext = databaseContext;
         }
 
-        public async Task<bool> Exists(String name)
+        public async Task<bool> Exists(string name)
         {
-            IEnumerable<IngredientCategory> categories = await GetAll();
-            foreach (var ingredientCategory in categories)
-                if (name.Equals(ingredientCategory.Name))
-                    return true;
-            return false;
+            return await _databaseContext.IngredientCategories.AnyAsync(ingCateg =>
+               ingCateg.Name.ToLower().Equals(name.ToLower()));
         }
 
         public async Task<IngredientCategory> GetByName(string name)
         {
-            IEnumerable<IngredientCategory> categories = await GetAll();
-            foreach (var ingredientCategory in categories)
-                if (name.Equals(ingredientCategory.Name))
-                    return ingredientCategory;
-            return null;
+            return await _databaseContext.IngredientCategories.FirstOrDefaultAsync(ingCateg =>
+                ingCateg.Name.ToLower().Equals(name.ToLower()));
         }
 
     }

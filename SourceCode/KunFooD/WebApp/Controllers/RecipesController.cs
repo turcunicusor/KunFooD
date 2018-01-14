@@ -36,5 +36,18 @@ namespace WebApp.Controllers
                     ingredient.Name, ingredient.Quantity);
             return Ok(recipe);
         }
+
+        [HttpGet]
+        [Route("All")]
+        public async Task<IActionResult> GetAll()
+        {
+            return Ok(await _recipesRepository.GetAll());
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get(string name)
+        {
+            return Ok(await _recipesRepository.GetByName(name, _recipesRepository.GetAll()));
+        }
     }
 }

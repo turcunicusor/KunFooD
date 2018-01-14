@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Data.Domain.Entities.Food;
 using Data.Domain.Intefaces;
 using Data.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Business
 {
@@ -24,29 +26,22 @@ namespace Business
 
         public async Task<bool> Exists(String name)
         {
-            IEnumerable<Ingredient> ingredients = await GetAll();
-            foreach (var ingredient in ingredients)
-                if (name.Equals(ingredient.Name))
-                    return true;
-            return false;
+            return await _databaseContext.Ingredients.AnyAsync(ingredient => ingredient.Name.ToLower().Equals(name.ToLower()));
         }
 
         public async Task<bool> Exists(String name, string measureUnit)
         {
-            IEnumerable<Ingredient> ingredients = await GetAll();
-            foreach (var ingredient in ingredients)
-                if (name.Equals(ingredient.Name) && measureUnit.Equals(ingredient.MeasuredUnit))
-                    return true;
-            return false;
+            return await _databaseContext.Ingredients.AnyAsync(ingredient => ingredient.Name.ToLower().Equals(name.ToLower()) && ingredient.MeasuredUnit.ToLower().Equals(measureUnit.ToLower()));
+        }
+
+        public async Task<IEnumerable<Ingredient>> GetByName(string name)
+        {
+            return await _databaseContext.Ingredients.Where(ingredient => ingredient.Name.ToLower().Contains(name.ToLower())).ToListAsync();
         }
 
         public async Task<Ingredient> GetByNameAndMeasure(String name, String measureUnit)
         {
-            IEnumerable<Ingredient> ingredients = await GetAll();
-            foreach (var ingredient in ingredients)
-                if (name.Equals(ingredient.Name) && measureUnit.Equals(ingredient.MeasuredUnit))
-                    return ingredient;
-            return null;
+            return await _databaseContext.Ingredients.FirstOrDefaultAsync(ingredient => ingredient.Name.ToLower().Contains(name.ToLower()) && ingredient.MeasuredUnit.ToLower().Equals(measureUnit.ToLower()));
         }
 
         public async Task UpdateIngredientsCategory(String ingredientName, Guid? categoryId)

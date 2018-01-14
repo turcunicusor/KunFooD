@@ -24,22 +24,6 @@ def send_recipes(url, recipes):
     err = 0
     for recipe in recipes:
         body = str(json.dumps(recipe, sort_keys=True, indent=4, separators=(',', ': ')))
-        # body = json.loads(str(recipe))
-        # while True:
-        #     try:
-        #         result = json.loads(body)  # try to parse...
-        #         break  # parsing worked -> exit loop
-        #     except Exception as e:
-        #         # "Expecting , delimiter: line 34 column 54 (char 1158)"
-        #         # position of unexpected character after '"'
-        #         unexp = int(re.findall(r'\(char (\d+)\)', str(e))[0])
-        #         # position of unescaped '"' before that
-        #         unesc = body.rfind(r'"', 0, unexp)
-        #         body = body[:unesc] + r'\"' + body[unesc + 1:]
-        #         # position of correspondig closing '"' (+2 for inserted '\')
-        #         closg = body.find(r'"', unesc + 2)
-        #         body = body[:closg] + r'\"' + body[closg + 1:]
-        # print(json.dumps(body, sort_keys=True, indent=4, separators=(',', ': ')))
         response = requests.post(url=url, data=body, headers=headers)
         if response.status_code != 200:
             print("Failed to request. Status code: " + str(response.status_code))
@@ -49,3 +33,8 @@ def send_recipes(url, recipes):
         elif response.status_code == 200:
             print("Request success!")
     return err, response.content
+
+
+def send_request(url, params):
+    response = requests.get(url, params=params)
+    print(response.status_code, response.content)

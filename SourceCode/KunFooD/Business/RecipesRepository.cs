@@ -62,7 +62,7 @@ namespace Business
         public async Task<IEnumerable<Recipe>> GetByName(String name, Task<IEnumerable<Recipe>> recipes)
         {
             return (await recipes).Where(recipe =>
-                recipe.Name.Contains(name));
+                recipe.Name.ToLower().Contains(name.ToLower()));
         }
 
         public async Task<IEnumerable<Recipe>> GetByRating(Double rating, Task<IEnumerable<Recipe>> recipes)
