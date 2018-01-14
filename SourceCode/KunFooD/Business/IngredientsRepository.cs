@@ -16,7 +16,37 @@ namespace Business
         private readonly IIngredientsCategoryRepository _ingredientsCategoryRepository;
         private readonly IFridgeRepository _fridgeRepository;
 
-        public IngredientsRepository(IDatabaseContext databaseContext, IIngredientsCategoryRepository ingredientsCategoryRepository, IFridgeRepository fridgeRepository) : base(databaseContext)
+        public static Dictionary<string, double> MapMeasurement = new Dictionary<string, double>()
+        {
+            {"undefined", 1.0},
+            {"bottle", 1.0},
+            {"slice", 0.05},
+            {"chunk", 0.03},
+            {"cup", 0.15},
+            {"liter", 1.0},
+            {"ounce", 0},
+            {"strip", 0.02},
+            {"teaspoon", 0.01},
+            {"to taste", 0},
+            {"pound", 0.7 },
+            {"bunch", 3},
+            {"package", 1},
+            {"piece", 1},
+            {"quart", 1.4},
+            {"container", 1},
+            {"box", 1},
+            {"loaf", 1},
+            {"oz", 0.01},
+            {"dash", 0},
+            {"cups", 0.7},
+            {"stalk", 0},
+            {"leaf", 0},
+            {"can", 0.3},
+            {"ball", 0.1},
+            {"pack", 1}
+        };
+
+    public IngredientsRepository(IDatabaseContext databaseContext, IIngredientsCategoryRepository ingredientsCategoryRepository, IFridgeRepository fridgeRepository) : base(databaseContext)
         {
             _databaseContext = databaseContext;
             _ingredientsCategoryRepository = ingredientsCategoryRepository;
@@ -87,7 +117,11 @@ namespace Business
                 {
                     categoryId = (await _ingredientsCategoryRepository.GetByName(categoryName)).Id;
                 }
-                ingredient = Ingredient.Create(categoryId, name, measureUnit, cost);
+                double scale = IngredientsRepository.MapMeasurement["undefined"];
+                if (IngredientsRepository.MapMeasurement.ContainsKey(measureUnit))
+                    scale = IngredientsRepository.MapMeasurement[measureUnit];
+
+                ingredient = Ingredient.Create(categoryId, name, measureUnit, cost*scale);
                 await Add(ingredient);
                 await UpdateIngredientsCategory(name, await GetSpecificCategory(name));
             }
