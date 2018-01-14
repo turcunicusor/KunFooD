@@ -65,12 +65,12 @@ namespace Business
 
         public async Task<IEnumerable<Ingredient>> GetByName(string name)
         {
-            return await _databaseContext.Ingredients.Where(ingredient => ingredient.Name.ToLower().Contains(name.ToLower())).ToListAsync();
+            return await _databaseContext.Ingredients.Where(ingredient => ingredient.Name.ToLower().Equals(name.ToLower())).ToListAsync();
         }
 
         public async Task<Ingredient> GetByNameAndMeasure(String name, String measureUnit)
         {
-            return await _databaseContext.Ingredients.FirstOrDefaultAsync(ingredient => ingredient.Name.ToLower().Contains(name.ToLower()) && ingredient.MeasuredUnit.ToLower().Equals(measureUnit.ToLower()));
+            return await _databaseContext.Ingredients.FirstOrDefaultAsync(ingredient => ingredient.Name.ToLower().Equals(name.ToLower()) && ingredient.MeasuredUnit.ToLower().Equals(measureUnit.ToLower()));
         }
 
         public async Task UpdateIngredientsCategory(String ingredientName, Guid? categoryId)

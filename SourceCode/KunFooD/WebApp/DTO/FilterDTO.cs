@@ -8,14 +8,15 @@ namespace WebApp.DTO
     {
         public KitchenType Cuisine { get; set; }
         public double Cost { get; set; }
-        [Required, MaxLength(256)]
         public string Name { get; set; }
         public double Rating { get; set; }
         public int VotesNumber { get; set; }
         public int PreparationTime { get; set; }
-
+        [Required]
         public List<IngredientFilterDTO> IncludedIngredients { get; set; }
+        [Required]
         public List<IngredientFilterDTO> OnlyIngredients { get; set; }
+        [Required]
         public List<IngredientFilterDTO> ExcludedIngredients { get; set; }
     }
 }

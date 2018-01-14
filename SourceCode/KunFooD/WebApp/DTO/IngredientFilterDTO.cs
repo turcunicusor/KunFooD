@@ -8,6 +8,6 @@ namespace WebApp.DTO
         [Required, MaxLength(100000)]
         public String Name { get; set; }
         [Required, MaxLength(100000)]
-        public String MeasuredUnit { get; set; }
+        public String MeasurementUnit { get; set; }
     }
 }

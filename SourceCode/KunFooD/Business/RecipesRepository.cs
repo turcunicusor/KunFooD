@@ -157,9 +157,9 @@ namespace Business
             if (filter.PreparationTime != 0)
                 recipes = GetByPrepatationTime(filter.PreparationTime, recipes);
 
-            if (filter.OnlyIngredients != null)
+            if (filter.OnlyIngredients.Count != 0)
                 recipes = GetByOnlyIngredients(filter.OnlyIngredients, recipes);
-            else if (filter.ExcludedIngredients != null || filter.IncludedIngredients != null)
+            else if (filter.ExcludedIngredients.Count != 0|| filter.IncludedIngredients.Count != 0)
                 recipes = GetByIngredients(filter.IncludedIngredients, filter.ExcludedIngredients, recipes);
 
             return await recipes;

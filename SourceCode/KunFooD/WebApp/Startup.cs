@@ -80,6 +80,8 @@ namespace WebApp
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseStaticFiles();
             app.UseSession();
 
             app.UseMvc(routes =>

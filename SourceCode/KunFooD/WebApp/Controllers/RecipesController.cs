@@ -54,20 +54,18 @@ namespace WebApp.Controllers
         [Route("Filter")]
         public async Task<IActionResult> FilterRecipes([FromBody] FilterDTO filterDto)
         {
-            if (!((filterDto.IncludedIngredients.Count != 0 && filterDto.ExcludedIngredients.Count != 0 &&
-                   filterDto.OnlyIngredients.Count == 0) ||
-                  (filterDto.IncludedIngredients.Count == 0 && filterDto.ExcludedIngredients.Count == 0 &&
-                   filterDto.OnlyIngredients.Count == 0)))
-                return BadRequest("Ingredients list ar initialized wrong");
+            if ((filterDto.IncludedIngredients.Count != 0 || filterDto.ExcludedIngredients.Count != 0) &&
+                   filterDto.OnlyIngredients.Count != 0)
+                return BadRequest("Ingredients lists are initialized wrong");
             List<Ingredient> includedIngredients = new List<Ingredient>();
             List<Ingredient> onlyIngredients = new List<Ingredient>();
             List<Ingredient> excludedIngredients = new List<Ingredient>();
             foreach (var ing in filterDto.IncludedIngredients)
-                includedIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasuredUnit));
+                includedIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasurementUnit));
             foreach (var ing in filterDto.OnlyIngredients)
-                includedIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasuredUnit));
+                includedIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasurementUnit));
             foreach (var ing in filterDto.OnlyIngredients)
-                includedIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasuredUnit));
+                includedIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasurementUnit));
             Filter filter = new Filter
             {
                 Cost = filterDto.Cost,
