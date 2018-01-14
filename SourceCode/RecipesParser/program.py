@@ -95,7 +95,6 @@ def read_recipies(file_name):
 
 def read_recipies_v2(file_name):
     data = json.loads(u.read(file_name))
-    rst = []
     recipes = []
     for recipe in data:
         try:
@@ -115,10 +114,6 @@ def read_recipies_v2(file_name):
                 i["cost"] = float(ingredient["price"])
                 i["weight"] = float(ingredient["weight"])
                 i["priceCurrency"] = ingredient["price_currency"]
-                x = dict()
-                x["name"] = i["name"]
-                x["measurementUnit"] = i["measurementUnit"]
-                rst.append(x)
                 ing.append(i)
             r["ingredients"] = ing
             recipes.append(r)
@@ -126,7 +121,7 @@ def read_recipies_v2(file_name):
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
             print("Failed to parse recipie. Error", str(e), "Line:", exc_tb.tb_lineno)
-    return rst
+    return recipes
 
 def func():
     ingredients = json.loads(u.read("_ingredients.json"))
@@ -169,6 +164,5 @@ def exec():
 
 if __name__ == "__main__":
     recipes = read_recipies_v2("data_to_populate_database.json")
-    print(json.dumps(recipes))
-    # error, res = u.send_recipes("http://localhost:55383/api/Recipes/", recipes)
-    # print("Failed requests: " + str(error))
+    error, res = u.send_recipes("http://localhost:55383/api/Recipes/", recipes)
+    print("Failed requests: " + str(error))
