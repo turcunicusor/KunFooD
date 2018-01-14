@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using WebApp.DTO;
 using WebApp.Filters;
 
@@ -69,16 +70,16 @@ namespace WebApp.Controllers
         public async Task<IActionResult> CreateThread(CreateThreadDTO dto)
         {
             // TEMP CODE: Check email and get userid based on it
-            var user = await _userRepo.GetByEmail(dto.UserEmail);
-            if (user != null)
-            {
-                var thread = Data.Domain.Entities.Forum.Thread.Create(dto.Name, dto.Description, user.Id, dto.CategoryId);
+//            var user = await _userRepo.GetByEmail(dto.UserEmail);
+//            if (user != null)
+//            {
+                var thread = Data.Domain.Entities.Forum.Thread.Create(dto.Name, dto.Description, new Guid(HttpContext.Session.GetString("user_id")), dto.CategoryId);
                 await _threadRepo.Add(thread);
                 await _threadRepo.Save();
 
                 return RedirectToAction("Category", "Forum", new { id = dto.CategoryId });
-            }
-            ModelState.AddModelError("", "TEMPCODE: Account doesn't exist!");
+//            }
+//            ModelState.AddModelError("", "TEMPCODE: Account doesn't exist!");
 
             // Something went bad, return dto back to view
             return View(dto);

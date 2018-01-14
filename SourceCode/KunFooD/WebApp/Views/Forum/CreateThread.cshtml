@@ -1,6 +1,4 @@
-﻿@using Microsoft.AspNetCore.Http
-
-@model WebApp.DTO.CreateThreadDTO
+﻿@model WebApp.DTO.CreateThreadDTO
 
 <style>
     .create-box {
@@ -34,13 +32,6 @@
             <div class="col-lg-10">
                 <textarea asp-for="Description" class="form-control" rows="5"></textarea>
                 <span asp-validation-for="Description"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <label asp-for="UserEmail" class="col-lg-2 control-label"></label>
-            <div class="col-lg-10">
-                <input asp-for="UserEmail" class="form-control">
-                <span asp-validation-for="UserEmail"></span>
             </div>
         </div>
         <div class="form-group">

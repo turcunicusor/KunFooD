@@ -6,7 +6,6 @@ using Data.Domain.Entities;
 using Data.Domain.Entities.Food;
 using Data.Domain.Intefaces;
 using Data.Persistence;
-using Microsoft.EntityFrameworkCore;
 
 namespace Business
 {
@@ -28,7 +27,7 @@ namespace Business
         {
             double cost = 0;
             IEnumerable<PairItem> pairs = await _fridgeRepository.GetByRecipe(id);
-            foreach(PairItem pair in pairs)
+            foreach (PairItem pair in pairs)
             {
                 var ingredient = await _ingredientsRepository.FindById(pair.IngredientId);
                 cost += ingredient.Cost * pair.Quantity;
@@ -120,17 +119,28 @@ namespace Business
             }
             return true;
         }
-
         public async Task<IEnumerable<Recipe>> GetByIngredients(List<Ingredient> included, List<Ingredient> excluded, Task<IEnumerable<Recipe>> recipes)
         {
             //the lists should contain different ingrdients
-            return (IEnumerable<Recipe>) (await recipes).Select(async recipe=> await IncludesTheseIngredients(recipe.Id, included) && await ExcludesTheseIngredients(recipe.Id, excluded));
+            List<Recipe> recipesResult = new List<Recipe>();
+            foreach (var recipe in recipes.Result)
+            {
+                if(await IncludesTheseIngredients(recipe.Id, included) && await ExcludesTheseIngredients(recipe.Id, excluded))
+                    recipesResult.Add(recipe);
+            }
+            return recipesResult;
         }
 
         public async Task<IEnumerable<Recipe>> GetByOnlyIngredients(List<Ingredient> ingredients, Task<IEnumerable<Recipe>> recipes)
         {
-            //the lists should contain different ingredients
-            return (IEnumerable<Recipe>)(await recipes).Select(async recipe =>await IncludesTheseIngredients(recipe.Id, ingredients) && ingredients.Count == await IngredientsNumber(recipe.Id));
+            //the lists should contain different ingrdients
+            List<Recipe> recipesResult = new List<Recipe>();
+            foreach (var recipe in recipes.Result)
+            {
+                if (await IncludesTheseIngredients(recipe.Id, ingredients) && ingredients.Count == await IngredientsNumber(recipe.Id))
+                    recipesResult.Add(recipe);
+            }
+            return recipesResult;
         }
 
         public async Task<IEnumerable<Recipe>> GetByFilter(Filter filter)

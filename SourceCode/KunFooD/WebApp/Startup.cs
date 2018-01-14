@@ -1,4 +1,5 @@
-﻿using Business;
+﻿using System;
+using Business;
 using Data.Domain.Intefaces;
 using Data.Persistence;
 using FluentValidation.AspNetCore;
@@ -38,8 +39,20 @@ namespace WebApp
                 {
                     options.Filters.Add(typeof(DefaultControllerFilter));
                 }
-            ).AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<Startup>());
+            ).AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<Startup>()).AddSessionStateTempDataProvider();
             // Register the Swagger generator, defining one or more Swagger documents
+
+            // Adds a default in-memory implementation of IDistributedCache.
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                options.Cookie.Name = ".KunFooD.Session";
+                options.IdleTimeout = TimeSpan.MaxValue;
+                options.Cookie.HttpOnly = true; 
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "KunFooD API", Version = "v1" });
@@ -67,8 +80,7 @@ namespace WebApp
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
-            app.UseStaticFiles();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

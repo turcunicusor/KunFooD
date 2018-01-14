@@ -15,7 +15,7 @@ namespace WebApp.DTO
         [Required, Display(Name = "Content")]
         public string Description { get; set; }
 
-        [Required]
-        public string UserEmail { get; set; }
+//        [Required]
+//        public string UserEmail { get; set; }
     }
 }

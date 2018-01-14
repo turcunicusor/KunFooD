@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApp.DTO
 {
-    public class IngredientDTO
+    public class IngredientRecipeDTO
     {
         [Required, MaxLength(100000)]
         public String Category { get; set; }

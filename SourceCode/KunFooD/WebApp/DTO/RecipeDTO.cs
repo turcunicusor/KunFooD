@@ -8,7 +8,7 @@ namespace WebApp.DTO
     {
         [Required, MaxLength(100000)]
         public String Content { get; set; }
-        public List<IngredientDTO> Ingredients { get; set; }
+        public List<IngredientRecipeDTO> Ingredients { get; set; }
         [Required, MaxLength(100000)]
         public String Name { get; set; }
         public int PreparationTime { get; set; }

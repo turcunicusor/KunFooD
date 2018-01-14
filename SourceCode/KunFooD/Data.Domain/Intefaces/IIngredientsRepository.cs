@@ -10,5 +10,6 @@ namespace Data.Domain.Intefaces
         Task AddIngredientCustom(Guid recipeId, string categoryName, string measureUnit, string name,
             double quantity, double cost, double weight);
         Task<IEnumerable<Ingredient>> GetByName(string name);
+        Task<Ingredient> GetByNameAndMeasure(String name, String measureUnit);
     }
 }
