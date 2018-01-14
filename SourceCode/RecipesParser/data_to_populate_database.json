@@ -4563,7 +4563,7 @@
          {
             "quantity":8.0,
             "name":"sage",
-            "measurementUnit":"leaves",
+            "measurementUnit":"leaf",
             "category":"spices-and-herbs",
             "price":"7.57",
             "weight":"453592.37",
@@ -6723,7 +6723,7 @@
          {
             "quantity":0.0,
             "name":"oil",
-            "measurementUnit":"to fry",
+            "measurementUnit":"liter",
             "category":"other-ingredients",
             "price":"11.95",
             "weight":"85048.57",
@@ -9576,7 +9576,7 @@
          {
             "quantity":2.0,
             "name":"cheese tortellini",
-            "measurementUnit":"packages",
+            "measurementUnit":"package",
             "category":"other-ingredients",
             "price":"7.50",
             "weight":"285763.19",

@@ -162,6 +162,6 @@ def exec():
 # print(get_price("lemon juice"))
 
 if __name__ == "__main__":
-    recipes = read_recipies_v2("_data_important_last_result_final.json")
+    recipes = read_recipies_v2("data_to_populate_database.json")
     error, res = u.send_recipes("http://localhost:55383/api/Recipes/", recipes)
     print("Failed requests: " + str(error))
