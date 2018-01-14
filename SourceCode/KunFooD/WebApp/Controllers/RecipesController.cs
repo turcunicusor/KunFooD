@@ -33,7 +33,7 @@ namespace WebApp.Controllers
             await _recipesRepository.Add(recipe);
             foreach (var ingredient in recipeDto.Ingredients)
                 await _ingredientsRepository.AddIngredientCustom(recipe.Id, ingredient.Category, ingredient.MeasurementUnit,
-                    ingredient.Name, ingredient.Quantity);
+                    ingredient.Name, ingredient.Quantity, ingredient.Cost, ingredient.Weight);
             return Ok(recipe);
         }
 

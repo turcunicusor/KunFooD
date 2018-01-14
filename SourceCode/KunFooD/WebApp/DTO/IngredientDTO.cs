@@ -12,5 +12,9 @@ namespace WebApp.DTO
         [Required, MaxLength(100000)]
         public String Name { get; set; }
         public double Quantity { get; set; }
+        public double Cost { get; set; }
+        public double Weight { get; set; }
+        [Required, MaxLength(100000)]
+        public String PriceCurrency { get; set; }
     }
 }

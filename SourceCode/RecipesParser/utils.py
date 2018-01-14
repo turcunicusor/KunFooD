@@ -27,8 +27,6 @@ def send_recipes(url, recipes):
         response = requests.post(url=url, data=body, headers=headers)
         if response.status_code != 200:
             print("Failed to request. Status code: " + str(response.status_code))
-            # print("Failed to request. Status code: " + str(response.status_code) + " Reason: " + str(response.content))
-            # print(body)
             err += 1
         elif response.status_code == 200:
             print("Request success!")

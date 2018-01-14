@@ -72,7 +72,7 @@ namespace Business
         }
 
         public async Task AddIngredientCustom(Guid recipeId, string categoryName, string measureUnit, string name,
-            double quantity)
+            double quantity, double cost, double weight)
         {
             Ingredient ingredient;
             if (!await Exists(name, measureUnit))
@@ -88,7 +88,7 @@ namespace Business
                 {
                     categoryId = (await _ingredientsCategoryRepository.GetByName(categoryName)).Id;
                 }
-                ingredient = Ingredient.Create(categoryId, name, measureUnit, 0);
+                ingredient = Ingredient.Create(categoryId, name, measureUnit, cost);
                 await Add(ingredient);
                 await UpdateIngredientsCategory(name, await GetSpecificCategory(name));
             }

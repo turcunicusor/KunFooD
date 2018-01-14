@@ -93,6 +93,35 @@ def read_recipies(file_name):
     return recipes
 
 
+def read_recipies_v2(file_name):
+    data = json.loads(u.read(file_name))
+    recipes = []
+    for recipe in data:
+        try:
+            r = dict()
+            r['name'] = recipe["name"]
+            r["summary"] = recipe["summary"]
+            r["content"] = recipe["content"]
+            r["preparationTime"] = int(recipe["preparationTime"])
+            r["servings"] = int(recipe["servings"])
+            ing = []
+            for ingredient in recipe["ingredients"]:
+                i = dict()
+                i["quantity"] = float(ingredient["quantity"])
+                i["name"] = ingredient["name"]
+                i["measurementUnit"] = ingredient["measurementUnit"]
+                i["category"] = ingredient["category"]
+                i["cost"] = float(ingredient["price"])
+                i["weight"] = float(ingredient["weight"])
+                i["priceCurrency"] = ingredient["price_currency"]
+                ing.append(i)
+            r["ingredients"] = ing
+            recipes.append(r)
+        except Exception as e:
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            print("Failed to parse recipie. Error", str(e), "Line:", exc_tb.tb_lineno)
+    return recipes
+
 def func():
     ingredients = json.loads(u.read("_ingredients.json"))
     r = []
@@ -133,4 +162,6 @@ def exec():
 # print(get_price("lemon juice"))
 
 if __name__ == "__main__":
-    exec()
+    recipes = read_recipies_v2("_data_important_last_result_final.json")
+    error, res = u.send_recipes("http://localhost:55383/api/Recipes/", recipes)
+    print("Failed requests: " + str(error))
