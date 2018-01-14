@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Business;
 using Data.Domain.Entities;
 using Data.Domain.Entities.Food;
 using Data.Persistence;
@@ -97,6 +98,30 @@ namespace IntegrationTests
             if (0 >= count) throw new IndexOutOfRangeException("Null or negative count [in BaseIntegrationTest class]");
             if (items.Count < count) throw new IndexOutOfRangeException("Not enough users in Pair Item List [in BaseIntegrationTest class]");
             return items.Take(count);
+        }
+
+        public static IEnumerable<IngredientCategory> GetDefaultCategories()
+        {
+            List<IngredientCategory> categories = new List<IngredientCategory>
+            {
+                IngredientCategory.Create("First Category"),
+                IngredientCategory.Create("Second Category"),
+                IngredientCategory.Create("Third Category"),
+                IngredientCategory.Create("4th Category"),
+                IngredientCategory.Create("5th Category"),
+                IngredientCategory.Create("other-ingredients")
+            };
+            return categories;
+        }
+        public static async void PopulateWithCategories(DatabaseContext s)
+        {
+            var categoryRepo = new IngredientsCategoryRepository(s);
+            IEnumerable<IngredientCategory> categories = GetDefaultCategories();
+
+            foreach (var ingredientCategory in categories)
+            {
+                await categoryRepo.Add(ingredientCategory);
+            }
         }
     }
 }

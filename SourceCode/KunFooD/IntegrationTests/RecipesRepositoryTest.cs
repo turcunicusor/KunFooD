@@ -13,7 +13,10 @@ namespace IntegrationTests
             {
                 DestroyDatabase();
                 // Arrange
-                var repository = new RecipesRepository(s);
+                var fridgeRepo = new FridgeRepository(s);
+                var ingredCatRepo = new IngredientsCategoryRepository(s);
+                var ingredientRepo = new IngredientsRepository(s, ingredCatRepo, fridgeRepo);
+                var repository = new RecipesRepository(s, fridgeRepo, ingredientRepo);
 
                 // Act
 
