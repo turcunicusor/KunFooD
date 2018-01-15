@@ -1,0 +1,42 @@
+﻿
+@model WebApp.DTO.RecipeDTO
+
+<style>
+    h1 {
+        margin-top: 50px;
+    }
+
+    blockquote {
+        margin-top: 15px;
+    }
+
+    .prep-time-info {
+        border-left-color: lightgreen;
+    }
+
+    .serv-info {
+        border-left-color: yellow;
+    }
+
+    .recipe-img {
+        margin: 15px;
+    }
+</style>
+
+<h1>@Model.Name</h1>
+
+<blockquote class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+    <img class="recipe-img" src="~/images/recipe.png" align="left" />
+    <p>@Model.Content</p>
+</blockquote>
+
+<blockquote class="prep-time-info col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    <p>Preparation Time: @Model.PreparationTime minutes</p>
+</blockquote>
+
+<blockquote class="serv-info col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    <p>Number of servings: @Model.Servings</p>
+</blockquote>
+
+<div class="clearfix visible-lg visible-md visible-sm visible-xs">
+</div>

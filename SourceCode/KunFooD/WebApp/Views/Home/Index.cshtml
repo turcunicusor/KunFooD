@@ -17,25 +17,31 @@
     }
     .recipe-item {
         border: 1px solid #337ab7;
-        width: 150px;
-        height: 200px;
-        display: inline-flex;
         margin: 10px;
-        cursor: pointer;
+        cursor: default;
+        height: 100px;
     }
-    img {
-        width: 90%;
-        height: 50%;
-    }
-    .recipe-item-content {
-        display: block;
-    }
-    p {
+    .recipe-img {
+        width: 75px;
+        height: 75px;
         margin-left: 5px;
+        margin-top: 5px;
     }
-
-    .recipe-view-btn {
-        margin-left: 35%;
+    .recipe-title {
+        font-weight: bold;
+        margin-left: 100px;
+        margin-top: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 0px;
+        
+    }
+    .recipe-desc {
+        margin-left: 100px;
+    }
+    .btn-recipe-desc {
+        margin-left: 20px;
     }
 </style>
 
@@ -66,18 +72,14 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 @foreach (var recipe in Model.recipeList)
-        {
-            <div class="recipe-item">
-                <div class="recipe-item-content">
-                    <img src="~/images/recipe.png" />
-                    <div>
-                        <p><b>Recipe name</b></p>
-                        <p>Prep Time: @recipe.PreparationTime mins</p>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-xs recipe-view-btn">View</a>
+                {
+                <div class="recipe-item col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                    <img class="recipe-img" src="~/images/recipe.png" align="left" />
+                    <p class="recipe-title">@recipe.Name</p>
+                    <p class="recipe-desc">Prep time: @recipe.PreparationTime mins</p>
+                    <a href="@(Url.Action("Details", "Recipes", new { id = recipe.Id }))" class="btn-recipe-desc btn btn-primary btn-xs">View recipe</a>
                 </div>
-            </div>
-}
+                }
             </div>
             <ul class="pagination">
                 <li class="disabled"><a href="#">&laquo;</a></li>

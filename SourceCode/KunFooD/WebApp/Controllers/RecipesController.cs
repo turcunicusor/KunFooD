@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Data.Domain.Entities;
 using Data.Domain.Entities.Food;
@@ -9,7 +10,7 @@ using WebApp.Filters;
 
 namespace WebApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [DefaultControllerFilter]
     public class RecipesController : Controller
     {
@@ -80,6 +81,21 @@ namespace WebApp.Controllers
                 VotesNumber = filterDto.VotesNumber
             };
             return Ok(await _recipesRepository.GetByFilter(filter));
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> Details(Guid id)
+        {
+            RecipeDTO recipeDto = new RecipeDTO();
+
+            var recipe = await _recipesRepository.FindById(id);
+
+            recipeDto.Content = recipe.Content;
+            recipeDto.Name = recipe.Name;
+            recipeDto.PreparationTime = recipe.PreparationTime;
+            recipeDto.Servings = recipe.NrPeopleQuantity;
+
+            return View(recipeDto);
         }
     }
 }
