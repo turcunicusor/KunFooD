@@ -113,7 +113,7 @@ namespace IntegrationTests
             };
             return categories;
         }
-        public static async void PopulateWithCategories(DatabaseContext s)
+        public static async void Populate(DatabaseContext s)
         {
             var categoryRepo = new IngredientsCategoryRepository(s);
             IEnumerable<IngredientCategory> categories = GetDefaultCategories();
@@ -122,6 +122,30 @@ namespace IntegrationTests
             {
                 await categoryRepo.Add(ingredientCategory);
             }
+            var fridgeRepos = new FridgeRepository(s);
+            var ingredientRepo = new IngredientsRepository(s, categoryRepo, fridgeRepos);
+            var recipeRepo = new RecipesRepository(s, fridgeRepos, ingredientRepo);
+
+            Ingredient i1 = Ingredient.Create(categories.First().Id, "i1", "cup", 0.9);
+            Ingredient i2 = Ingredient.Create(categories.First().Id, "i2", "piece", 1.9);
+            Ingredient i3 = Ingredient.Create(categories.First().Id, "i3", "slice", 0.5);
+            Ingredient i4 = Ingredient.Create(categories.First().Id, "i3", "cup", 2.9);
+            User user = User.Create("xx", true, "tam@yahpp.com", "sh", "sdsbdk", "sureal");
+
+            await ingredientRepo.Add(i1);
+            await ingredientRepo.Add(i2);
+            await ingredientRepo.Add(i3);
+            await ingredientRepo.Add(i4);
+
+            Recipe recipe1 = Recipe.Create(user.Id, "r1", "reteta", RecipeStatusType.Approved, 10, 1, KitchenType.Asian);
+            Recipe recipe2 = Recipe.Create(user.Id, "r2", "reteta2", RecipeStatusType.Approved, 15, 2, KitchenType.Unspecified);
+            await recipeRepo.Add(recipe1);
+            await recipeRepo.Add(recipe2);
+
+            await fridgeRepos.Add(PairItem.Create(i1.Id, recipe1.Id, 2));
+            await fridgeRepos.Add(PairItem.Create(i2.Id, recipe1.Id, 4));
+            await fridgeRepos.Add(PairItem.Create(i3.Id, recipe1.Id, 1));
+            await fridgeRepos.Add(PairItem.Create(i1.Id, recipe2.Id, 3));
         }
     }
 }

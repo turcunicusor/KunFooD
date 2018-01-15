@@ -27,5 +27,45 @@ namespace IntegrationTests
                 Assert.AreEqual(0, data.Result.ToList().Count);
             });
         }
+        [TestMethod]
+        public void Given_Repository_When_Get_By_Recipe_ShouldBe_Correct()
+        {
+            RunOnDatabase(async s =>
+            {
+                DestroyDatabase();
+                // Arrange
+                var fridgeRepos = new FridgeRepository(s);
+                var categoryRepo = new IngredientsCategoryRepository(s);
+                var ingredientRepo = new IngredientsRepository(s, categoryRepo, fridgeRepos);
+                var recipeRepo = new RecipesRepository(s, fridgeRepos, ingredientRepo);
+
+                // Act
+                Populate(s);
+                var data = await fridgeRepos.GetByRecipe(recipeRepo.GetByName("r1", recipeRepo.GetAll()).Result.First().Id);
+
+                // Assert
+                Assert.AreEqual(3, data.ToList().Count);
+            });
+        }
+        [TestMethod]
+        public void Given_Repository_When_Get_By_Ingredient_ShouldBe_Correct()
+        {
+            RunOnDatabase(async s =>
+            {
+                DestroyDatabase();
+                // Arrange
+                var fridgeRepos = new FridgeRepository(s);
+                var categoryRepo = new IngredientsCategoryRepository(s);
+                var ingredientRepo = new IngredientsRepository(s, categoryRepo, fridgeRepos);
+                var recipeRepo = new RecipesRepository(s, fridgeRepos, ingredientRepo);
+
+                // Act
+                Populate(s);
+                var data = await fridgeRepos.GetByIngredient(ingredientRepo.GetByName("i1").Result.First().Id);
+
+                // Assert
+                Assert.AreEqual(2, data.ToList().Count);
+            });
+        }
     }
 }
