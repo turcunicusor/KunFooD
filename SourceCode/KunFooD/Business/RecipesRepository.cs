@@ -46,6 +46,8 @@ namespace Business
             await Save();
         }
 
+        
+
         public async Task<IEnumerable<Recipe>> GetByKitchenType(KitchenType cuisine, Task<IEnumerable<Recipe>> recipes)
         {
             return (await recipes).Where(recipe =>
@@ -152,6 +154,37 @@ namespace Business
             else if (filter.ExcludedIngredients != null || filter.IncludedIngredients != null)
                 recipes = GetByIngredients(filter.IncludedIngredients, filter.ExcludedIngredients, recipes);
 
+            return await recipes;
+        }
+
+        public async Task<IEnumerable<Recipe>> SortBy(String sortType)
+        {
+            Task<IEnumerable<Recipe>> recipes = GetAll();
+
+            switch (sortType)
+            {
+                case "name_asc":
+                    return (await recipes).OrderBy(recipe => recipe.Name);
+                case "name_desc":
+                    return (await recipes).OrderByDescending(recipe => recipe.Name);
+                case "nrpeoplequantity_asc":
+                    return (await recipes).OrderBy(recipe => recipe.NrPeopleQuantity);
+                case "nrpeoplequantity_desc":
+                    return (await recipes).OrderByDescending(recipe => recipe.NrPeopleQuantity);
+                case "preparationtime_asc":
+                    return (await recipes).OrderBy(recipe => recipe.PreparationTime);
+                case "preparationtime_desc":
+                    return (await recipes).OrderByDescending(recipe => recipe.PreparationTime);
+                case "rating_asc":
+                    return (await recipes).OrderBy(recipe => recipe.Rating);
+                case "rating_desc":
+                    return (await recipes).OrderByDescending(recipe => recipe.Rating);
+                case "status_asc":
+                    return (await recipes).OrderBy(recipe => recipe.Status);
+                case "status_desc":
+                    return (await recipes).OrderByDescending(recipe => recipe.Status);
+
+            }
             return await recipes;
         }
     }
