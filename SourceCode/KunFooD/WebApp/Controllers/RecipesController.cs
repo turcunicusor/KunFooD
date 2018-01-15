@@ -64,9 +64,9 @@ namespace WebApp.Controllers
             foreach (var ing in filterDto.IncludedIngredients)
                 includedIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasurementUnit));
             foreach (var ing in filterDto.OnlyIngredients)
-                includedIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasurementUnit));
-            foreach (var ing in filterDto.OnlyIngredients)
-                includedIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasurementUnit));
+                onlyIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasurementUnit));
+            foreach (var ing in filterDto.ExcludedIngredients)
+                excludedIngredients.Add(await _ingredientsRepository.GetByNameAndMeasure(ing.Name, ing.MeasurementUnit));
             Filter filter = new Filter
             {
                 Cost = filterDto.Cost,
