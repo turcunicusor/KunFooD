@@ -22,5 +22,6 @@ namespace Data.Domain.Intefaces
 
         Task<IEnumerable<Recipe>> GetByOnlyIngredients(List<Ingredient> ingredients, Task<IEnumerable<Recipe>> recipes);
         Task<IEnumerable<Recipe>> GetByFilter(Filter filter);
+        Task<IEnumerable<Recipe>> SortBy(String sortType);
     }
 }

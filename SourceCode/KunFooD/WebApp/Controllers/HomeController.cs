@@ -1,5 +1,9 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using Data.Domain.Intefaces;
 using Microsoft.AspNetCore.Mvc;
+using WebApp.DTO;
 using WebApp.Filters;
 using WebApp.Models;
 
@@ -8,11 +12,22 @@ namespace WebApp.Controllers
     [DefaultControllerFilter]
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IRecipesRepository _recipesRepo;
+
+        public HomeController(IRecipesRepository recipesRepo)
+        {
+            _recipesRepo = recipesRepo;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
             ViewBag.LoggedIn = false;
 
-            return View();
+            HomepageDTO homepageDTO = new HomepageDTO();
+            homepageDTO.recipeList = await _recipesRepo.GetAll();
+            
+            return View(homepageDTO);
         }
 
         [HttpGet]
