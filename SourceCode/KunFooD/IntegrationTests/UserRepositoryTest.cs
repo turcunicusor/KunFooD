@@ -109,5 +109,41 @@ namespace IntegrationTests
                 Assert.AreEqual(3, users.Result.ToList().Count);
             });
         }
+
+        [TestMethod]
+        public void GetByEmail_Should_Return_Correct()
+        {
+            RunOnDatabase(async s =>
+            {
+                DestroyDatabase();
+                // Arrange
+                var userRepository = new UsersRepository(s);
+
+                // Act
+                Populate(s);
+                var data = await userRepository.GetByEmail("tam@yahpp.com");
+
+                // Assert
+                Assert.AreEqual(data.UserName, "xx");
+            });
+        }
+
+        [TestMethod]
+        public void GetByName_Should_Return_Correct()
+        {
+            RunOnDatabase(async s =>
+            {
+                DestroyDatabase();
+                // Arrange
+                var userRepository = new UsersRepository(s);
+
+                // Act
+                Populate(s);
+                var data = await userRepository.GetByName("xx");
+
+                // Assert
+                Assert.AreEqual(data.Email, "tam@yahpp.com");
+            });
+        }
     }
 }
