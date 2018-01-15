@@ -117,7 +117,6 @@ def read_recipies_v2(file_name):
                 ing.append(i)
             r["ingredients"] = ing
             recipes.append(r)
-            break
         except Exception as e:
             exc_type, exc_obj, exc_tb = sys.exc_info()
             print("Failed to parse recipie. Error", str(e), "Line:", exc_tb.tb_lineno)

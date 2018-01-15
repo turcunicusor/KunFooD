@@ -121,7 +121,7 @@ namespace Business
                 if (IngredientsRepository.MapMeasurement.ContainsKey(measureUnit))
                     scale = IngredientsRepository.MapMeasurement[measureUnit];
 
-                ingredient = Ingredient.Create(categoryId, name, measureUnit, cost*scale);
+                ingredient = Ingredient.Create(categoryId, name, measureUnit, cost*scale*weight/10000000);
                 await Add(ingredient);
                 await UpdateIngredientsCategory(name, await GetSpecificCategory(name));
             }

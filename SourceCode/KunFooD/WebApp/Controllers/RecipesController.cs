@@ -41,6 +41,7 @@ namespace WebApp.Controllers
         [Route("All")]
         public async Task<IActionResult> GetAll()
         {
+            await _recipesRepository.UpdateAllCosts();
             return Ok(await _recipesRepository.GetAll());
         }
 
