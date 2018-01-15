@@ -18,9 +18,9 @@ namespace Data.Domain.Entities
 
         public Filter()
         {
-            IncludedIngredients = null;
-            OnlyIngredients = null;
-            ExcludedIngredients = null;
+            IncludedIngredients = new List<Ingredient>();
+            OnlyIngredients = new List<Ingredient>();
+            ExcludedIngredients = new List<Ingredient>();
 
             Cuisine = KitchenType.Unspecified;
             Cost = 0;
