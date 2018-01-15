@@ -1,1 +1,1 @@
-qwwwroot/lib/jquery/dist :rs
+q$wwwroot/lib/bootstrap/dist/js/npm.js 2jsXhr+WebApp/wwwroot/lib/bootstrap/dist/js/npm.js

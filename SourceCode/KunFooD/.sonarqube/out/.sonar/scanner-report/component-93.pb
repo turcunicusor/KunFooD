@@ -1,1 +1,2 @@
-]wwwroot/lib/bootstrap/dist/js :\`a
+]
+wwwroot/js :[_rWebApp\wwwroot\js

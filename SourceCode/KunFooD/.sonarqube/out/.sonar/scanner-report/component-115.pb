@@ -1,1 +1,1 @@
-s!wwwroot/lib/jquery/dist/jquery.js 2jsXËLh
+s)wwwroot/lib/jquery-validation-unobtrusive :u{r0WebApp\wwwroot\lib\jquery-validation-unobtrusive

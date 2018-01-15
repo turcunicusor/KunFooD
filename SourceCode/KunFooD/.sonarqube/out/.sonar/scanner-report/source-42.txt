@@ -1,17 +1,35 @@
-using FluentValidation;
-using WebApp.DTOs;
+using Data.Domain.Entities;
+using Data.Domain.Entities.Food;
+using Data.Domain.Entities.Forum;
+using Microsoft.EntityFrameworkCore;
 
-namespace WebApp.DTOs_Validator
+namespace Data.Persistence
 {
-    public class RegisterValidator : AbstractValidator<Register>
+    public sealed class DatabaseContext : DbContext, IDatabaseContext
     {
-        public RegisterValidator()
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
-            RuleFor(usr => usr.UserName).NotEmpty();
-            RuleFor(usr => usr.Email).NotEmpty().EmailAddress();
-            RuleFor(usr => usr.Password).Length(8, 20);
-            RuleFor(usr => usr.ConfirmPassword).NotEmpty();
-            RuleFor(usr => usr.ConfirmPassword).Equal(usr => usr.Password).WithMessage("Passwords do not match!");
+            Database.EnsureCreated();
         }
+        public DatabaseContext()
+        {
+            Database.EnsureCreated();
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<PairItem>()
+                .HasKey(pairItem => new { pairItem.IngredientId, pairItem.RecipieId });
+            modelBuilder.Entity<Post>()
+                .HasKey(post => new { post.Id });
+        }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Thread> Threads { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<IngredientCategory> IngredientCategories { get; set; }
+        public DbSet<Ingredient> Ingredients { get; set; }
+        public DbSet<PairItem> PairItems { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

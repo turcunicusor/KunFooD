@@ -1,1 +1,1 @@
-/ : 
++Intefaces/IIngredientsCategoryRepository.cs 2csXhr7Data.Domain/Intefaces/IIngredientsCategoryRepository.cs

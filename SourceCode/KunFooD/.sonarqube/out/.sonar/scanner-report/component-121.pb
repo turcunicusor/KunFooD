@@ -1,0 +1,1 @@
+y.wwwroot/lib/bootstrap/dist/js/bootstrap.min.js 2jsXhr5WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js

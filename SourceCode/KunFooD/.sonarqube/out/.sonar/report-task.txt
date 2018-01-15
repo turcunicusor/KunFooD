@@ -1,7 +1,7 @@
 organization=kunfoodfii
 projectKey=kunfood
 serverUrl=https://sonarcloud.io
-serverVersion=6.7.0.33301
+serverVersion=7.0.0.35052
 dashboardUrl=https://sonarcloud.io/dashboard/index/kunfood
-ceTaskId=AWBr6U6ME5-t8Obqz0cg
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWBr6U6ME5-t8Obqz0cg
+ceTaskId=AWD72RY3r86VThkHOGjv
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWD72RY3r86VThkHOGjv

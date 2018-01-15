@@ -1,1 +1,0 @@
-c)wwwroot/lib/jquery-validation-unobtrusive :dj

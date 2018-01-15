@@ -1,12 +1,9 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Data.Domain.Entities;
+using Data.Domain.Entities.Forum;
 
 namespace Data.Domain.Intefaces
 {
-    public interface IUsersRepository : IGenericRepository<User>
+    public interface IForumCategoryRepository : IGenericRepository<Category>
     {
-        Task<IEnumerable<User>> GetAdmins();
-        Task<User> GetByEmail(string email);
+
     }
 }

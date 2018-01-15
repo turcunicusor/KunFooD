@@ -1,1 +1,1 @@
-#Intefaces/IIngredientsRepository.cs 2csX	h
+Intefaces/IFridgeRepository.cs 2csXhr*Data.Domain/Intefaces/IFridgeRepository.cs

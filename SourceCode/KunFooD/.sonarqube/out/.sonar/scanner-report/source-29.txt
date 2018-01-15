@@ -1,25 +1,13 @@
-using Business;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Data.Domain.Entities;
 
-namespace IntegrationTests
+namespace Data.Domain.Intefaces
 {
-    [TestClass]
-    public class IngredientsRepositoryTest : BaseIntegrationTest
+    public interface IUsersRepository : IGenericRepository<User>
     {
-        [TestMethod]
-        public void Default_Ingredients_Test()
-        {
-            RunOnDatabase(s =>
-            {
-                DestroyDatabase();
-                // Arrange
-                var repository = new IngredientsRepository(s);
-
-                // Act
-
-                // Assert
-                Assert.IsTrue(true);
-            });
-        }
+        Task<IEnumerable<User>> GetAdmins();
+        Task<User> GetByEmail(string email);
+        Task<User> GetByName(string userName);
     }
 }

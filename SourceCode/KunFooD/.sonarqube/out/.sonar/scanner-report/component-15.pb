@@ -1,2 +1,2 @@
-Entities/Forum :
-
+Entities/Food :
+	rData.Domain\Entities\Food

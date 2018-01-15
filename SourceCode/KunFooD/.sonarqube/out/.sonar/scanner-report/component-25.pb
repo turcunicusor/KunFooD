@@ -1,1 +1,1 @@
-Entities :
+Intefaces/IGenericRepository.cs 2csXhr+Data.Domain/Intefaces/IGenericRepository.cs

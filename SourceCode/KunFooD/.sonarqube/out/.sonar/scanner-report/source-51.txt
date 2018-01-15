@@ -1,16 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Data.Domain.Intefaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
+using WebApp.Filters;
 
-namespace WebApp.Filters
+namespace WebApp.Controllers
 {
-    public class DefaultControllerFilter : ActionFilterAttribute
+    [Route("api/[controller]")]
+    [DefaultControllerFilter]
+    public class IngredientCategoryController : Controller
     {
-        public override void OnActionExecuting(ActionExecutingContext context)
+        private readonly IIngredientsCategoryRepository _ingredientsCategoryRepository;
+
+        public IngredientCategoryController(IIngredientsCategoryRepository ingredientsCategoryRepository)
         {
-            if (!context.ModelState.IsValid)
-            {
-                context.Result = new BadRequestObjectResult(context.ModelState);
-            }
+            _ingredientsCategoryRepository = ingredientsCategoryRepository;
+        }
+
+        [HttpGet]
+        [Route("All")]
+        public async Task<IActionResult> GetAll()
+        {
+            return Ok(await _ingredientsCategoryRepository.GetAll());
         }
     }
 }

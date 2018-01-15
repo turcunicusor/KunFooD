@@ -1,21 +1,21 @@
-ß¨¤ß†,
+¾ãŞ,
 kunfoodfiikunfood(:4
 cpp-
 AWARs3pVn0GEJADuJiDT	Sonar waycpp ÀÌà·î+:0
 c+
 AWARs3pVn0GEJADuJiDI	Sonar wayc àèá·î+:2
 js,
-AWARs3pVn0GEJADuJiDL	Sonar wayjs ˜¯ËÊû+:2
+AWARs3pVn0GEJADuJiDL	Sonar wayjs ¨åğÆ‡,:2
 py,
 AWARs3pVn0GEJADuJiDM	Sonar waypy ÀŞ”‚Â+:6
 tsql.
 AWARs3pVn0GEJADuJiDD	Sonar waytsql ˆûäÇá+:8
 plsql/
-AWARs3pVn0GEJADuJiC9	Sonar wayplsql °¶ööç+:2
+AWARs3pVn0GEJADuJiC9	Sonar wayplsql ¨úş°Œ,:2
 cs,
-AWARs3pVn0GEJADuJiDF	Sonar waycs ˜£ÏÊû+:6
+AWARs3pVn0GEJADuJiDF	Sonar waycs ˆ¾Ö˜‡,:6
 java.
-AWARs3pVn0GEJADuJiDP	Sonar wayjava ØŞ€÷ç+:4
+AWARs3pVn0GEJADuJiDP	Sonar wayjava è‹±Œ,:4
 web-
 AWARs3pVn0GEJADuJiDN	Sonar wayweb ˆªÔ÷º+:6
 flex.
@@ -33,35 +33,35 @@ kunfoodfiikunfood(:4
 swift/
 AWARs3pVn0GEJADuJiDA	Sonar wayswift ó÷ç+:2
 ts,
-AWARs3pVn0GEJADuJiDO	Sonar wayts €†ûè€,B
+AWARs3pVn0GEJADuJiDO	Sonar wayts °”¸Ñ,B
 scmcvs
 scmcvsİòñöç+B'
 authbitbucket
 authbitbucketİòñöç+B
 branch
-branchÇÙÆÊû+B
+branch¼”Ë˜‡,B
 scmsvn
 scmsvnÇÙÆÊû+B
 billing
-billingìŒ´”,B
+billing¼”Ë˜‡,B
 plsql
-plsqlÇÙÆÊû+B
+plsqlá¨÷°Œ,B
 csharp
-csharpÇÙÆÊû+B
+csharpá¨÷°Œ,B
 java
-javaÇÙÆÊû+B
+javaá¨÷°Œ,B
 web
 webİòñöç+B
 flex
 flexİòñöç+B
 xml
-xmlİòñöç+B!
+xmlá¨÷°Œ,B!
 
 typescript
 
-typescriptĞ­Ôè€,B
+typescriptÌÆƒÑ,B
 vbnet
-vbnetÇÙÆÊû+B
+vbnet¼”Ë˜‡,B
 swift
 swiftÇÙÆÊû+B
 github
@@ -81,17 +81,17 @@ authgithubİòñöç+B%
 
 javascript
 
-javascriptÇÙÆÊû+B
+javascriptº§êÆ‡,B
 license
 licenseÇÙÆÊû+B
 scmgit
 scmgitÇÙÆÊû+B
 ha
-haÇÙÆÊû+B
+ha¼”Ë˜‡,B
 php
 phpĞ­Ôè€,B
 	developer
-	developerÇÙÆÊû+B
+	developer¼”Ë˜‡,B
 abap
 abapÇÙÆÊû+B
 status

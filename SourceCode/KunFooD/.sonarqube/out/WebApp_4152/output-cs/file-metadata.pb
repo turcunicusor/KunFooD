@@ -1,0 +1,29 @@
+y
+wC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Controllers\AdminPanelController.cst
+rC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Controllers\ForumController.css
+qC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Controllers\HomeController.csÅ
+C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Controllers\IngredientCategoryController.csz
+xC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Controllers\IngredientsController.cst
+rC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Controllers\LoginController.csv
+tC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Controllers\RecipesController.csw
+uC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Controllers\RegisterController.cst
+rC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Controllers\UsersController.csh
+fC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\CategoryDTO.csn
+lC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\CreateCategoryDTO.csl
+jC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\CreateThreadDTO.csh
+fC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\CreateUsers.csf
+dC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\FilterDTO.csp
+nC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\IngredientFilterDTO.csp
+nC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\IngredientRecipeDTO.cse
+cC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\LoginDTO.csf
+dC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\RecipeDTO.csh
+fC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\RegisterDTO.csf
+dC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\ThreadDTO.csh
+fC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\DTO\UpdateUsers.csÅ
+C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Filters\DefaultControllerFilterAttribute.csn
+lC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Models\ErrorViewModel.cs`
+^C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Program.csj
+hC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Security\JWTToken.cs`
+^C:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\Startup.cs\
+XC:\Users\Turcu Nicusor\AppData\Local\Temp\.NETCoreApp,Version=v2.0.AssemblyAttributes.csá
+ÇC:\Users\Turcu Nicusor\Desktop\Work\Anul 3\DotNet\KunFooD\SourceCode\KunFooD\WebApp\obj\Debug\netcoreapp2.0\WebApp.AssemblyInfo.cs

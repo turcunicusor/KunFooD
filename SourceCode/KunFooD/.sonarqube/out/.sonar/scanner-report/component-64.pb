@@ -1,2 +1,1 @@
-@
-Program.cs 2csXh
+@DTO/FilterDTO.cs 2csXhrWebApp/DTO/FilterDTO.cs

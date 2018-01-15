@@ -1,75 +1,25 @@
-using Business;
-using Data.Domain.Intefaces;
-using Data.Persistence;
-using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore.Swagger;
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 using WebApp.Filters;
+using WebApp.Models;
 
-namespace WebApp
+namespace WebApp.Controllers
 {
-    public class Startup
+    [DefaultControllerFilter]
+    public class HomeController : Controller
     {
-        public Startup(IConfiguration configuration)
+        public IActionResult Index()
         {
-            Configuration = configuration;
+            ViewBag.LoggedIn = false;
+
+            return View();
         }
 
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        [HttpGet]
+        [Route("error")]
+        public IActionResult Error()
         {
-            services.AddTransient<IDatabaseContext, DatabaseContext>();
-            services.AddTransient<IUsersRepository, UsersRepository>();
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddMvc(options =>
-                {
-                    options.Filters.Add(typeof(DefaultControllerFilter));
-                }
-            ).AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<Startup>());
-            // Register the Swagger generator, defining one or more Swagger documents
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info { Title = "KunFooD API", Version = "v1" });
-            });
-        }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
-            // Enable middleware to serve generated Swagger as a JSON endpoint.
-            app.UseSwagger();
-
-            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "KunFooD V1");
-            });
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseBrowserLink();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
-
-            app.UseStaticFiles();
-
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

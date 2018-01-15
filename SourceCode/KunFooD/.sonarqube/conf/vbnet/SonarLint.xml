@@ -2,10 +2,6 @@
 <AnalysisInput>
   <Settings>
     <Setting>
-      <Key>sonar.vbnet.msbuild.testProjectPattern</Key>
-      <Value>[^\\]*test[^\\]*$</Value>
-    </Setting>
-    <Setting>
       <Key>sonar.vbnet.ignoreHeaderComments</Key>
       <Value>true</Value>
     </Setting>

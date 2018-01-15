@@ -1,34 +1,19 @@
-using Data.Domain.Entities;
-using Data.Domain.Intefaces;
-using Microsoft.AspNetCore.Mvc;
-using WebApp.DTOs;
-using WebApp.Filters;
+using Data.Domain.Entities.Forum;
+using FluentAssertions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace WebApp.Controllers
+namespace UnitTests
 {
-    [Route("api/[controller]")]
-    [DefaultControllerFilter]
-    public class RegisterController : Controller
+    [TestClass]
+    public class CategoryTests
     {
-        private readonly IUsersRepository _repository;
-
-        public RegisterController(IUsersRepository repository)
+        [TestMethod]
+        public void Category_Name_Should_Be_TestCategory()
         {
-            _repository = repository;
-        }
+            string name = "TestCategory";
+            Category category = Category.Create(name, "desc");
 
-        [HttpGet]
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Register([FromBody] Register newUser)
-        {
-            User user = Data.Domain.Entities.User.Create(newUser.UserName, false, newUser.Email, newUser.Password, null, null);
-            _repository.Add(user);
-            return Ok(user);
+            category.Name.Should().Be(name);
         }
     }
 }

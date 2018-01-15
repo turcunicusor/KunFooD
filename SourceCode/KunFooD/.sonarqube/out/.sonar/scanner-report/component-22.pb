@@ -1,1 +1,1 @@
-Intefaces/IGenericRepository.cs 2csXh
+	Intefaces :rData.Domain\Intefaces

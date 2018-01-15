@@ -1,44 +1,71 @@
-using System.IdentityModel.Tokens.Jwt;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using WebApp.DTOs;
-using WebApp.Filters;
-using WebApp.Security;
-using Data.Domain.Entities;
-using Data.Domain.Intefaces;
+using System.Linq;
+using Business;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace WebApp.Controllers
+namespace IntegrationTests
 {
-    [Route("api/[controller]")]
-    [DefaultControllerFilter]
-    public class LoginController : Controller
+    [TestClass]
+    public class FridgeRepositoryTest : BaseIntegrationTest
     {
-        private readonly IUsersRepository _repository;
-
-        public LoginController(IUsersRepository repository)
+        [TestMethod]
+        public void Given_Repository_When_Delete_Then_ShouldBe_Correct()
         {
-            _repository = repository;
-        }
-
-        [HttpGet]
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Login([FromBody] Login newLogin)
-        {
-            User user = await _repository.GetByEmail(newLogin.Email);
-            if (user != null)
+            RunOnDatabase(async s =>
             {
-                var token = JwtToken.GenerateToken(user);
-                return Ok(new
-                {
-                    token = new JwtSecurityTokenHandler().WriteToken(token)
-                });
-            }
-            return Unauthorized();
+                DestroyDatabase();
+                // Arrange
+                var repository = new FridgeRepository(s);
+                var pairItem = GetPairItems().First();
+
+                // Act
+                await repository.Add(pairItem);
+                var pairAdded = repository.Get(pairItem.IngredientId, pairItem.RecipieId).Result;
+                await repository.Delete(pairAdded.IngredientId, pairAdded.RecipieId);
+
+                // Assert
+                var data = repository.GetAll();
+                Assert.AreEqual(0, data.Result.ToList().Count);
+            });
+        }
+        [TestMethod]
+        public void Given_Repository_When_Get_By_Recipe_ShouldBe_Correct()
+        {
+            RunOnDatabase(async s =>
+            {
+                DestroyDatabase();
+                // Arrange
+                var fridgeRepos = new FridgeRepository(s);
+                var categoryRepo = new IngredientsCategoryRepository(s);
+                var ingredientRepo = new IngredientsRepository(s, categoryRepo, fridgeRepos);
+                var recipeRepo = new RecipesRepository(s, fridgeRepos, ingredientRepo);
+
+                // Act
+                Populate(s);
+                var data = await fridgeRepos.GetByRecipe(recipeRepo.GetByName("r1", recipeRepo.GetAll()).Result.First().Id);
+
+                // Assert
+                Assert.AreEqual(3, data.ToList().Count);
+            });
+        }
+        [TestMethod]
+        public void Given_Repository_When_Get_By_Ingredient_ShouldBe_Correct()
+        {
+            RunOnDatabase(async s =>
+            {
+                DestroyDatabase();
+                // Arrange
+                var fridgeRepos = new FridgeRepository(s);
+                var categoryRepo = new IngredientsCategoryRepository(s);
+                var ingredientRepo = new IngredientsRepository(s, categoryRepo, fridgeRepos);
+                var recipeRepo = new RecipesRepository(s, fridgeRepos, ingredientRepo);
+
+                // Act
+                Populate(s);
+                var data = await fridgeRepos.GetByIngredient(ingredientRepo.GetByName("i1").Result.First().Id);
+
+                // Assert
+                Assert.AreEqual(2, data.ToList().Count);
+            });
         }
     }
 }

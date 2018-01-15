@@ -1,1 +1,1 @@
-	Intefaces :
+Entities/Post.cs 2csXhrData.Domain/Entities/Post.cs

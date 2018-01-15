@@ -1,0 +1,1 @@
+pwwwroot/lib/bootstrap/dist/js :oqyr$WebApp\wwwroot\lib\bootstrap\dist\js

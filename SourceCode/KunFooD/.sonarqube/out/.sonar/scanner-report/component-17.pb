@@ -1,1 +1,1 @@
-Entities/User.cs 2csX'h
+Entities :rData.Domain\Entities

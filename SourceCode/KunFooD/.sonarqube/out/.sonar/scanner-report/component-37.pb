@@ -1,1 +1,1 @@
-%/ :#$
+%ForumCategoryRepositoryTest.cs 2csXhr/IntegrationTests/ForumCategoryRepositoryTest.cs
