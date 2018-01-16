@@ -23,7 +23,7 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Index()
         {
             ViewBag.LoggedIn = false;
-
+            
             HomepageDTO homepageDTO = new HomepageDTO();
             homepageDTO.recipeList = await _recipesRepo.GetAll();
             

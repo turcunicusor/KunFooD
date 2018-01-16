@@ -62,7 +62,7 @@ namespace WebApp.Controllers
 
                     // Write the token to the cookie
                     Response.Cookies.Append("SessionId", new JwtSecurityTokenHandler().WriteToken(token));
-
+                    
                     HttpContext.Session.SetString("user_id", user.Id.ToString());
                     // Redirect to homepage
                     return RedirectToAction("Index", "Home");
