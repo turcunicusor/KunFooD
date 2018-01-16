@@ -17,12 +17,15 @@ namespace WebApp.Controllers
         private readonly IRecipesRepository _recipesRepository;
         private readonly IIngredientsRepository _ingredientsRepository;
         private readonly IUsersRepository _usersRepository;
+        private readonly IFridgeRepository _fridgeRepository;
 
-        public RecipesController(IRecipesRepository recipesRepository, IIngredientsRepository ingredientsRepository, IUsersRepository usersRepository)
+        public RecipesController(IRecipesRepository recipesRepository, IIngredientsRepository ingredientsRepository,
+            IUsersRepository usersRepository, IFridgeRepository fridgeRepository)
         {
             _recipesRepository = recipesRepository;
             _ingredientsRepository = ingredientsRepository;
             _usersRepository = usersRepository;
+            _fridgeRepository = fridgeRepository;
         }
 
         [HttpPost]
@@ -95,6 +98,23 @@ namespace WebApp.Controllers
             recipeDto.PreparationTime = recipe.PreparationTime;
             recipeDto.Servings = recipe.NrPeopleQuantity;
 
+            // Get the ingredients
+            List<IngredientRecipeDTO> ingredientList = new List<IngredientRecipeDTO>();
+            var fridgeList = await _fridgeRepository.GetByRecipe(id);
+            foreach(var pairItem in fridgeList)
+            {
+                IngredientRecipeDTO ingredientDto = new IngredientRecipeDTO();
+                var ingredientInfo = await _ingredientsRepository.FindById(pairItem.IngredientId);
+
+                ingredientDto.Name = ingredientInfo.Name;
+                ingredientDto.MeasurementUnit = ingredientInfo.MeasuredUnit;
+                ingredientDto.Quantity = pairItem.Quantity;
+                ingredientDto.Cost = ingredientInfo.Cost;
+
+                ingredientList.Add(ingredientDto);
+            }
+
+            recipeDto.Ingredients = ingredientList;
             return View(recipeDto);
         }
     }
